@@ -1,0 +1,585 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AR	Makefile	/^AR            = ar cqs$/;"	m
+AUTHOR_H_INCLUDED	Author.h	4;"	d
+Author	Author.cpp	/^Author::Author()\/\/stringºÍlistÀà×Ô´ø¹¹Ôìº¯Êı$/;"	f	class:Author	signature:()
+Author	Author.cpp	/^Author::Author(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
+Author	Author.h	/^    Author();$/;"	p	class:Author	access:public	signature:()
+Author	Author.h	/^    Author(book*& bk);$/;"	p	class:Author	access:public	signature:(book*& bk)
+Author	Author.h	/^class Author$/;"	c
+Author::Author	Author.cpp	/^Author::Author()\/\/stringºÍlistÀà×Ô´ø¹¹Ôìº¯Êı$/;"	f	class:Author	signature:()
+Author::Author	Author.cpp	/^Author::Author(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
+Author::Author	Author.h	/^    Author();$/;"	p	class:Author	access:public	signature:()
+Author::Author	Author.h	/^    Author(book*& bk);$/;"	p	class:Author	access:public	signature:(book*& bk)
+Author::Authorname	Author.h	/^    string Authorname;$/;"	m	class:Author	access:private
+Author::addbook	Author.cpp	/^void Author::addbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
+Author::addbook	Author.h	/^    void addbook(book*& bk);\/\/¼ÓÈëÍ¼ÊéºóµÄ´¦Àí$/;"	p	class:Author	access:public	signature:(book*& bk)
+Author::bklist	Author.h	/^    list<book*> bklist;$/;"	m	class:Author	access:private
+Author::bknum	Author.h	/^    int bknum;$/;"	m	class:Author	access:private
+Author::delbook	Author.cpp	/^void Author::delbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
+Author::delbook	Author.h	/^    void delbook(book*& bk);\/\/É¾³ıÍ¼Êé$/;"	p	class:Author	access:public	signature:(book*& bk)
+Author::getauthor	Author.cpp	/^string Author::getauthor() const$/;"	f	class:Author	signature:() const
+Author::getauthor	Author.h	/^    string getauthor() const;$/;"	p	class:Author	access:public	signature:() const
+Author::getbknum	Author.cpp	/^int Author::getbknum()$/;"	f	class:Author	signature:()
+Author::getbknum	Author.h	/^    int getbknum();$/;"	p	class:Author	access:public	signature:()
+Author::show	Author.cpp	/^void  Author::show()$/;"	f	class:Author	signature:()
+Author::show	Author.h	/^    void  show();\/\/ÏÔÊ¾Í¼Êé$/;"	p	class:Author	access:public	signature:()
+Authorname	Author.h	/^    string Authorname;$/;"	m	class:Author	access:private
+Authortree	manager.h	/^    redblacktree<string,Author> Authortree;\/\/ä½œè€…çš„çº¢é»‘æ ‘$/;"	m	class:manager	access:private
+BOOK_H_INCLUDED	book.h	5;"	d
+BORROWBOOKLIMIT	user.h	6;"	d
+CC	Makefile	/^CC            = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
+COPY_FILE	Makefile	/^COPY_FILE     = $(COPY)$/;"	m
+CXX	Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+Color	redblacktree.h	/^enum Color {black = 0, red};$/;"	g
+Commit	register.cpp	/^void Register::Commit()$/;"	f	class:Register	signature:()
+Commit	register.h	/^		void Commit();$/;"	p	class:Register	access:private	signature:()
+DEFINES	Makefile	/^DEFINES       = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
+DEL_DIR	Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	Makefile	/^DESTDIR       = $/;"	m
+DIST	Makefile	/^DIST          = \/usr\/share\/qt4\/mkspecs\/common\/g++.conf \\$/;"	m
+INCPATH	Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++ -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I. -I.$/;"	m
+INSTALL_DIR	Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+KEYWORDS_H_INCLUDED	keywords.h	2;"	d
+LFLAGS	Makefile	/^LFLAGS        = -Wl,-O1$/;"	m
+LIBS	Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/i386-linux-gnu -lQtGui -lQtCore -lpthread $/;"	m
+LINK	Makefile	/^LINK          = g++$/;"	m
+MAINWINDOW_H	mainwindow.h	2;"	d
+MANAGER_H_INCLUDED	manager.h	5;"	d
+MKDIR	Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	Makefile	/^MOVE          = mv -f$/;"	m
+MainWindow	mainwindow.cpp	/^MainWindow::MainWindow(QWidget *parent)$/;"	f	class:MainWindow	signature:(QWidget *parent)
+MainWindow	mainwindow.h	/^    MainWindow(QWidget *parent = 0);$/;"	p	class:MainWindow	access:public	signature:(QWidget *parent = 0)
+MainWindow	mainwindow.h	/^class MainWindow : public QMainWindow$/;"	c	inherits:QMainWindow
+MainWindow::MainWindow	mainwindow.cpp	/^MainWindow::MainWindow(QWidget *parent)$/;"	f	class:MainWindow	signature:(QWidget *parent)
+MainWindow::MainWindow	mainwindow.h	/^    MainWindow(QWidget *parent = 0);$/;"	p	class:MainWindow	access:public	signature:(QWidget *parent = 0)
+MainWindow::getStaticMetaObject	moc_mainwindow.cpp	/^const QMetaObject &MainWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindow	signature:()
+MainWindow::metaObject	moc_mainwindow.cpp	/^const QMetaObject *MainWindow::metaObject() const$/;"	f	class:MainWindow	signature:() const
+MainWindow::qt_metacall	moc_mainwindow.cpp	/^int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+MainWindow::qt_metacast	moc_mainwindow.cpp	/^void *MainWindow::qt_metacast(const char *_clname)$/;"	f	class:MainWindow	signature:(const char *_clname)
+MainWindow::staticMetaObject	moc_mainwindow.cpp	/^const QMetaObject MainWindow::staticMetaObject = {$/;"	m	class:MainWindow	file:
+MainWindow::~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow	signature:()
+MainWindow::~MainWindow	mainwindow.h	/^    ~MainWindow();$/;"	p	class:MainWindow	access:public	signature:()
+OBJECTS	Makefile	/^OBJECTS       = Author.o \\$/;"	m
+OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+QMAKE	Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
+QMAKE_TARGET	Makefile	/^QMAKE_TARGET  = library$/;"	m
+RANLIB	Makefile	/^RANLIB        = $/;"	m
+RB_DELETE	redblacktree.h	/^    bool RB_DELETE(const K& dkey);\/\/É¾³ıËã·¨$/;"	p	class:redblacktree	access:public	signature:(const K& dkey)
+RB_DELETE	redblacktree.h	/^    void RB_DELETE(node<K,T>* x);\/\/É¾³ıÄ³¸ö½Úµã$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* x)
+RB_DELETE	redblacktree.h	/^bool redblacktree<K,T>::RB_DELETE(const K& dkey)$/;"	f	class:redblacktree	signature:(const K& dkey)
+RB_DELETE	redblacktree.h	/^void redblacktree<K,T>::RB_DELETE(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+RB_DELETE_fixup	redblacktree.h	/^    void RB_DELETE_fixup(node<K,T>* x);\/\/É¾³ıµ÷Õû$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+RB_DELETE_fixup	redblacktree.h	/^void redblacktree<K,T>::RB_DELETE_fixup(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+RB_insert	redblacktree.h	/^    node<K,T>* RB_insert(const T& data,const K& insrtkey);\/\/²åÈëËã·¨$/;"	p	class:redblacktree	access:public	signature:(const T& data,const K& insrtkey)
+RB_insert	redblacktree.h	/^node<K,T>* redblacktree<K,T>::RB_insert(const T& data, const K& insrtkey)\/\/²åÈëËã·¨$/;"	f	class:redblacktree	signature:(const T& data, const K& insrtkey)
+RB_insert_fixup	redblacktree.h	/^    void RB_insert_fixup(node<K,T>* x);\/\/²åÈëµ÷Õû$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+RB_insert_fixup	redblacktree.h	/^void redblacktree<K,T>::RB_insert_fixup(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+REDBLACKTREE_H_INCLUDED	redblacktree.h	2;"	d
+REGISTER_H	register.h	2;"	d
+Register	register.cpp	/^Register::Register(QWidget *parent,manager *mmanager)$/;"	f	class:Register	signature:(QWidget *parent,manager *mmanager)
+Register	register.h	/^		Register(QWidget *parent,manager *mmanager);$/;"	p	class:Register	access:public	signature:(QWidget *parent,manager *mmanager)
+Register	register.h	/^class Register : public QDialog$/;"	c	inherits:QDialog
+Register::Commit	register.cpp	/^void Register::Commit()$/;"	f	class:Register	signature:()
+Register::Commit	register.h	/^		void Commit();$/;"	p	class:Register	access:private	signature:()
+Register::Register	register.cpp	/^Register::Register(QWidget *parent,manager *mmanager)$/;"	f	class:Register	signature:(QWidget *parent,manager *mmanager)
+Register::Register	register.h	/^		Register(QWidget *parent,manager *mmanager);$/;"	p	class:Register	access:public	signature:(QWidget *parent,manager *mmanager)
+Register::cancelButton	register.h	/^		QPushButton *cancelButton;$/;"	m	class:Register	access:private
+Register::emailEdit	register.h	/^		QLineEdit *emailEdit;$/;"	m	class:Register	access:private
+Register::emailLabel	register.h	/^		QLabel *emailLabel;$/;"	m	class:Register	access:private
+Register::getStaticMetaObject	moc_register.cpp	/^const QMetaObject &Register::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Register	signature:()
+Register::keyEdit	register.h	/^		QLineEdit *keyEdit;$/;"	m	class:Register	access:private
+Register::keyLabel	register.h	/^		QLabel *keyLabel;$/;"	m	class:Register	access:private
+Register::mainLayout	register.h	/^		QGridLayout *mainLayout;$/;"	m	class:Register	access:private
+Register::metaObject	moc_register.cpp	/^const QMetaObject *Register::metaObject() const$/;"	f	class:Register	signature:() const
+Register::nameEdit	register.h	/^		QLineEdit *nameEdit;$/;"	m	class:Register	access:private
+Register::nameLabel	register.h	/^		QLabel *nameLabel;$/;"	m	class:Register	access:private
+Register::okButton	register.h	/^		QPushButton *okButton;$/;"	m	class:Register	access:private
+Register::qt_metacall	moc_register.cpp	/^int Register::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Register	signature:(QMetaObject::Call _c, int _id, void **_a)
+Register::qt_metacast	moc_register.cpp	/^void *Register::qt_metacast(const char *_clname)$/;"	f	class:Register	signature:(const char *_clname)
+Register::rmanager	register.h	/^		manager *rmanager;$/;"	m	class:Register	access:private
+Register::staticMetaObject	moc_register.cpp	/^const QMetaObject Register::staticMetaObject = {$/;"	m	class:Register	file:
+Register::studentNumberEdit	register.h	/^		QLineEdit *studentNumberEdit;$/;"	m	class:Register	access:private
+Register::studentNumberLabel	register.h	/^		QLabel *studentNumberLabel;$/;"	m	class:Register	access:private
+SED	Makefile	/^SED           = sed$/;"	m
+SOURCES	Makefile	/^SOURCES       = Author.cpp \\$/;"	m
+STRIP	Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	Makefile	/^SYMLINK       = ln -f -s$/;"	m
+TAR	Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	Makefile	/^TARGET        = library$/;"	m
+USER_H_INCLUDED	user.h	5;"	d
+addbook	Author.cpp	/^void Author::addbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
+addbook	Author.h	/^    void addbook(book*& bk);\/\/¼ÓÈëÍ¼ÊéºóµÄ´¦Àí$/;"	p	class:Author	access:public	signature:(book*& bk)
+addbook	keywords.cpp	/^void keywords::addbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
+addbook	keywords.h	/^    void addbook(book*& bk);\/\/å¢åŠ å…³é”®å­—æ‰€å¯¹çš„å›¾ä¹¦$/;"	p	class:keywords	access:public	signature:(book*& bk)
+addbook	manager.cpp	/^void manager::addbook()$/;"	f	class:manager	signature:()
+addbook	manager.h	/^    void addbook();\/\/å¾€ä¹¦åº“é‡Œæ·»ä¹¦$/;"	p	class:manager	access:public	signature:()
+addbook	user.cpp	/^bool user::addbook(book* newbook)$/;"	f	class:user	signature:(book* newbook)
+addbook	user.h	/^    bool addbook(book* newbook);\/\/ç”¨æˆ·å€Ÿä¹¦$/;"	p	class:user	access:public	signature:(book* newbook)
+addusr	manager.cpp	/^void addusr(const string& uname,const string& unumber,const string& uemail,const string& ukey)$/;"	f	signature:(const string& uname,const string& unumber,const string& uemail,const string& ukey)
+addusr	manager.cpp	/^void manager::addusr()$/;"	f	class:manager	signature:()
+addusr	manager.h	/^    void addusr();\/\/åŠ å…¥ç”¨æˆ·$/;"	p	class:manager	access:public	signature:()
+addusr	manager.h	/^    void addusr(const string& uname, const string& unumber, const string& uemail, const string& ukey);$/;"	p	class:manager	access:public	signature:(const string& uname, const string& unumber, const string& uemail, const string& ukey)
+author	book.h	/^    string author;$/;"	m	class:book	access:private
+bklist	Author.h	/^    list<book*> bklist;$/;"	m	class:Author	access:private
+bklist	keywords.h	/^    list<book*> bklist;$/;"	m	class:keywords	access:private
+bkname	book.h	/^    string bkname;$/;"	m	class:book	access:private
+bknum	Author.h	/^    int bknum;$/;"	m	class:Author	access:private
+bknum	keywords.h	/^    int bknum;$/;"	m	class:keywords	access:private
+black	redblacktree.h	/^enum Color {black = 0, red};$/;"	e	enum:Color
+book	book.cpp	/^book::book()$/;"	f	class:book	signature:()
+book	book.cpp	/^book::book(const book& bk)$/;"	f	class:book	signature:(const book& bk)
+book	book.cpp	/^book::book(const string& name):bkname(name),state("clean") {};$/;"	f	class:book	signature:(const string& name)
+book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath)
+book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath, const string& st)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath, const string& st)
+book	book.h	/^    book();$/;"	p	class:book	access:public	signature:()
+book	book.h	/^    book(const book& bk);\/\/å¤åˆ¶æ„é€ å‡½æ•°$/;"	p	class:book	access:public	signature:(const book& bk)
+book	book.h	/^    book(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
+book	book.h	/^    book(const string& name, const string& ibn, const string& ath);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath)
+book	book.h	/^    book(const string& name, const string& ibn, const string& ath, const string& st);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath, const string& st)
+book	book.h	/^class book$/;"	c
+book::author	book.h	/^    string author;$/;"	m	class:book	access:private
+book::bkname	book.h	/^    string bkname;$/;"	m	class:book	access:private
+book::book	book.cpp	/^book::book()$/;"	f	class:book	signature:()
+book::book	book.cpp	/^book::book(const book& bk)$/;"	f	class:book	signature:(const book& bk)
+book::book	book.cpp	/^book::book(const string& name):bkname(name),state("clean") {};$/;"	f	class:book	signature:(const string& name)
+book::book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath)
+book::book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath, const string& st)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath, const string& st)
+book::book	book.h	/^    book();$/;"	p	class:book	access:public	signature:()
+book::book	book.h	/^    book(const book& bk);\/\/å¤åˆ¶æ„é€ å‡½æ•°$/;"	p	class:book	access:public	signature:(const book& bk)
+book::book	book.h	/^    book(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
+book::book	book.h	/^    book(const string& name, const string& ibn, const string& ath);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath)
+book::book	book.h	/^    book(const string& name, const string& ibn, const string& ath, const string& st);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath, const string& st)
+book::getauthor	book.cpp	/^string book::getauthor() const$/;"	f	class:book	signature:() const
+book::getauthor	book.h	/^    string getauthor() const;$/;"	p	class:book	access:public	signature:() const
+book::getbkname	book.cpp	/^string book::getbkname() const$/;"	f	class:book	signature:() const
+book::getbkname	book.h	/^    string getbkname() const;$/;"	p	class:book	access:public	signature:() const
+book::getinfor	book.cpp	/^void book::getinfor()$/;"	f	class:book	signature:()
+book::getinfor	book.h	/^    void getinfor();$/;"	p	class:book	access:public	signature:()
+book::getisbn	book.cpp	/^string book::getisbn() const$/;"	f	class:book	signature:() const
+book::getisbn	book.h	/^    string getisbn() const;$/;"	p	class:book	access:public	signature:() const
+book::getstate	book.cpp	/^void book::getstate()$/;"	f	class:book	signature:()
+book::getstate	book.h	/^    void getstate();$/;"	p	class:book	access:public	signature:()
+book::isbn	book.h	/^    string isbn;$/;"	m	class:book	access:private
+book::operator =	book.cpp	/^book& book::operator=(const book& bk)$/;"	f	class:book	signature:(const book& bk)
+book::operator =	book.h	/^    book& operator=(const book& bk);\/\/èµ‹å€¼æ“ä½œç¬¦$/;"	p	class:book	access:public	signature:(const book& bk)
+book::setauthor	book.cpp	/^void book::setauthor(const string& author)$/;"	f	class:book	signature:(const string& author)
+book::setauthor	book.h	/^    void setauthor(const string& author);$/;"	p	class:book	access:public	signature:(const string& author)
+book::setbkname	book.cpp	/^void book::setbkname(const string& bkname)$/;"	f	class:book	signature:(const string& bkname)
+book::setbkname	book.h	/^    void setbkname(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
+book::setisbn	book.cpp	/^void book::setisbn(const string& isbn)$/;"	f	class:book	signature:(const string& isbn)
+book::setisbn	book.h	/^    void setisbn(const string& isbn);$/;"	p	class:book	access:public	signature:(const string& isbn)
+book::setstate	book.cpp	/^void book::setstate(const string& state)$/;"	f	class:book	signature:(const string& state)
+book::setstate	book.h	/^    void setstate(const string& state);$/;"	p	class:book	access:public	signature:(const string& state)
+book::state	book.h	/^    string state;$/;"	m	class:book	access:private
+bookfilename	manager.h	/^    string bookfilename;$/;"	m	class:manager	access:private
+booknum	manager.h	/^    int booknum;\/\/ä¹¦çš„æ•°ç›®$/;"	m	class:manager	access:private
+booknum	user.h	/^    int booknum;\/\/å€Ÿä¹¦çš„æ•°é‡$/;"	m	class:user	access:private
+booktree	manager.h	/^    redblacktree<string,book> booktree;\/\/å›¾ä¹¦æŒ‡é’ˆçš„çº¢é»‘æ ‘$/;"	m	class:manager	access:private
+borrowbook	manager.cpp	/^void manager::borrowbook()$/;"	f	class:manager	signature:()
+borrowbook	manager.h	/^    void borrowbook();\/\/å€Ÿä¹¦$/;"	p	class:manager	access:public	signature:()
+cancelButton	register.h	/^		QPushButton *cancelButton;$/;"	m	class:Register	access:private
+color	redblacktree.h	/^    Color color;$/;"	m	class:node	access:private
+data	redblacktree.h	/^    T data;$/;"	m	class:node	access:private
+delbook	Author.cpp	/^void Author::delbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
+delbook	Author.h	/^    void delbook(book*& bk);\/\/É¾³ıÍ¼Êé$/;"	p	class:Author	access:public	signature:(book*& bk)
+delbook	keywords.cpp	/^void keywords::delbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
+delbook	keywords.h	/^    void delbook(book*& bk);$/;"	p	class:keywords	access:public	signature:(book*& bk)
+delbook	manager.cpp	/^void manager::delbook()$/;"	f	class:manager	signature:()
+delbook	manager.h	/^    void delbook();\/\/ä»ä¹¦åº“é‡Œé¢åˆ é™¤ä¹¦$/;"	p	class:manager	access:public	signature:()
+deluser	manager.cpp	/^void manager::deluser()$/;"	f	class:manager	signature:()
+deluser	manager.h	/^    void deluser();\/\/ç”¨æˆ·æ³¨é”€è´¦å·$/;"	p	class:manager	access:public	signature:()
+email	user.h	/^    string email;\/\/é‚®ç®±$/;"	m	class:user	access:private
+emailEdit	register.h	/^		QLineEdit *emailEdit;$/;"	m	class:Register	access:private
+emailLabel	register.h	/^		QLabel *emailLabel;$/;"	m	class:Register	access:private
+empty	redblacktree.h	/^    bool empty() const;$/;"	p	class:redblacktree	access:public	signature:() const
+empty	redblacktree.h	/^bool redblacktree<K,T>::empty() const$/;"	f	class:redblacktree	signature:() const
+getStaticMetaObject	moc_mainwindow.cpp	/^const QMetaObject &MainWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindow	signature:()
+getStaticMetaObject	moc_register.cpp	/^const QMetaObject &Register::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Register	signature:()
+getauthor	Author.cpp	/^string Author::getauthor() const$/;"	f	class:Author	signature:() const
+getauthor	Author.h	/^    string getauthor() const;$/;"	p	class:Author	access:public	signature:() const
+getauthor	book.cpp	/^string book::getauthor() const$/;"	f	class:book	signature:() const
+getauthor	book.h	/^    string getauthor() const;$/;"	p	class:book	access:public	signature:() const
+getbkname	book.cpp	/^string book::getbkname() const$/;"	f	class:book	signature:() const
+getbkname	book.h	/^    string getbkname() const;$/;"	p	class:book	access:public	signature:() const
+getbknum	Author.cpp	/^int Author::getbknum()$/;"	f	class:Author	signature:()
+getbknum	Author.h	/^    int getbknum();$/;"	p	class:Author	access:public	signature:()
+getbknum	keywords.cpp	/^int keywords::getbknum()$/;"	f	class:keywords	signature:()
+getbknum	keywords.h	/^    int getbknum();$/;"	p	class:keywords	access:public	signature:()
+getbooknumb	user.cpp	/^int user::getbooknumb() const$/;"	f	class:user	signature:() const
+getbooknumb	user.h	/^    int getbooknumb() const;$/;"	p	class:user	access:public	signature:() const
+getemail	user.cpp	/^string user::getemail() const$/;"	f	class:user	signature:() const
+getemail	user.h	/^    string getemail() const;$/;"	p	class:user	access:public	signature:() const
+getinfor	book.cpp	/^void book::getinfor()$/;"	f	class:book	signature:()
+getinfor	book.h	/^    void getinfor();$/;"	p	class:book	access:public	signature:()
+getisbn	book.cpp	/^string book::getisbn() const$/;"	f	class:book	signature:() const
+getisbn	book.h	/^    string getisbn() const;$/;"	p	class:book	access:public	signature:() const
+getkeywords	keywords.cpp	/^string keywords::getkeywords() const$/;"	f	class:keywords	signature:() const
+getkeywords	keywords.h	/^    string getkeywords() const;$/;"	p	class:keywords	access:public	signature:() const
+getlibraryinfo	manager.cpp	/^void manager::getlibraryinfo()$/;"	f	class:manager	signature:()
+getlibraryinfo	manager.h	/^    void getlibraryinfo();\/\/å¾—åˆ°å›¾ä¹¦é¦†çš„ä¿¡æ¯$/;"	p	class:manager	access:public	signature:()
+getname	user.cpp	/^string user::getname() const$/;"	f	class:user	signature:() const
+getname	user.h	/^    string getname() const;$/;"	p	class:user	access:public	signature:() const
+getnumber	user.cpp	/^string user::getnumber() const$/;"	f	class:user	signature:() const
+getnumber	user.h	/^    string getnumber() const;$/;"	p	class:user	access:public	signature:() const
+getsize	redblacktree.h	/^    int getsize() const;$/;"	p	class:redblacktree	access:public	signature:() const
+getsize	redblacktree.h	/^int redblacktree<K,T>::getsize() const$/;"	f	class:redblacktree	signature:() const
+getstate	book.cpp	/^void book::getstate()$/;"	f	class:book	signature:()
+getstate	book.h	/^    void getstate();$/;"	p	class:book	access:public	signature:()
+getuserinfo	manager.cpp	/^void manager::getuserinfo()$/;"	f	class:manager	signature:()
+getuserinfo	manager.h	/^    void getuserinfo();\/\/å¾—åˆ°ç”¨æˆ·çš„ä¿¡æ¯$/;"	p	class:manager	access:public	signature:()
+isbn	book.h	/^    string isbn;$/;"	m	class:book	access:private
+isbookfull	user.cpp	/^bool user::isbookfull() const$/;"	f	class:user	signature:() const
+isbookfull	user.h	/^    bool isbookfull() const;\/\/åˆ¤æ–­æ˜¯å¦å·²ç»å€Ÿæ»¡äº†ä¹¦$/;"	p	class:user	access:private	signature:() const
+ismanagerkey	manager.cpp	/^bool manager::ismanagerkey() const$/;"	f	class:manager	signature:() const
+ismanagerkey	manager.h	/^    bool ismanagerkey() const;\/\/éªŒè¯ç®¡ç†å‘˜å¯†ç $/;"	p	class:manager	access:public	signature:() const
+key	keywords.h	/^    string key;$/;"	m	class:keywords	access:private
+key	redblacktree.h	/^    K key;$/;"	m	class:node	access:private
+key	user.h	/^    string key;\/\/å¯†ç $/;"	m	class:user	access:private
+keyEdit	register.h	/^		QLineEdit *keyEdit;$/;"	m	class:Register	access:private
+keyLabel	register.h	/^		QLabel *keyLabel;$/;"	m	class:Register	access:private
+keywords	keywords.cpp	/^keywords::keywords()$/;"	f	class:keywords	signature:()
+keywords	keywords.cpp	/^keywords::keywords(book*& bk, string& keywd)$/;"	f	class:keywords	signature:(book*& bk, string& keywd)
+keywords	keywords.h	/^    keywords();$/;"	p	class:keywords	access:public	signature:()
+keywords	keywords.h	/^    keywords(book*& bk, string& keywd);$/;"	p	class:keywords	access:public	signature:(book*& bk, string& keywd)
+keywords	keywords.h	/^class keywords$/;"	c
+keywords::addbook	keywords.cpp	/^void keywords::addbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
+keywords::addbook	keywords.h	/^    void addbook(book*& bk);\/\/å¢åŠ å…³é”®å­—æ‰€å¯¹çš„å›¾ä¹¦$/;"	p	class:keywords	access:public	signature:(book*& bk)
+keywords::bklist	keywords.h	/^    list<book*> bklist;$/;"	m	class:keywords	access:private
+keywords::bknum	keywords.h	/^    int bknum;$/;"	m	class:keywords	access:private
+keywords::delbook	keywords.cpp	/^void keywords::delbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
+keywords::delbook	keywords.h	/^    void delbook(book*& bk);$/;"	p	class:keywords	access:public	signature:(book*& bk)
+keywords::getbknum	keywords.cpp	/^int keywords::getbknum()$/;"	f	class:keywords	signature:()
+keywords::getbknum	keywords.h	/^    int getbknum();$/;"	p	class:keywords	access:public	signature:()
+keywords::getkeywords	keywords.cpp	/^string keywords::getkeywords() const$/;"	f	class:keywords	signature:() const
+keywords::getkeywords	keywords.h	/^    string getkeywords() const;$/;"	p	class:keywords	access:public	signature:() const
+keywords::key	keywords.h	/^    string key;$/;"	m	class:keywords	access:private
+keywords::keywords	keywords.cpp	/^keywords::keywords()$/;"	f	class:keywords	signature:()
+keywords::keywords	keywords.cpp	/^keywords::keywords(book*& bk, string& keywd)$/;"	f	class:keywords	signature:(book*& bk, string& keywd)
+keywords::keywords	keywords.h	/^    keywords();$/;"	p	class:keywords	access:public	signature:()
+keywords::keywords	keywords.h	/^    keywords(book*& bk, string& keywd);$/;"	p	class:keywords	access:public	signature:(book*& bk, string& keywd)
+keywords::show	keywords.cpp	/^void keywords::show()$/;"	f	class:keywords	signature:()
+keywords::show	keywords.h	/^    void show(); \/\/æ˜¾ç¤ºå«æœ‰è¯¥å…³é”®å­—çš„å›¾ä¹¦$/;"	p	class:keywords	access:public	signature:()
+left_rotate	redblacktree.h	/^    void left_rotate(node<K,T>* x);\/\/×óĞı$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+left_rotate	redblacktree.h	/^void redblacktree<K,T>::left_rotate(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+leftchild	redblacktree.h	/^    node<K,T>* leftchild;$/;"	m	class:node	access:private
+load	manager.cpp	/^void manager::load()$/;"	f	class:manager	signature:()
+load	manager.h	/^    void load();$/;"	p	class:manager	access:public	signature:()
+loadfile	manager.cpp	/^void manager::loadfile()$/;"	f	class:manager	signature:()
+loadfile	manager.h	/^    void loadfile();$/;"	p	class:manager	access:public	signature:()
+loadfileprocess	manager.cpp	/^bool manager::loadfileprocess()$/;"	f	class:manager	signature:()
+loadfileprocess	manager.h	/^    bool loadfileprocess();\/\/åŠ è½½æ•°æ®$/;"	p	class:manager	access:public	signature:()
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+mainLayout	register.h	/^		QGridLayout *mainLayout;$/;"	m	class:Register	access:private
+manager	manager.cpp	/^manager::manager()$/;"	f	class:manager	signature:()
+manager	manager.h	/^    manager();$/;"	p	class:manager	access:public	signature:()
+manager	manager.h	/^class manager$/;"	c
+manager::Authortree	manager.h	/^    redblacktree<string,Author> Authortree;\/\/ä½œè€…çš„çº¢é»‘æ ‘$/;"	m	class:manager	access:private
+manager::addbook	manager.cpp	/^void manager::addbook()$/;"	f	class:manager	signature:()
+manager::addbook	manager.h	/^    void addbook();\/\/å¾€ä¹¦åº“é‡Œæ·»ä¹¦$/;"	p	class:manager	access:public	signature:()
+manager::addusr	manager.cpp	/^void manager::addusr()$/;"	f	class:manager	signature:()
+manager::addusr	manager.h	/^    void addusr();\/\/åŠ å…¥ç”¨æˆ·$/;"	p	class:manager	access:public	signature:()
+manager::addusr	manager.h	/^    void addusr(const string& uname, const string& unumber, const string& uemail, const string& ukey);$/;"	p	class:manager	access:public	signature:(const string& uname, const string& unumber, const string& uemail, const string& ukey)
+manager::bookfilename	manager.h	/^    string bookfilename;$/;"	m	class:manager	access:private
+manager::booknum	manager.h	/^    int booknum;\/\/ä¹¦çš„æ•°ç›®$/;"	m	class:manager	access:private
+manager::booktree	manager.h	/^    redblacktree<string,book> booktree;\/\/å›¾ä¹¦æŒ‡é’ˆçš„çº¢é»‘æ ‘$/;"	m	class:manager	access:private
+manager::borrowbook	manager.cpp	/^void manager::borrowbook()$/;"	f	class:manager	signature:()
+manager::borrowbook	manager.h	/^    void borrowbook();\/\/å€Ÿä¹¦$/;"	p	class:manager	access:public	signature:()
+manager::delbook	manager.cpp	/^void manager::delbook()$/;"	f	class:manager	signature:()
+manager::delbook	manager.h	/^    void delbook();\/\/ä»ä¹¦åº“é‡Œé¢åˆ é™¤ä¹¦$/;"	p	class:manager	access:public	signature:()
+manager::deluser	manager.cpp	/^void manager::deluser()$/;"	f	class:manager	signature:()
+manager::deluser	manager.h	/^    void deluser();\/\/ç”¨æˆ·æ³¨é”€è´¦å·$/;"	p	class:manager	access:public	signature:()
+manager::getlibraryinfo	manager.cpp	/^void manager::getlibraryinfo()$/;"	f	class:manager	signature:()
+manager::getlibraryinfo	manager.h	/^    void getlibraryinfo();\/\/å¾—åˆ°å›¾ä¹¦é¦†çš„ä¿¡æ¯$/;"	p	class:manager	access:public	signature:()
+manager::getuserinfo	manager.cpp	/^void manager::getuserinfo()$/;"	f	class:manager	signature:()
+manager::getuserinfo	manager.h	/^    void getuserinfo();\/\/å¾—åˆ°ç”¨æˆ·çš„ä¿¡æ¯$/;"	p	class:manager	access:public	signature:()
+manager::ismanagerkey	manager.cpp	/^bool manager::ismanagerkey() const$/;"	f	class:manager	signature:() const
+manager::ismanagerkey	manager.h	/^    bool ismanagerkey() const;\/\/éªŒè¯ç®¡ç†å‘˜å¯†ç $/;"	p	class:manager	access:public	signature:() const
+manager::load	manager.cpp	/^void manager::load()$/;"	f	class:manager	signature:()
+manager::load	manager.h	/^    void load();$/;"	p	class:manager	access:public	signature:()
+manager::loadfile	manager.cpp	/^void manager::loadfile()$/;"	f	class:manager	signature:()
+manager::loadfile	manager.h	/^    void loadfile();$/;"	p	class:manager	access:public	signature:()
+manager::loadfileprocess	manager.cpp	/^bool manager::loadfileprocess()$/;"	f	class:manager	signature:()
+manager::loadfileprocess	manager.h	/^    bool loadfileprocess();\/\/åŠ è½½æ•°æ®$/;"	p	class:manager	access:public	signature:()
+manager::manager	manager.cpp	/^manager::manager()$/;"	f	class:manager	signature:()
+manager::manager	manager.h	/^    manager();$/;"	p	class:manager	access:public	signature:()
+manager::managerkey	manager.h	/^    string managerkey;\/\/ç®¡ç†å‘˜å¯†ç $/;"	m	class:manager	access:private
+manager::returnbook	manager.cpp	/^void manager::returnbook()$/;"	f	class:manager	signature:()
+manager::returnbook	manager.h	/^    void returnbook();\/\/è¿˜ä¹¦$/;"	p	class:manager	access:public	signature:()
+manager::savebook	manager.cpp	/^void manager::savebook()$/;"	f	class:manager	signature:()
+manager::savebook	manager.cpp	/^void manager::savebook(node<string,book>* root, node<string,book>* nill)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill)
+manager::savebook	manager.h	/^    void savebook();$/;"	p	class:manager	access:public	signature:()
+manager::savebook	manager.h	/^    void savebook(node<string,book>* root, node<string,book>* nill);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill)
+manager::savechanges	manager.cpp	/^void manager::savechanges()$/;"	f	class:manager	signature:()
+manager::savechanges	manager.h	/^    void savechanges();\/\/ä¿å­˜åº“çš„å˜åŒ–$/;"	p	class:manager	access:public	signature:()
+manager::saveuser	manager.cpp	/^void manager::saveuser()$/;"	f	class:manager	signature:()
+manager::saveuser	manager.cpp	/^void manager::saveuser(node<string,user>* root, node<string,user>* nill)$/;"	f	class:manager	signature:(node<string,user>* root, node<string,user>* nill)
+manager::saveuser	manager.h	/^    void saveuser();$/;"	p	class:manager	access:public	signature:()
+manager::saveuser	manager.h	/^    void saveuser(node<string,user>* root, node<string,user>* nill);$/;"	p	class:manager	access:public	signature:(node<string,user>* root, node<string,user>* nill)
+manager::searchAuthor	manager.cpp	/^bool manager::searchAuthor(const string& athname, Author*& srAuthor) const$/;"	f	class:manager	signature:(const string& athname, Author*& srAuthor) const
+manager::searchAuthor	manager.cpp	/^void manager::searchAuthor()$/;"	f	class:manager	signature:()
+manager::searchAuthor	manager.h	/^    bool searchAuthor(const string& athname, Author*& srAuthor) const;\/\/æœç´¢ä½œè€…$/;"	p	class:manager	access:public	signature:(const string& athname, Author*& srAuthor) const
+manager::searchAuthor	manager.h	/^    void searchAuthor();\/\/æŸ¥æ‰¾ä½œè€…$/;"	p	class:manager	access:public	signature:()
+manager::searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname) const$/;"	f	class:manager	signature:(const string& bookname) const
+manager::searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname,book*& srbook) const$/;"	f	class:manager	signature:(const string& bookname,book*& srbook) const
+manager::searchbook	manager.cpp	/^void manager::searchbook()$/;"	f	class:manager	signature:()
+manager::searchbook	manager.h	/^    bool searchbook(const string& bookname) const;$/;"	p	class:manager	access:public	signature:(const string& bookname) const
+manager::searchbook	manager.h	/^    bool searchbook(const string& bookname,book*& srbook) const;\/\/æœç´¢å›¾ä¹¦ï¼ŒæŒ‰ç…§ä¹¦åæœç´¢$/;"	p	class:manager	access:public	signature:(const string& bookname,book*& srbook) const
+manager::searchbook	manager.h	/^    void searchbook();\/\/æŸ¥æ‰¾ä¹¦ç±$/;"	p	class:manager	access:public	signature:()
+manager::searchbykey	manager.cpp	/^void manager::searchbykey()$/;"	f	class:manager	signature:()
+manager::searchbykey	manager.h	/^    void searchbykey();\/\/æŒ‰ç…§å…³é”®å­—æŸ¥æ‰¾$/;"	p	class:manager	access:public	signature:()
+manager::searchkey	manager.cpp	/^void manager::searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
+manager::searchkey	manager.h	/^    void searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
+manager::searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname) const$/;"	f	class:manager	signature:(const string& usrname) const
+manager::searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname, user*& sruser) const$/;"	f	class:manager	signature:(const string& usrname, user*& sruser) const
+manager::searchuser	manager.h	/^    bool searchuser(const string& usrname) const;$/;"	p	class:manager	access:public	signature:(const string& usrname) const
+manager::searchuser	manager.h	/^    bool searchuser(const string& usrname,user*& srusr) const;\/\/æœå¯»ç”¨æˆ·$/;"	p	class:manager	access:public	signature:(const string& usrname,user*& srusr) const
+manager::userfilename	manager.h	/^    string userfilename;$/;"	m	class:manager	access:private
+manager::userkey	manager.cpp	/^bool manager::userkey(user* ur) const$/;"	f	class:manager	signature:(user* ur) const
+manager::userkey	manager.h	/^    bool userkey(user* ur) const;\/\/éªŒè¯ç”¨æˆ·çš„å¯†ç $/;"	p	class:manager	access:public	signature:(user* ur) const
+manager::usernum	manager.h	/^    int usernum;\/\/ç”¨æˆ·æ•°é‡$/;"	m	class:manager	access:private
+manager::usertree	manager.h	/^    redblacktree<string,user> usertree;\/\/ç”¨æˆ·çš„çº¢é»‘æ ‘$/;"	m	class:manager	access:private
+managerkey	manager.h	/^    string managerkey;\/\/ç®¡ç†å‘˜å¯†ç $/;"	m	class:manager	access:private
+metaObject	moc_mainwindow.cpp	/^const QMetaObject *MainWindow::metaObject() const$/;"	f	class:MainWindow	signature:() const
+metaObject	moc_register.cpp	/^const QMetaObject *Register::metaObject() const$/;"	f	class:Register	signature:() const
+mid_tree_walk	redblacktree.h	/^    void mid_tree_walk();\/\/ÖĞĞò±éÀú£¬²âÊÔÓÃ$/;"	p	class:redblacktree	access:public	signature:()
+mid_tree_walk	redblacktree.h	/^    void mid_tree_walk(node<K,T>* root);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* root)
+mid_tree_walk	redblacktree.h	/^void redblacktree<K,T>::mid_tree_walk()$/;"	f	class:redblacktree	signature:()
+mid_tree_walk	redblacktree.h	/^void redblacktree<K,T>::mid_tree_walk(node<K,T>* root)$/;"	f	class:redblacktree	signature:(node<K,T>* root)
+mybook	user.h	/^    book* mybook[BORROWBOOKLIMIT];\/\/å€Ÿçš„ä¹¦$/;"	m	class:user	access:private
+name	user.h	/^    string name;\/\/å§“å$/;"	m	class:user	access:private
+nameEdit	register.h	/^		QLineEdit *nameEdit;$/;"	m	class:Register	access:private
+nameLabel	register.h	/^		QLabel *nameLabel;$/;"	m	class:Register	access:private
+nill	redblacktree.h	/^    node<K,T>* nill;\/\/´úÌæNULL$/;"	m	class:redblacktree	access:private
+node	redblacktree.h	/^    node()$/;"	f	class:node	access:private	signature:()
+node	redblacktree.h	/^    node(const Color& color)$/;"	f	class:node	access:private	signature:(const Color& color)
+node	redblacktree.h	/^    node(const T& data, const K& key)$/;"	f	class:node	access:private	signature:(const T& data, const K& key)
+node	redblacktree.h	/^    node(const T& data, const K& key, const Color& color)$/;"	f	class:node	access:private	signature:(const T& data, const K& key, const Color& color)
+node	redblacktree.h	/^class node$/;"	c
+node::color	redblacktree.h	/^    Color color;$/;"	m	class:node	access:private
+node::data	redblacktree.h	/^    T data;$/;"	m	class:node	access:private
+node::key	redblacktree.h	/^    K key;$/;"	m	class:node	access:private
+node::leftchild	redblacktree.h	/^    node<K,T>* leftchild;$/;"	m	class:node	access:private
+node::node	redblacktree.h	/^    node()$/;"	f	class:node	access:private	signature:()
+node::node	redblacktree.h	/^    node(const Color& color)$/;"	f	class:node	access:private	signature:(const Color& color)
+node::node	redblacktree.h	/^    node(const T& data, const K& key)$/;"	f	class:node	access:private	signature:(const T& data, const K& key)
+node::node	redblacktree.h	/^    node(const T& data, const K& key, const Color& color)$/;"	f	class:node	access:private	signature:(const T& data, const K& key, const Color& color)
+node::operator =	redblacktree.h	/^    node<K,T>& operator = (const node<K,T>& Node)\/\/ÖØÔØ¸³Öµ²Ù×÷$/;"	f	class:node	access:private	signature:(const node<K,T>& Node)
+node::parent	redblacktree.h	/^    node<K,T>* parent;$/;"	m	class:node	access:private
+node::rightchild	redblacktree.h	/^    node<K,T>* rightchild;$/;"	m	class:node	access:private
+number	user.h	/^    string number;\/\/å­¦å·$/;"	m	class:user	access:private
+okButton	register.h	/^		QPushButton *okButton;$/;"	m	class:Register	access:private
+operator =	book.cpp	/^book& book::operator=(const book& bk)$/;"	f	class:book	signature:(const book& bk)
+operator =	book.h	/^    book& operator=(const book& bk);\/\/èµ‹å€¼æ“ä½œç¬¦$/;"	p	class:book	access:public	signature:(const book& bk)
+operator =	redblacktree.h	/^    node<K,T>& operator = (const node<K,T>& Node)\/\/ÖØÔØ¸³Öµ²Ù×÷$/;"	f	class:node	access:private	signature:(const node<K,T>& Node)
+operator =	user.cpp	/^user& user::operator=(const user &usr)$/;"	f	class:user	signature:(const user &usr)
+operator =	user.h	/^    user& operator=(const user &usr);\/\/èµ‹å€¼æ“ä½œç¬¦$/;"	p	class:user	access:public	signature:(const user &usr)
+outbkfile	manager.cpp	/^fstream outbkfile;\/\/×öÁËÈ«¾Ö±äÁ¿$/;"	v
+outurfile	manager.cpp	/^fstream outurfile;\/\/È«¾Ö±äÁ¿$/;"	v
+parent	redblacktree.h	/^    node<K,T>* parent;$/;"	m	class:node	access:private
+pre_tree_walk	redblacktree.h	/^    void pre_tree_walk();\/\/Ç°Ğò±éÀú$/;"	p	class:redblacktree	access:public	signature:()
+pre_tree_walk	redblacktree.h	/^    void pre_tree_walk(node<K,T>* root);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* root)
+pre_tree_walk	redblacktree.h	/^void redblacktree<K,T>::pre_tree_walk()$/;"	f	class:redblacktree	signature:()
+pre_tree_walk	redblacktree.h	/^void redblacktree<K,T>::pre_tree_walk(node<K,T>* root)$/;"	f	class:redblacktree	signature:(node<K,T>* root)
+qt_meta_data_MainWindow	moc_mainwindow.cpp	/^static const uint qt_meta_data_MainWindow[] = {$/;"	v	file:
+qt_meta_data_Register	moc_register.cpp	/^static const uint qt_meta_data_Register[] = {$/;"	v	file:
+qt_meta_stringdata_MainWindow	moc_mainwindow.cpp	/^static const char qt_meta_stringdata_MainWindow[] = {$/;"	v	file:
+qt_meta_stringdata_Register	moc_register.cpp	/^static const char qt_meta_stringdata_Register[] = {$/;"	v	file:
+qt_metacall	moc_mainwindow.cpp	/^int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	moc_register.cpp	/^int Register::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Register	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacast	moc_mainwindow.cpp	/^void *MainWindow::qt_metacast(const char *_clname)$/;"	f	class:MainWindow	signature:(const char *_clname)
+qt_metacast	moc_register.cpp	/^void *Register::qt_metacast(const char *_clname)$/;"	f	class:Register	signature:(const char *_clname)
+rbsearch	redblacktree.h	/^    node<K,T>* rbsearch(const K& srkey) const;\/\/²éÕÒ$/;"	p	class:redblacktree	access:private	signature:(const K& srkey) const
+rbsearch	redblacktree.h	/^node<K,T>* redblacktree<K,T>::rbsearch(const K& srkey) const$/;"	f	class:redblacktree	signature:(const K& srkey) const
+red	redblacktree.h	/^enum Color {black = 0, red};$/;"	e	enum:Color
+redblacktree	redblacktree.h	/^    redblacktree()$/;"	f	class:redblacktree	access:public	signature:()
+redblacktree	redblacktree.h	/^class redblacktree$/;"	c
+redblacktree::RB_DELETE	redblacktree.h	/^    bool RB_DELETE(const K& dkey);\/\/É¾³ıËã·¨$/;"	p	class:redblacktree	access:public	signature:(const K& dkey)
+redblacktree::RB_DELETE	redblacktree.h	/^    void RB_DELETE(node<K,T>* x);\/\/É¾³ıÄ³¸ö½Úµã$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* x)
+redblacktree::RB_DELETE	redblacktree.h	/^bool redblacktree<K,T>::RB_DELETE(const K& dkey)$/;"	f	class:redblacktree	signature:(const K& dkey)
+redblacktree::RB_DELETE	redblacktree.h	/^void redblacktree<K,T>::RB_DELETE(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::RB_DELETE_fixup	redblacktree.h	/^    void RB_DELETE_fixup(node<K,T>* x);\/\/É¾³ıµ÷Õû$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+redblacktree::RB_DELETE_fixup	redblacktree.h	/^void redblacktree<K,T>::RB_DELETE_fixup(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::RB_insert	redblacktree.h	/^    node<K,T>* RB_insert(const T& data,const K& insrtkey);\/\/²åÈëËã·¨$/;"	p	class:redblacktree	access:public	signature:(const T& data,const K& insrtkey)
+redblacktree::RB_insert	redblacktree.h	/^node<K,T>* redblacktree<K,T>::RB_insert(const T& data, const K& insrtkey)\/\/²åÈëËã·¨$/;"	f	class:redblacktree	signature:(const T& data, const K& insrtkey)
+redblacktree::RB_insert_fixup	redblacktree.h	/^    void RB_insert_fixup(node<K,T>* x);\/\/²åÈëµ÷Õû$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+redblacktree::RB_insert_fixup	redblacktree.h	/^void redblacktree<K,T>::RB_insert_fixup(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::empty	redblacktree.h	/^    bool empty() const;$/;"	p	class:redblacktree	access:public	signature:() const
+redblacktree::empty	redblacktree.h	/^bool redblacktree<K,T>::empty() const$/;"	f	class:redblacktree	signature:() const
+redblacktree::getsize	redblacktree.h	/^    int getsize() const;$/;"	p	class:redblacktree	access:public	signature:() const
+redblacktree::getsize	redblacktree.h	/^int redblacktree<K,T>::getsize() const$/;"	f	class:redblacktree	signature:() const
+redblacktree::left_rotate	redblacktree.h	/^    void left_rotate(node<K,T>* x);\/\/×óĞı$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+redblacktree::left_rotate	redblacktree.h	/^void redblacktree<K,T>::left_rotate(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::mid_tree_walk	redblacktree.h	/^    void mid_tree_walk();\/\/ÖĞĞò±éÀú£¬²âÊÔÓÃ$/;"	p	class:redblacktree	access:public	signature:()
+redblacktree::mid_tree_walk	redblacktree.h	/^    void mid_tree_walk(node<K,T>* root);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* root)
+redblacktree::mid_tree_walk	redblacktree.h	/^void redblacktree<K,T>::mid_tree_walk()$/;"	f	class:redblacktree	signature:()
+redblacktree::mid_tree_walk	redblacktree.h	/^void redblacktree<K,T>::mid_tree_walk(node<K,T>* root)$/;"	f	class:redblacktree	signature:(node<K,T>* root)
+redblacktree::nill	redblacktree.h	/^    node<K,T>* nill;\/\/´úÌæNULL$/;"	m	class:redblacktree	access:private
+redblacktree::pre_tree_walk	redblacktree.h	/^    void pre_tree_walk();\/\/Ç°Ğò±éÀú$/;"	p	class:redblacktree	access:public	signature:()
+redblacktree::pre_tree_walk	redblacktree.h	/^    void pre_tree_walk(node<K,T>* root);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* root)
+redblacktree::pre_tree_walk	redblacktree.h	/^void redblacktree<K,T>::pre_tree_walk()$/;"	f	class:redblacktree	signature:()
+redblacktree::pre_tree_walk	redblacktree.h	/^void redblacktree<K,T>::pre_tree_walk(node<K,T>* root)$/;"	f	class:redblacktree	signature:(node<K,T>* root)
+redblacktree::rbsearch	redblacktree.h	/^    node<K,T>* rbsearch(const K& srkey) const;\/\/²éÕÒ$/;"	p	class:redblacktree	access:private	signature:(const K& srkey) const
+redblacktree::rbsearch	redblacktree.h	/^node<K,T>* redblacktree<K,T>::rbsearch(const K& srkey) const$/;"	f	class:redblacktree	signature:(const K& srkey) const
+redblacktree::redblacktree	redblacktree.h	/^    redblacktree()$/;"	f	class:redblacktree	access:public	signature:()
+redblacktree::right_rotate	redblacktree.h	/^    void right_rotate(node<K,T>* x);\/\/ÓÒĞı$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+redblacktree::right_rotate	redblacktree.h	/^void redblacktree<K,T>::right_rotate(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::root	redblacktree.h	/^    node<K,T>* root;$/;"	m	class:redblacktree	access:private
+redblacktree::search	redblacktree.h	/^    bool search(const K& srkey) const;$/;"	p	class:redblacktree	access:public	signature:(const K& srkey) const
+redblacktree::search	redblacktree.h	/^    bool search(const K& srkey, T*& data) const;$/;"	p	class:redblacktree	access:public	signature:(const K& srkey, T*& data) const
+redblacktree::search	redblacktree.h	/^bool redblacktree<K,T>::search(const K& srkey) const$/;"	f	class:redblacktree	signature:(const K& srkey) const
+redblacktree::search	redblacktree.h	/^bool redblacktree<K,T>::search(const K& srkey,  T*& datapoint) const$/;"	f	class:redblacktree	signature:(const K& srkey, T*& datapoint) const
+redblacktree::size	redblacktree.h	/^    int size;$/;"	m	class:redblacktree	access:private
+redblacktree::tree_destroy	redblacktree.h	/^    void tree_destroy(node<K,T>* current);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* current)
+redblacktree::tree_destroy	redblacktree.h	/^void redblacktree<K,T>::tree_destroy(node<K,T>* current)$/;"	f	class:redblacktree	signature:(node<K,T>* current)
+redblacktree::tree_max	redblacktree.h	/^    node<K,T>* tree_max(node<K,T>* rt);\/\/Ê÷µÄ×î´ó×îĞ¡$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* rt)
+redblacktree::tree_max	redblacktree.h	/^node<K,T>*  redblacktree<K,T>::tree_max(node<K,T>* rt)$/;"	f	class:redblacktree	signature:(node<K,T>* rt)
+redblacktree::tree_min	redblacktree.h	/^    node<K,T>* tree_min(node<K,T>* rt);$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* rt)
+redblacktree::tree_min	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_min(node<K,T>* rt)$/;"	f	class:redblacktree	signature:(node<K,T>* rt)
+redblacktree::tree_successor	redblacktree.h	/^    node<K,T>* tree_successor(node<K,T>* x);\/\/Çó½ÚµãµÄºó¼Ì$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+redblacktree::tree_successor	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_successor(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::~redblacktree	redblacktree.h	/^    ~redblacktree()$/;"	f	class:redblacktree	access:public	signature:()
+returnbook	manager.cpp	/^void manager::returnbook()$/;"	f	class:manager	signature:()
+returnbook	manager.h	/^    void returnbook();\/\/è¿˜ä¹¦$/;"	p	class:manager	access:public	signature:()
+returnbook	user.cpp	/^void user::returnbook(book* rbook)$/;"	f	class:user	signature:(book* rbook)
+returnbook	user.h	/^    void returnbook(book* rbook);\/\/ç”¨æˆ·è¿˜ä¹¦$/;"	p	class:user	access:public	signature:(book* rbook)
+right_rotate	redblacktree.h	/^    void right_rotate(node<K,T>* x);\/\/ÓÒĞı$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+right_rotate	redblacktree.h	/^void redblacktree<K,T>::right_rotate(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+rightchild	redblacktree.h	/^    node<K,T>* rightchild;$/;"	m	class:node	access:private
+rmanager	register.h	/^		manager *rmanager;$/;"	m	class:Register	access:private
+root	redblacktree.h	/^    node<K,T>* root;$/;"	m	class:redblacktree	access:private
+savebook	manager.cpp	/^void manager::savebook()$/;"	f	class:manager	signature:()
+savebook	manager.cpp	/^void manager::savebook(node<string,book>* root, node<string,book>* nill)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill)
+savebook	manager.h	/^    void savebook();$/;"	p	class:manager	access:public	signature:()
+savebook	manager.h	/^    void savebook(node<string,book>* root, node<string,book>* nill);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill)
+savechanges	manager.cpp	/^void manager::savechanges()$/;"	f	class:manager	signature:()
+savechanges	manager.h	/^    void savechanges();\/\/ä¿å­˜åº“çš„å˜åŒ–$/;"	p	class:manager	access:public	signature:()
+saveuser	manager.cpp	/^void manager::saveuser()$/;"	f	class:manager	signature:()
+saveuser	manager.cpp	/^void manager::saveuser(node<string,user>* root, node<string,user>* nill)$/;"	f	class:manager	signature:(node<string,user>* root, node<string,user>* nill)
+saveuser	manager.h	/^    void saveuser();$/;"	p	class:manager	access:public	signature:()
+saveuser	manager.h	/^    void saveuser(node<string,user>* root, node<string,user>* nill);$/;"	p	class:manager	access:public	signature:(node<string,user>* root, node<string,user>* nill)
+search	redblacktree.h	/^    bool search(const K& srkey) const;$/;"	p	class:redblacktree	access:public	signature:(const K& srkey) const
+search	redblacktree.h	/^    bool search(const K& srkey, T*& data) const;$/;"	p	class:redblacktree	access:public	signature:(const K& srkey, T*& data) const
+search	redblacktree.h	/^bool redblacktree<K,T>::search(const K& srkey) const$/;"	f	class:redblacktree	signature:(const K& srkey) const
+search	redblacktree.h	/^bool redblacktree<K,T>::search(const K& srkey,  T*& datapoint) const$/;"	f	class:redblacktree	signature:(const K& srkey, T*& datapoint) const
+searchAuthor	manager.cpp	/^bool manager::searchAuthor(const string& athname, Author*& srAuthor) const$/;"	f	class:manager	signature:(const string& athname, Author*& srAuthor) const
+searchAuthor	manager.cpp	/^void manager::searchAuthor()$/;"	f	class:manager	signature:()
+searchAuthor	manager.h	/^    bool searchAuthor(const string& athname, Author*& srAuthor) const;\/\/æœç´¢ä½œè€…$/;"	p	class:manager	access:public	signature:(const string& athname, Author*& srAuthor) const
+searchAuthor	manager.h	/^    void searchAuthor();\/\/æŸ¥æ‰¾ä½œè€…$/;"	p	class:manager	access:public	signature:()
+searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname) const$/;"	f	class:manager	signature:(const string& bookname) const
+searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname,book*& srbook) const$/;"	f	class:manager	signature:(const string& bookname,book*& srbook) const
+searchbook	manager.cpp	/^void manager::searchbook()$/;"	f	class:manager	signature:()
+searchbook	manager.h	/^    bool searchbook(const string& bookname) const;$/;"	p	class:manager	access:public	signature:(const string& bookname) const
+searchbook	manager.h	/^    bool searchbook(const string& bookname,book*& srbook) const;\/\/æœç´¢å›¾ä¹¦ï¼ŒæŒ‰ç…§ä¹¦åæœç´¢$/;"	p	class:manager	access:public	signature:(const string& bookname,book*& srbook) const
+searchbook	manager.h	/^    void searchbook();\/\/æŸ¥æ‰¾ä¹¦ç±$/;"	p	class:manager	access:public	signature:()
+searchbykey	manager.cpp	/^void manager::searchbykey()$/;"	f	class:manager	signature:()
+searchbykey	manager.h	/^    void searchbykey();\/\/æŒ‰ç…§å…³é”®å­—æŸ¥æ‰¾$/;"	p	class:manager	access:public	signature:()
+searchkey	manager.cpp	/^void manager::searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
+searchkey	manager.h	/^    void searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
+searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname) const$/;"	f	class:manager	signature:(const string& usrname) const
+searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname, user*& sruser) const$/;"	f	class:manager	signature:(const string& usrname, user*& sruser) const
+searchuser	manager.h	/^    bool searchuser(const string& usrname) const;$/;"	p	class:manager	access:public	signature:(const string& usrname) const
+searchuser	manager.h	/^    bool searchuser(const string& usrname,user*& srusr) const;\/\/æœå¯»ç”¨æˆ·$/;"	p	class:manager	access:public	signature:(const string& usrname,user*& srusr) const
+setauthor	book.cpp	/^void book::setauthor(const string& author)$/;"	f	class:book	signature:(const string& author)
+setauthor	book.h	/^    void setauthor(const string& author);$/;"	p	class:book	access:public	signature:(const string& author)
+setbkname	book.cpp	/^void book::setbkname(const string& bkname)$/;"	f	class:book	signature:(const string& bkname)
+setbkname	book.h	/^    void setbkname(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
+setemail	user.cpp	/^void user::setemail(const string& email)$/;"	f	class:user	signature:(const string& email)
+setemail	user.h	/^    void setemail(const string& email);$/;"	p	class:user	access:public	signature:(const string& email)
+setisbn	book.cpp	/^void book::setisbn(const string& isbn)$/;"	f	class:book	signature:(const string& isbn)
+setisbn	book.h	/^    void setisbn(const string& isbn);$/;"	p	class:book	access:public	signature:(const string& isbn)
+setname	user.cpp	/^void user::setname(const string& name)$/;"	f	class:user	signature:(const string& name)
+setname	user.h	/^    void setname(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
+setnumber	user.cpp	/^void  user::setnumber(const string& number)$/;"	f	class:user	signature:(const string& number)
+setnumber	user.h	/^    void setnumber(const string& number);$/;"	p	class:user	access:public	signature:(const string& number)
+setstate	book.cpp	/^void book::setstate(const string& state)$/;"	f	class:book	signature:(const string& state)
+setstate	book.h	/^    void setstate(const string& state);$/;"	p	class:book	access:public	signature:(const string& state)
+show	Author.cpp	/^void  Author::show()$/;"	f	class:Author	signature:()
+show	Author.h	/^    void  show();\/\/ÏÔÊ¾Í¼Êé$/;"	p	class:Author	access:public	signature:()
+show	keywords.cpp	/^void keywords::show()$/;"	f	class:keywords	signature:()
+show	keywords.h	/^    void show(); \/\/æ˜¾ç¤ºå«æœ‰è¯¥å…³é”®å­—çš„å›¾ä¹¦$/;"	p	class:keywords	access:public	signature:()
+showinfo	user.cpp	/^void user::showinfo()$/;"	f	class:user	signature:()
+showinfo	user.h	/^    void showinfo();$/;"	p	class:user	access:public	signature:()
+size	redblacktree.h	/^    int size;$/;"	m	class:redblacktree	access:private
+sleep	mainwindow.cpp	/^void sleep(unsigned long nSeconde)  $/;"	f	signature:(unsigned long nSeconde)
+state	book.h	/^    string state;$/;"	m	class:book	access:private
+staticMetaObject	moc_mainwindow.cpp	/^const QMetaObject MainWindow::staticMetaObject = {$/;"	m	class:MainWindow	file:
+staticMetaObject	moc_register.cpp	/^const QMetaObject Register::staticMetaObject = {$/;"	m	class:Register	file:
+studentNumberEdit	register.h	/^		QLineEdit *studentNumberEdit;$/;"	m	class:Register	access:private
+studentNumberLabel	register.h	/^		QLabel *studentNumberLabel;$/;"	m	class:Register	access:private
+tree_destroy	redblacktree.h	/^    void tree_destroy(node<K,T>* current);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* current)
+tree_destroy	redblacktree.h	/^void redblacktree<K,T>::tree_destroy(node<K,T>* current)$/;"	f	class:redblacktree	signature:(node<K,T>* current)
+tree_max	redblacktree.h	/^    node<K,T>* tree_max(node<K,T>* rt);\/\/Ê÷µÄ×î´ó×îĞ¡$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* rt)
+tree_max	redblacktree.h	/^node<K,T>*  redblacktree<K,T>::tree_max(node<K,T>* rt)$/;"	f	class:redblacktree	signature:(node<K,T>* rt)
+tree_min	redblacktree.h	/^    node<K,T>* tree_min(node<K,T>* rt);$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* rt)
+tree_min	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_min(node<K,T>* rt)$/;"	f	class:redblacktree	signature:(node<K,T>* rt)
+tree_successor	redblacktree.h	/^    node<K,T>* tree_successor(node<K,T>* x);\/\/Çó½ÚµãµÄºó¼Ì$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
+tree_successor	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_successor(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+user	user.cpp	/^user::user()$/;"	f	class:user	signature:()
+user	user.cpp	/^user::user(const string& name)$/;"	f	class:user	signature:(const string& name)
+user	user.cpp	/^user::user(const string& name, const string& number, const string& email, const string& key)$/;"	f	class:user	signature:(const string& name, const string& number, const string& email, const string& key)
+user	user.cpp	/^user::user(const user &usr)$/;"	f	class:user	signature:(const user &usr)
+user	user.h	/^    user();$/;"	p	class:user	access:public	signature:()
+user	user.h	/^    user(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
+user	user.h	/^    user(const string& name, const string& number, const string& email, const string& key);$/;"	p	class:user	access:public	signature:(const string& name, const string& number, const string& email, const string& key)
+user	user.h	/^    user(const user &usr);\/\/å¤åˆ¶æ„é€ å‡½æ•°$/;"	p	class:user	access:public	signature:(const user &usr)
+user	user.h	/^class user$/;"	c
+user::addbook	user.cpp	/^bool user::addbook(book* newbook)$/;"	f	class:user	signature:(book* newbook)
+user::addbook	user.h	/^    bool addbook(book* newbook);\/\/ç”¨æˆ·å€Ÿä¹¦$/;"	p	class:user	access:public	signature:(book* newbook)
+user::booknum	user.h	/^    int booknum;\/\/å€Ÿä¹¦çš„æ•°é‡$/;"	m	class:user	access:private
+user::email	user.h	/^    string email;\/\/é‚®ç®±$/;"	m	class:user	access:private
+user::getbooknumb	user.cpp	/^int user::getbooknumb() const$/;"	f	class:user	signature:() const
+user::getbooknumb	user.h	/^    int getbooknumb() const;$/;"	p	class:user	access:public	signature:() const
+user::getemail	user.cpp	/^string user::getemail() const$/;"	f	class:user	signature:() const
+user::getemail	user.h	/^    string getemail() const;$/;"	p	class:user	access:public	signature:() const
+user::getname	user.cpp	/^string user::getname() const$/;"	f	class:user	signature:() const
+user::getname	user.h	/^    string getname() const;$/;"	p	class:user	access:public	signature:() const
+user::getnumber	user.cpp	/^string user::getnumber() const$/;"	f	class:user	signature:() const
+user::getnumber	user.h	/^    string getnumber() const;$/;"	p	class:user	access:public	signature:() const
+user::isbookfull	user.cpp	/^bool user::isbookfull() const$/;"	f	class:user	signature:() const
+user::isbookfull	user.h	/^    bool isbookfull() const;\/\/åˆ¤æ–­æ˜¯å¦å·²ç»å€Ÿæ»¡äº†ä¹¦$/;"	p	class:user	access:private	signature:() const
+user::key	user.h	/^    string key;\/\/å¯†ç $/;"	m	class:user	access:private
+user::mybook	user.h	/^    book* mybook[BORROWBOOKLIMIT];\/\/å€Ÿçš„ä¹¦$/;"	m	class:user	access:private
+user::name	user.h	/^    string name;\/\/å§“å$/;"	m	class:user	access:private
+user::number	user.h	/^    string number;\/\/å­¦å·$/;"	m	class:user	access:private
+user::operator =	user.cpp	/^user& user::operator=(const user &usr)$/;"	f	class:user	signature:(const user &usr)
+user::operator =	user.h	/^    user& operator=(const user &usr);\/\/èµ‹å€¼æ“ä½œç¬¦$/;"	p	class:user	access:public	signature:(const user &usr)
+user::returnbook	user.cpp	/^void user::returnbook(book* rbook)$/;"	f	class:user	signature:(book* rbook)
+user::returnbook	user.h	/^    void returnbook(book* rbook);\/\/ç”¨æˆ·è¿˜ä¹¦$/;"	p	class:user	access:public	signature:(book* rbook)
+user::setemail	user.cpp	/^void user::setemail(const string& email)$/;"	f	class:user	signature:(const string& email)
+user::setemail	user.h	/^    void setemail(const string& email);$/;"	p	class:user	access:public	signature:(const string& email)
+user::setname	user.cpp	/^void user::setname(const string& name)$/;"	f	class:user	signature:(const string& name)
+user::setname	user.h	/^    void setname(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
+user::setnumber	user.cpp	/^void  user::setnumber(const string& number)$/;"	f	class:user	signature:(const string& number)
+user::setnumber	user.h	/^    void setnumber(const string& number);$/;"	p	class:user	access:public	signature:(const string& number)
+user::showinfo	user.cpp	/^void user::showinfo()$/;"	f	class:user	signature:()
+user::showinfo	user.h	/^    void showinfo();$/;"	p	class:user	access:public	signature:()
+user::user	user.cpp	/^user::user()$/;"	f	class:user	signature:()
+user::user	user.cpp	/^user::user(const string& name)$/;"	f	class:user	signature:(const string& name)
+user::user	user.cpp	/^user::user(const string& name, const string& number, const string& email, const string& key)$/;"	f	class:user	signature:(const string& name, const string& number, const string& email, const string& key)
+user::user	user.cpp	/^user::user(const user &usr)$/;"	f	class:user	signature:(const user &usr)
+user::user	user.h	/^    user();$/;"	p	class:user	access:public	signature:()
+user::user	user.h	/^    user(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
+user::user	user.h	/^    user(const string& name, const string& number, const string& email, const string& key);$/;"	p	class:user	access:public	signature:(const string& name, const string& number, const string& email, const string& key)
+user::user	user.h	/^    user(const user &usr);\/\/å¤åˆ¶æ„é€ å‡½æ•°$/;"	p	class:user	access:public	signature:(const user &usr)
+userfilename	manager.h	/^    string userfilename;$/;"	m	class:manager	access:private
+userkey	manager.cpp	/^bool manager::userkey(user* ur) const$/;"	f	class:manager	signature:(user* ur) const
+userkey	manager.h	/^    bool userkey(user* ur) const;\/\/éªŒè¯ç”¨æˆ·çš„å¯†ç $/;"	p	class:manager	access:public	signature:(user* ur) const
+usernum	manager.h	/^    int usernum;\/\/ç”¨æˆ·æ•°é‡$/;"	m	class:manager	access:private
+usertree	manager.h	/^    redblacktree<string,user> usertree;\/\/ç”¨æˆ·çš„çº¢é»‘æ ‘$/;"	m	class:manager	access:private
+~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow	signature:()
+~MainWindow	mainwindow.h	/^    ~MainWindow();$/;"	p	class:MainWindow	access:public	signature:()
+~redblacktree	redblacktree.h	/^    ~redblacktree()$/;"	f	class:redblacktree	access:public	signature:()
