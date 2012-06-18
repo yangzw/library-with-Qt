@@ -6,30 +6,28 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 AR	Makefile	/^AR            = ar cqs$/;"	m
 AUTHOR_H_INCLUDED	Author.h	4;"	d
-Author	Author.cpp	/^Author::Author()\/\/string��list���Դ����캯��$/;"	f	class:Author	signature:()
+Author	Author.cpp	/^Author::Author()\/\/QString��list���Դ����캯��$/;"	f	class:Author	signature:()
 Author	Author.cpp	/^Author::Author(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
 Author	Author.h	/^    Author();$/;"	p	class:Author	access:public	signature:()
 Author	Author.h	/^    Author(book*& bk);$/;"	p	class:Author	access:public	signature:(book*& bk)
 Author	Author.h	/^class Author$/;"	c
-Author::Author	Author.cpp	/^Author::Author()\/\/string��list���Դ����캯��$/;"	f	class:Author	signature:()
+Author::Author	Author.cpp	/^Author::Author()\/\/QString��list���Դ����캯��$/;"	f	class:Author	signature:()
 Author::Author	Author.cpp	/^Author::Author(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
 Author::Author	Author.h	/^    Author();$/;"	p	class:Author	access:public	signature:()
 Author::Author	Author.h	/^    Author(book*& bk);$/;"	p	class:Author	access:public	signature:(book*& bk)
-Author::Authorname	Author.h	/^    string Authorname;$/;"	m	class:Author	access:private
+Author::Authorname	Author.h	/^    QString Authorname;$/;"	m	class:Author	access:private
 Author::addbook	Author.cpp	/^void Author::addbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
 Author::addbook	Author.h	/^    void addbook(book*& bk);\/\/����ͼ���Ĵ���$/;"	p	class:Author	access:public	signature:(book*& bk)
 Author::bklist	Author.h	/^    list<book*> bklist;$/;"	m	class:Author	access:private
 Author::bknum	Author.h	/^    int bknum;$/;"	m	class:Author	access:private
 Author::delbook	Author.cpp	/^void Author::delbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
 Author::delbook	Author.h	/^    void delbook(book*& bk);\/\/ɾ��ͼ��$/;"	p	class:Author	access:public	signature:(book*& bk)
-Author::getauthor	Author.cpp	/^string Author::getauthor() const$/;"	f	class:Author	signature:() const
-Author::getauthor	Author.h	/^    string getauthor() const;$/;"	p	class:Author	access:public	signature:() const
+Author::getauthor	Author.cpp	/^QString Author::getauthor() const$/;"	f	class:Author	signature:() const
+Author::getauthor	Author.h	/^    QString getauthor() const;$/;"	p	class:Author	access:public	signature:() const
 Author::getbknum	Author.cpp	/^int Author::getbknum()$/;"	f	class:Author	signature:()
 Author::getbknum	Author.h	/^    int getbknum();$/;"	p	class:Author	access:public	signature:()
-Author::show	Author.cpp	/^void  Author::show()$/;"	f	class:Author	signature:()
-Author::show	Author.h	/^    void  show();\/\/��ʾͼ��$/;"	p	class:Author	access:public	signature:()
-Authorname	Author.h	/^    string Authorname;$/;"	m	class:Author	access:private
-Authortree	manager.h	/^    redblacktree<string,Author> Authortree;\/\/作者的红黑树$/;"	m	class:manager	access:private
+Authorname	Author.h	/^    QString Authorname;$/;"	m	class:Author	access:private
+Authortree	manager.h	/^    redblacktree<QString,Author> Authortree;\/\/作者的红黑树$/;"	m	class:manager	access:private
 BOOK_H_INCLUDED	book.h	5;"	d
 BORROWBOOKLIMIT	user.h	6;"	d
 CC	Makefile	/^CC            = gcc$/;"	m
@@ -53,11 +51,11 @@ INCPATH	Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++ -I. -
 INSTALL_DIR	Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
 INSTALL_FILE	Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
 INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
-KEYWORDS_H_INCLUDED	keywords.h	2;"	d
 LFLAGS	Makefile	/^LFLAGS        = -Wl,-O1$/;"	m
 LIBS	Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/i386-linux-gnu -lQtGui -lQtCore -lpthread $/;"	m
 LINK	Makefile	/^LINK          = g++$/;"	m
 MAINWINDOW_H	mainwindow.h	2;"	d
+MANAGERWINDOW_H	managerwindow.h	2;"	d
 MANAGER_H_INCLUDED	manager.h	5;"	d
 MKDIR	Makefile	/^MKDIR         = mkdir -p$/;"	m
 MOVE	Makefile	/^MOVE          = mv -f$/;"	m
@@ -66,13 +64,142 @@ MainWindow	mainwindow.h	/^    MainWindow(QWidget *parent = 0);$/;"	p	class:MainW
 MainWindow	mainwindow.h	/^class MainWindow : public QMainWindow$/;"	c	inherits:QMainWindow
 MainWindow::MainWindow	mainwindow.cpp	/^MainWindow::MainWindow(QWidget *parent)$/;"	f	class:MainWindow	signature:(QWidget *parent)
 MainWindow::MainWindow	mainwindow.h	/^    MainWindow(QWidget *parent = 0);$/;"	p	class:MainWindow	access:public	signature:(QWidget *parent = 0)
+MainWindow::MainWindowButton	mainwindow.h	/^    QPushButton *MainWindowButton;$/;"	m	class:MainWindow	access:private
+MainWindow::about	mainwindow.cpp	/^void MainWindow::about()$/;"	f	class:MainWindow	signature:()
+MainWindow::about	mainwindow.h	/^	void about();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::aboutLibraryAction	mainwindow.h	/^    QAction *aboutLibraryAction;$/;"	m	class:MainWindow	access:private
+MainWindow::aboutQtAction	mainwindow.h	/^    QAction *aboutQtAction;$/;"	m	class:MainWindow	access:private
+MainWindow::bkfilebutton	mainwindow.h	/^    QPushButton *bkfilebutton;$/;"	m	class:MainWindow	access:private
+MainWindow::bkfileedit	mainwindow.h	/^    QLineEdit *bkfileedit;$/;"	m	class:MainWindow	access:private
+MainWindow::bkfilelabel	mainwindow.h	/^    QLabel *bkfilelabel;$/;"	m	class:MainWindow	access:private
+MainWindow::bkfilename	mainwindow.h	/^    QString bkfilename;$/;"	m	class:MainWindow	access:private
+MainWindow::buttomlayout	mainwindow.h	/^    QHBoxLayout *buttomlayout;$/;"	m	class:MainWindow	access:private
+MainWindow::createAction	mainwindow.cpp	/^void MainWindow::createAction()$/;"	f	class:MainWindow	signature:()
+MainWindow::createAction	mainwindow.h	/^    void createAction();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::createCenter	mainwindow.cpp	/^void MainWindow::createCenter()$/;"	f	class:MainWindow	signature:()
+MainWindow::createCenter	mainwindow.h	/^    void createCenter();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::createMenu	mainwindow.cpp	/^void MainWindow::createMenu()$/;"	f	class:MainWindow	signature:()
+MainWindow::createMenu	mainwindow.h	/^    void createMenu();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::createStatusBar	mainwindow.cpp	/^void MainWindow::createStatusBar()$/;"	f	class:MainWindow	signature:()
+MainWindow::createStatusBar	mainwindow.h	/^    void createStatusBar();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::exitAction	mainwindow.h	/^    QAction *exitAction;$/;"	m	class:MainWindow	access:private
+MainWindow::exitButton	mainwindow.h	/^    QPushButton *exitButton;$/;"	m	class:MainWindow	access:private
+MainWindow::fileMenu	mainwindow.h	/^    QMenu *fileMenu;$/;"	m	class:MainWindow	access:private
 MainWindow::getStaticMetaObject	moc_mainwindow.cpp	/^const QMetaObject &MainWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindow	signature:()
+MainWindow::helpMenu	mainwindow.h	/^    QMenu *helpMenu;$/;"	m	class:MainWindow	access:private
+MainWindow::ismanager	mainwindow.h	/^    bool ismanager;$/;"	m	class:MainWindow	access:private
+MainWindow::isuser	mainwindow.h	/^    bool isuser;$/;"	m	class:MainWindow	access:private
+MainWindow::mainmanager	mainwindow.h	/^    manager* mainmanager;$/;"	m	class:MainWindow	access:private
+MainWindow::managerButton	mainwindow.h	/^    QPushButton *managerButton;$/;"	m	class:MainWindow	access:private
+MainWindow::managerlog	mainwindow.cpp	/^void MainWindow::managerlog()$/;"	f	class:MainWindow	signature:()
+MainWindow::managerlog	mainwindow.h	/^	void managerlog();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::manawidget	mainwindow.h	/^    ManagerWindow* manawidget;$/;"	m	class:MainWindow	access:private
 MainWindow::metaObject	moc_mainwindow.cpp	/^const QMetaObject *MainWindow::metaObject() const$/;"	f	class:MainWindow	signature:() const
+MainWindow::okopen	mainwindow.cpp	/^void MainWindow::okopen()$/;"	f	class:MainWindow	signature:()
+MainWindow::okopen	mainwindow.h	/^	void okopen();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::oktoopen	mainwindow.h	/^    QPushButton *oktoopen;$/;"	m	class:MainWindow	access:private
+MainWindow::open	mainwindow.cpp	/^void MainWindow::open()$/;"	f	class:MainWindow	signature:()
+MainWindow::open	mainwindow.h	/^	void open();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::openbkfile	mainwindow.cpp	/^void MainWindow::openbkfile()$/;"	f	class:MainWindow	signature:()
+MainWindow::openbkfile	mainwindow.h	/^	void openbkfile();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::opendialog	mainwindow.h	/^    QDialog *opendialog;$/;"	m	class:MainWindow	access:private
+MainWindow::openfileAction	mainwindow.h	/^    QAction *openfileAction;$/;"	m	class:MainWindow	access:private
+MainWindow::openusrfile	mainwindow.cpp	/^void MainWindow::openusrfile()$/;"	f	class:MainWindow	signature:()
+MainWindow::openusrfile	mainwindow.h	/^	void openusrfile();$/;"	p	class:MainWindow	access:private	signature:()
 MainWindow::qt_metacall	moc_mainwindow.cpp	/^int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
 MainWindow::qt_metacast	moc_mainwindow.cpp	/^void *MainWindow::qt_metacast(const char *_clname)$/;"	f	class:MainWindow	signature:(const char *_clname)
+MainWindow::regis	mainwindow.cpp	/^void MainWindow::regis()$/;"	f	class:MainWindow	signature:()
+MainWindow::regis	mainwindow.h	/^	void regis();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::registerButton	mainwindow.h	/^    QPushButton *registerButton;$/;"	m	class:MainWindow	access:private
+MainWindow::rig	mainwindow.h	/^    Register* rig;$/;"	m	class:MainWindow	access:private
+MainWindow::rmain	mainwindow.cpp	/^void MainWindow::rmain()$/;"	f	class:MainWindow	signature:()
+MainWindow::rmain	mainwindow.h	/^	void rmain();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::search	mainwindow.cpp	/^void MainWindow::search()$/;"	f	class:MainWindow	signature:()
+MainWindow::search	mainwindow.h	/^	void search();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::searchButton	mainwindow.h	/^    QPushButton *searchButton;$/;"	m	class:MainWindow	access:private
+MainWindow::searchwin	mainwindow.h	/^    SearchWindow* searchwin;$/;"	m	class:MainWindow	access:private
 MainWindow::staticMetaObject	moc_mainwindow.cpp	/^const QMetaObject MainWindow::staticMetaObject = {$/;"	m	class:MainWindow	file:
+MainWindow::swidget	mainwindow.h	/^    QStackedWidget *swidget;$/;"	m	class:MainWindow	access:private
+MainWindow::toplayout	mainwindow.h	/^    QHBoxLayout *toplayout;$/;"	m	class:MainWindow	access:private
+MainWindow::ulogin	mainwindow.cpp	/^void MainWindow::ulogin()$/;"	f	class:MainWindow	signature:()
+MainWindow::ulogin	mainwindow.h	/^	void ulogin();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::userLoginButton	mainwindow.h	/^    QPushButton *userLoginButton;$/;"	m	class:MainWindow	access:private
+MainWindow::usrfilebutton	mainwindow.h	/^    QPushButton *usrfilebutton;$/;"	m	class:MainWindow	access:private
+MainWindow::usrfileedit	mainwindow.h	/^    QLineEdit *usrfileedit;$/;"	m	class:MainWindow	access:private
+MainWindow::usrfilelabel	mainwindow.h	/^    QLabel *usrfilelabel;$/;"	m	class:MainWindow	access:private
+MainWindow::usrfilename	mainwindow.h	/^    QString usrfilename;$/;"	m	class:MainWindow	access:private
+MainWindow::usrwidget	mainwindow.h	/^    userWindow *usrwidget;$/;"	m	class:MainWindow	access:private
+MainWindow::vlayout	mainwindow.h	/^    QVBoxLayout *vlayout;$/;"	m	class:MainWindow	access:private
+MainWindow::welcomelayout	mainwindow.h	/^    QVBoxLayout *welcomelayout;$/;"	m	class:MainWindow	access:private
+MainWindow::whenexit	mainwindow.cpp	/^void MainWindow::whenexit()$/;"	f	class:MainWindow	signature:()
+MainWindow::whenexit	mainwindow.h	/^	void whenexit();$/;"	p	class:MainWindow	access:private	signature:()
 MainWindow::~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow	signature:()
 MainWindow::~MainWindow	mainwindow.h	/^    ~MainWindow();$/;"	p	class:MainWindow	access:public	signature:()
+MainWindowButton	mainwindow.h	/^    QPushButton *MainWindowButton;$/;"	m	class:MainWindow	access:private
+ManagerWindow	managerwindow.cpp	/^ManagerWindow::ManagerWindow(QWidget *parent, manager *&mmanager)$/;"	f	class:ManagerWindow	signature:(QWidget *parent, manager *&mmanager)
+ManagerWindow	managerwindow.h	/^		ManagerWindow(QWidget *parent, manager *&mainmanager);$/;"	p	class:ManagerWindow	access:public	signature:(QWidget *parent, manager *&mainmanager)
+ManagerWindow	managerwindow.h	/^class ManagerWindow : public QDialog$/;"	c	inherits:QDialog
+ManagerWindow::ManagerWindow	managerwindow.cpp	/^ManagerWindow::ManagerWindow(QWidget *parent, manager *&mmanager)$/;"	f	class:ManagerWindow	signature:(QWidget *parent, manager *&mmanager)
+ManagerWindow::ManagerWindow	managerwindow.h	/^		ManagerWindow(QWidget *parent, manager *&mainmanager);$/;"	p	class:ManagerWindow	access:public	signature:(QWidget *parent, manager *&mainmanager)
+ManagerWindow::addbook	managerwindow.cpp	/^void ManagerWindow::addbook()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::addbook	managerwindow.h	/^		void addbook();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::addbutton	managerwindow.h	/^		QPushButton *addbutton;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::addgroup	managerwindow.h	/^		QGroupBox *addgroup;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::addlayout	managerwindow.h	/^		QGridLayout *addlayout;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::allbookmodel	managerwindow.h	/^		QStandardItemModel *allbookmodel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::allbooktableview	managerwindow.h	/^		QTableView *allbooktableview;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::allbookwidget	managerwindow.h	/^		QWidget *allbookwidget;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::allusermodel	managerwindow.h	/^		QStandardItemModel *allusermodel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::allusertableview	managerwindow.h	/^		QTableView *allusertableview;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::alluserwidget	managerwindow.h	/^		QWidget *alluserwidget;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::authoredit	managerwindow.h	/^		QLineEdit *authoredit;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::authorlabel	managerwindow.h	/^		QLabel *authorlabel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::bknameedit	managerwindow.h	/^		QLineEdit *bknameedit;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::bknamelabel	managerwindow.h	/^		QLabel *bknamelabel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::bookdetailbutton	managerwindow.h	/^		QPushButton *bookdetailbutton;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::bookinforlabel	managerwindow.h	/^		QLabel *bookinforlabel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::canceladdbutton	managerwindow.h	/^		QPushButton *canceladdbutton;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::cleanaddwindow	managerwindow.cpp	/^void ManagerWindow::cleanaddwindow()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::cleanaddwindow	managerwindow.h	/^		void cleanaddwindow();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::createaddwindow	managerwindow.cpp	/^void ManagerWindow::createaddwindow()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::createaddwindow	managerwindow.h	/^		void createaddwindow();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::createinforwindow	managerwindow.cpp	/^void ManagerWindow::createinforwindow()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::createinforwindow	managerwindow.h	/^		void createinforwindow();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::fresh	managerwindow.cpp	/^void ManagerWindow::fresh()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::fresh	managerwindow.h	/^		void fresh();$/;"	p	class:ManagerWindow	access:public	signature:()
+ManagerWindow::getStaticMetaObject	moc_managerwindow.cpp	/^const QMetaObject &ManagerWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::imglabel	managerwindow.h	/^		QLabel *imglabel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::inforgroup	managerwindow.h	/^		QGroupBox *inforgroup;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::inforlayout	managerwindow.h	/^		QGridLayout *inforlayout;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::isbnedit	managerwindow.h	/^		QLineEdit *isbnedit;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::isbnlabel	managerwindow.h	/^		QLabel *isbnlabel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::leftlayout	managerwindow.h	/^		QVBoxLayout *leftlayout;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::lefttoplayout	managerwindow.h	/^		QHBoxLayout *lefttoplayout;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::list	managerwindow.h	/^		QListWidget *list;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::mainlayout	managerwindow.h	/^		QHBoxLayout *mainlayout;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::metaObject	moc_managerwindow.cpp	/^const QMetaObject *ManagerWindow::metaObject() const$/;"	f	class:ManagerWindow	signature:() const
+ManagerWindow::namelabel	managerwindow.h	/^		QLabel *namelabel;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::on_lineEdit_textChanged	managerwindow.cpp	/^void ManagerWindow::on_lineEdit_textChanged()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::on_lineEdit_textChanged	managerwindow.h	/^		void on_lineEdit_textChanged();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::qt_metacall	moc_managerwindow.cpp	/^int ManagerWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ManagerWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+ManagerWindow::qt_metacast	moc_managerwindow.cpp	/^void *ManagerWindow::qt_metacast(const char *_clname)$/;"	f	class:ManagerWindow	signature:(const char *_clname)
+ManagerWindow::remain	managerwindow.cpp	/^void ManagerWindow::remain()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::remain	managerwindow.h	/^		void remain();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::rmanager	managerwindow.h	/^		manager *rmanager;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::searchwin	managerwindow.h	/^		SearchWindow *searchwin;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::setCurrent	managerwindow.cpp	/^void ManagerWindow::setCurrent(int index)$/;"	f	class:ManagerWindow	signature:(int index)
+ManagerWindow::setCurrent	managerwindow.h	/^		void setCurrent(int index);$/;"	p	class:ManagerWindow	access:private	signature:(int index)
+ManagerWindow::showallbook	managerwindow.cpp	/^void ManagerWindow::showallbook()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::showallbook	managerwindow.h	/^		void showallbook();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::showalluser	managerwindow.cpp	/^void ManagerWindow::showalluser()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::showalluser	managerwindow.h	/^		void showalluser();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::stack	managerwindow.h	/^		QStackedWidget *stack;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::staticMetaObject	moc_managerwindow.cpp	/^const QMetaObject ManagerWindow::staticMetaObject = {$/;"	m	class:ManagerWindow	file:
+ManagerWindow::tmp	managerwindow.h	/^		QLabel *tmp;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::updateinfor	managerwindow.cpp	/^void ManagerWindow::updateinfor()$/;"	f	class:ManagerWindow	signature:()
+ManagerWindow::updateinfor	managerwindow.h	/^		void updateinfor();$/;"	p	class:ManagerWindow	access:private	signature:()
+ManagerWindow::userdetailbutton	managerwindow.h	/^		QPushButton *userdetailbutton;$/;"	m	class:ManagerWindow	access:private
+ManagerWindow::userinforlabel	managerwindow.h	/^		QLabel *userinforlabel;$/;"	m	class:ManagerWindow	access:private
 OBJECTS	Makefile	/^OBJECTS       = Author.o \\$/;"	m
 OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
 QMAKE	Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
@@ -90,17 +217,21 @@ RB_insert_fixup	redblacktree.h	/^    void RB_insert_fixup(node<K,T>* x);\/\/����
 RB_insert_fixup	redblacktree.h	/^void redblacktree<K,T>::RB_insert_fixup(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
 REDBLACKTREE_H_INCLUDED	redblacktree.h	2;"	d
 REGISTER_H	register.h	2;"	d
-Register	register.cpp	/^Register::Register(QWidget *parent,manager *mmanager)$/;"	f	class:Register	signature:(QWidget *parent,manager *mmanager)
-Register	register.h	/^		Register(QWidget *parent,manager *mmanager);$/;"	p	class:Register	access:public	signature:(QWidget *parent,manager *mmanager)
+Register	register.cpp	/^Register::Register(QWidget *parent,manager *&mmanager)$/;"	f	class:Register	signature:(QWidget *parent,manager *&mmanager)
+Register	register.h	/^		Register(QWidget *parent,manager *&mmanager);$/;"	p	class:Register	access:public	signature:(QWidget *parent,manager *&mmanager)
 Register	register.h	/^class Register : public QDialog$/;"	c	inherits:QDialog
 Register::Commit	register.cpp	/^void Register::Commit()$/;"	f	class:Register	signature:()
 Register::Commit	register.h	/^		void Commit();$/;"	p	class:Register	access:private	signature:()
-Register::Register	register.cpp	/^Register::Register(QWidget *parent,manager *mmanager)$/;"	f	class:Register	signature:(QWidget *parent,manager *mmanager)
-Register::Register	register.h	/^		Register(QWidget *parent,manager *mmanager);$/;"	p	class:Register	access:public	signature:(QWidget *parent,manager *mmanager)
+Register::Register	register.cpp	/^Register::Register(QWidget *parent,manager *&mmanager)$/;"	f	class:Register	signature:(QWidget *parent,manager *&mmanager)
+Register::Register	register.h	/^		Register(QWidget *parent,manager *&mmanager);$/;"	p	class:Register	access:public	signature:(QWidget *parent,manager *&mmanager)
 Register::cancelButton	register.h	/^		QPushButton *cancelButton;$/;"	m	class:Register	access:private
 Register::emailEdit	register.h	/^		QLineEdit *emailEdit;$/;"	m	class:Register	access:private
 Register::emailLabel	register.h	/^		QLabel *emailLabel;$/;"	m	class:Register	access:private
+Register::fresh	register.cpp	/^void Register::fresh()$/;"	f	class:Register	signature:()
+Register::fresh	register.h	/^		void fresh();$/;"	p	class:Register	access:public	signature:()
 Register::getStaticMetaObject	moc_register.cpp	/^const QMetaObject &Register::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Register	signature:()
+Register::isexit	moc_register.cpp	/^void Register::isexit()$/;"	f	class:Register	signature:()
+Register::isexit	register.h	/^		void isexit();$/;"	p	class:Register	access:private	signature:()
 Register::keyEdit	register.h	/^		QLineEdit *keyEdit;$/;"	m	class:Register	access:private
 Register::keyLabel	register.h	/^		QLabel *keyLabel;$/;"	m	class:Register	access:private
 Register::mainLayout	register.h	/^		QGridLayout *mainLayout;$/;"	m	class:Register	access:private
@@ -114,255 +245,448 @@ Register::rmanager	register.h	/^		manager *rmanager;$/;"	m	class:Register	access
 Register::staticMetaObject	moc_register.cpp	/^const QMetaObject Register::staticMetaObject = {$/;"	m	class:Register	file:
 Register::studentNumberEdit	register.h	/^		QLineEdit *studentNumberEdit;$/;"	m	class:Register	access:private
 Register::studentNumberLabel	register.h	/^		QLabel *studentNumberLabel;$/;"	m	class:Register	access:private
+Register::whenexit	register.cpp	/^void Register::whenexit()$/;"	f	class:Register	signature:()
+Register::whenexit	register.h	/^		void whenexit();$/;"	p	class:Register	access:private	signature:()
+SEARCHWINDOW_H	searchwindow.h	2;"	d
 SED	Makefile	/^SED           = sed$/;"	m
 SOURCES	Makefile	/^SOURCES       = Author.cpp \\$/;"	m
 STRIP	Makefile	/^STRIP         = strip$/;"	m
 SYMLINK	Makefile	/^SYMLINK       = ln -f -s$/;"	m
+SearchWindow	searchwindow.cpp	/^SearchWindow::SearchWindow(QWidget *parent, manager*& mmanager, user*& usr, bool isuser, bool ismanager) : QSplitter(parent)$/;"	f	class:SearchWindow	signature:(QWidget *parent, manager*& mmanager, user*& usr, bool isuser, bool ismanager)
+SearchWindow	searchwindow.h	/^		SearchWindow(QWidget *parent, manager*& mmanager, user *& usr,bool isuser, bool ismanager);$/;"	p	class:SearchWindow	access:public	signature:(QWidget *parent, manager*& mmanager, user *& usr,bool isuser, bool ismanager)
+SearchWindow	searchwindow.h	/^class SearchWindow : public QSplitter$/;"	c	inherits:QSplitter
+SearchWindow::SearchWindow	searchwindow.cpp	/^SearchWindow::SearchWindow(QWidget *parent, manager*& mmanager, user*& usr, bool isuser, bool ismanager) : QSplitter(parent)$/;"	f	class:SearchWindow	signature:(QWidget *parent, manager*& mmanager, user*& usr, bool isuser, bool ismanager)
+SearchWindow::SearchWindow	searchwindow.h	/^		SearchWindow(QWidget *parent, manager*& mmanager, user *& usr,bool isuser, bool ismanager);$/;"	p	class:SearchWindow	access:public	signature:(QWidget *parent, manager*& mmanager, user *& usr,bool isuser, bool ismanager)
+SearchWindow::authoredit	searchwindow.h	/^		QLineEdit *authoredit;$/;"	m	class:SearchWindow	access:private
+SearchWindow::authorlabel	searchwindow.h	/^		QLabel *authorlabel;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bknameedit	searchwindow.h	/^		QLineEdit *bknameedit;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bknamelable	searchwindow.h	/^		QLabel *bknamelable;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bookTableView	searchwindow.h	/^		QTableView *bookTableView;$/;"	m	class:SearchWindow	access:private
+SearchWindow::borrowbook	searchwindow.cpp	/^void SearchWindow::borrowbook()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::borrowbook	searchwindow.h	/^		void borrowbook();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::borrowbutton	searchwindow.h	/^		QPushButton *borrowbutton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::buttomrightgroup	searchwindow.h	/^		QGroupBox *buttomrightgroup;$/;"	m	class:SearchWindow	access:private
+SearchWindow::buttomrightlayout	searchwindow.h	/^		QVBoxLayout *buttomrightlayout;$/;"	m	class:SearchWindow	access:private
+SearchWindow::buttomspliter	searchwindow.h	/^		QSplitter *buttomspliter;$/;"	m	class:SearchWindow	access:private
+SearchWindow::byauthorButton	searchwindow.h	/^		QPushButton *byauthorButton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::byauthorEdit	searchwindow.h	/^		QLineEdit *byauthorEdit;$/;"	m	class:SearchWindow	access:private
+SearchWindow::byauthorLabel	searchwindow.h	/^		QLabel *byauthorLabel;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bybknameButton	searchwindow.h	/^		QPushButton *bybknameButton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bybknameEdit	searchwindow.h	/^		QLineEdit *bybknameEdit;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bybknameLabel	searchwindow.h	/^		QLabel *bybknameLabel;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bykeyButton	searchwindow.h	/^		QPushButton *bykeyButton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bykeyEdit	searchwindow.h	/^		QLineEdit *bykeyEdit;$/;"	m	class:SearchWindow	access:private
+SearchWindow::bykeyLabel	searchwindow.h	/^		QLabel *bykeyLabel;$/;"	m	class:SearchWindow	access:private
+SearchWindow::cancelbutton	searchwindow.h	/^		QPushButton *cancelbutton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::createresultable	searchwindow.cpp	/^void SearchWindow::createresultable()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::createresultable	searchwindow.h	/^		void createresultable();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::createsearchwidget	searchwindow.cpp	/^void SearchWindow::createsearchwidget()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::createsearchwidget	searchwindow.h	/^		void createsearchwidget();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::delbutton	searchwindow.h	/^		QPushButton *delbutton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::deletebook	searchwindow.cpp	/^void SearchWindow::deletebook()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::deletebook	searchwindow.h	/^		void deletebook();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::getStaticMetaObject	moc_searchwindow.cpp	/^const QMetaObject &SearchWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:SearchWindow	signature:()
+SearchWindow::isbnedit	searchwindow.h	/^		QLineEdit *isbnedit;$/;"	m	class:SearchWindow	access:private
+SearchWindow::isbnlabel	searchwindow.h	/^		QLabel *isbnlabel;$/;"	m	class:SearchWindow	access:private
+SearchWindow::ismanager	searchwindow.h	/^		bool ismanager;$/;"	m	class:SearchWindow	access:private
+SearchWindow::isuser	searchwindow.h	/^		bool isuser;$/;"	m	class:SearchWindow	access:private
+SearchWindow::mainlayout	searchwindow.h	/^		QGridLayout *mainlayout;$/;"	m	class:SearchWindow	access:private
+SearchWindow::metaObject	moc_searchwindow.cpp	/^const QMetaObject *SearchWindow::metaObject() const$/;"	f	class:SearchWindow	signature:() const
+SearchWindow::model	searchwindow.h	/^		QStandardItemModel *model;$/;"	m	class:SearchWindow	access:private
+SearchWindow::okupdatebutton	searchwindow.h	/^		QPushButton *okupdatebutton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::on_lineEdit_textChanged	searchwindow.cpp	/^void SearchWindow::on_lineEdit_textChanged()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::on_lineEdit_textChanged	searchwindow.h	/^		void on_lineEdit_textChanged();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::qt_metacall	moc_searchwindow.cpp	/^int SearchWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:SearchWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+SearchWindow::qt_metacast	moc_searchwindow.cpp	/^void *SearchWindow::qt_metacast(const char *_clname)$/;"	f	class:SearchWindow	signature:(const char *_clname)
+SearchWindow::refresh	searchwindow.cpp	/^void SearchWindow::refresh()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::refresh	searchwindow.h	/^		void refresh();$/;"	p	class:SearchWindow	access:public	signature:()
+SearchWindow::refreshtable	searchwindow.cpp	/^void SearchWindow::refreshtable()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::refreshtable	searchwindow.h	/^		void refreshtable();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::rmanager	searchwindow.h	/^		manager* rmanager;$/;"	m	class:SearchWindow	access:private
+SearchWindow::rowselected	searchwindow.cpp	/^void SearchWindow::rowselected()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::rowselected	searchwindow.h	/^		void rowselected();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::rusr	searchwindow.h	/^		user* rusr;$/;"	m	class:SearchWindow	access:private
+SearchWindow::searchbyauthor	searchwindow.cpp	/^void SearchWindow::searchbyauthor()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::searchbyauthor	searchwindow.h	/^		void searchbyauthor();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::searchbybkname	searchwindow.cpp	/^void SearchWindow::searchbybkname()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::searchbybkname	searchwindow.h	/^		void searchbybkname();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::searchbykey	searchwindow.cpp	/^void SearchWindow::searchbykey()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::searchbykey	searchwindow.h	/^		void searchbykey();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::show	searchwindow.cpp	/^void SearchWindow::show(list<book*> &bklist)$/;"	f	class:SearchWindow	signature:(list<book*> &bklist)
+SearchWindow::show	searchwindow.h	/^		void show(list<book*> &bklist);$/;"	p	class:SearchWindow	access:private	signature:(list<book*> &bklist)
+SearchWindow::staticMetaObject	moc_searchwindow.cpp	/^const QMetaObject SearchWindow::staticMetaObject = {$/;"	m	class:SearchWindow	file:
+SearchWindow::topwidget	searchwindow.h	/^		QGroupBox* topwidget;$/;"	m	class:SearchWindow	access:private
+SearchWindow::updatebkprocess	searchwindow.cpp	/^void SearchWindow::updatebkprocess()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::updatebkprocess	searchwindow.h	/^		void updatebkprocess();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::updatebkwin	searchwindow.h	/^		QGroupBox *updatebkwin;$/;"	m	class:SearchWindow	access:private
+SearchWindow::updatebook	searchwindow.cpp	/^void SearchWindow::updatebook()$/;"	f	class:SearchWindow	signature:()
+SearchWindow::updatebook	searchwindow.h	/^		void updatebook();$/;"	p	class:SearchWindow	access:private	signature:()
+SearchWindow::updatebutton	searchwindow.h	/^		QPushButton *updatebutton;$/;"	m	class:SearchWindow	access:private
+SearchWindow::updatelayout	searchwindow.h	/^		QGridLayout *updatelayout;$/;"	m	class:SearchWindow	access:private
 TAR	Makefile	/^TAR           = tar -cf$/;"	m
 TARGET	Makefile	/^TARGET        = library$/;"	m
+USERINFOR_H	userinfor.h	2;"	d
+USERWINDOW_H	userwindow.h	2;"	d
 USER_H_INCLUDED	user.h	5;"	d
+about	mainwindow.cpp	/^void MainWindow::about()$/;"	f	class:MainWindow	signature:()
+about	mainwindow.h	/^	void about();$/;"	p	class:MainWindow	access:private	signature:()
+aboutLibraryAction	mainwindow.h	/^    QAction *aboutLibraryAction;$/;"	m	class:MainWindow	access:private
+aboutQtAction	mainwindow.h	/^    QAction *aboutQtAction;$/;"	m	class:MainWindow	access:private
+addbk	searchwindow.cpp	/^book* addbk;$/;"	v
 addbook	Author.cpp	/^void Author::addbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
 addbook	Author.h	/^    void addbook(book*& bk);\/\/����ͼ���Ĵ���$/;"	p	class:Author	access:public	signature:(book*& bk)
-addbook	keywords.cpp	/^void keywords::addbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
-addbook	keywords.h	/^    void addbook(book*& bk);\/\/增加关键字所对的图书$/;"	p	class:keywords	access:public	signature:(book*& bk)
-addbook	manager.cpp	/^void manager::addbook()$/;"	f	class:manager	signature:()
-addbook	manager.h	/^    void addbook();\/\/往书库里添书$/;"	p	class:manager	access:public	signature:()
+addbook	manager.cpp	/^void manager::addbook(const QString& bkname, const QString& isbn, const QString& author)$/;"	f	class:manager	signature:(const QString& bkname, const QString& isbn, const QString& author)
+addbook	manager.h	/^    void addbook(const QString& bkname, const QString& isbn, const QString& author);\/\/往书库里添书$/;"	p	class:manager	access:public	signature:(const QString& bkname, const QString& isbn, const QString& author)
+addbook	managerwindow.cpp	/^void ManagerWindow::addbook()$/;"	f	class:ManagerWindow	signature:()
+addbook	managerwindow.h	/^		void addbook();$/;"	p	class:ManagerWindow	access:private	signature:()
 addbook	user.cpp	/^bool user::addbook(book* newbook)$/;"	f	class:user	signature:(book* newbook)
 addbook	user.h	/^    bool addbook(book* newbook);\/\/用户借书$/;"	p	class:user	access:public	signature:(book* newbook)
-addusr	manager.cpp	/^void addusr(const string& uname,const string& unumber,const string& uemail,const string& ukey)$/;"	f	signature:(const string& uname,const string& unumber,const string& uemail,const string& ukey)
-addusr	manager.cpp	/^void manager::addusr()$/;"	f	class:manager	signature:()
-addusr	manager.h	/^    void addusr();\/\/加入用户$/;"	p	class:manager	access:public	signature:()
-addusr	manager.h	/^    void addusr(const string& uname, const string& unumber, const string& uemail, const string& ukey);$/;"	p	class:manager	access:public	signature:(const string& uname, const string& unumber, const string& uemail, const string& ukey)
-author	book.h	/^    string author;$/;"	m	class:book	access:private
+addbutton	managerwindow.h	/^		QPushButton *addbutton;$/;"	m	class:ManagerWindow	access:private
+addgroup	managerwindow.h	/^		QGroupBox *addgroup;$/;"	m	class:ManagerWindow	access:private
+addlayout	managerwindow.h	/^		QGridLayout *addlayout;$/;"	m	class:ManagerWindow	access:private
+addusr	manager.cpp	/^void manager::addusr(const QString& uname,const QString& unumber,const QString& uemail,const QString& ukey)$/;"	f	class:manager	signature:(const QString& uname,const QString& unumber,const QString& uemail,const QString& ukey)
+addusr	manager.h	/^    void addusr(const QString& uname, const QString& unumber, const QString& uemail, const QString& ukey);$/;"	p	class:manager	access:public	signature:(const QString& uname, const QString& unumber, const QString& uemail, const QString& ukey)
+allbookmodel	managerwindow.h	/^		QStandardItemModel *allbookmodel;$/;"	m	class:ManagerWindow	access:private
+allbooktableview	managerwindow.h	/^		QTableView *allbooktableview;$/;"	m	class:ManagerWindow	access:private
+allbookwidget	managerwindow.h	/^		QWidget *allbookwidget;$/;"	m	class:ManagerWindow	access:private
+allusermodel	managerwindow.h	/^		QStandardItemModel *allusermodel;$/;"	m	class:ManagerWindow	access:private
+allusertableview	managerwindow.h	/^		QTableView *allusertableview;$/;"	m	class:ManagerWindow	access:private
+alluserwidget	managerwindow.h	/^		QWidget *alluserwidget;$/;"	m	class:ManagerWindow	access:private
+author	book.h	/^    QString author;$/;"	m	class:book	access:private
+authoredit	managerwindow.h	/^		QLineEdit *authoredit;$/;"	m	class:ManagerWindow	access:private
+authoredit	searchwindow.h	/^		QLineEdit *authoredit;$/;"	m	class:SearchWindow	access:private
+authorlabel	managerwindow.h	/^		QLabel *authorlabel;$/;"	m	class:ManagerWindow	access:private
+authorlabel	searchwindow.h	/^		QLabel *authorlabel;$/;"	m	class:SearchWindow	access:private
+bkfilebutton	mainwindow.h	/^    QPushButton *bkfilebutton;$/;"	m	class:MainWindow	access:private
+bkfileedit	mainwindow.h	/^    QLineEdit *bkfileedit;$/;"	m	class:MainWindow	access:private
+bkfilelabel	mainwindow.h	/^    QLabel *bkfilelabel;$/;"	m	class:MainWindow	access:private
+bkfilename	mainwindow.h	/^    QString bkfilename;$/;"	m	class:MainWindow	access:private
 bklist	Author.h	/^    list<book*> bklist;$/;"	m	class:Author	access:private
-bklist	keywords.h	/^    list<book*> bklist;$/;"	m	class:keywords	access:private
-bkname	book.h	/^    string bkname;$/;"	m	class:book	access:private
+bkname	book.h	/^    QString bkname;$/;"	m	class:book	access:private
+bknameedit	managerwindow.h	/^		QLineEdit *bknameedit;$/;"	m	class:ManagerWindow	access:private
+bknameedit	searchwindow.h	/^		QLineEdit *bknameedit;$/;"	m	class:SearchWindow	access:private
+bknamelabel	managerwindow.h	/^		QLabel *bknamelabel;$/;"	m	class:ManagerWindow	access:private
+bknamelable	searchwindow.h	/^		QLabel *bknamelable;$/;"	m	class:SearchWindow	access:private
 bknum	Author.h	/^    int bknum;$/;"	m	class:Author	access:private
-bknum	keywords.h	/^    int bknum;$/;"	m	class:keywords	access:private
 black	redblacktree.h	/^enum Color {black = 0, red};$/;"	e	enum:Color
 book	book.cpp	/^book::book()$/;"	f	class:book	signature:()
+book	book.cpp	/^book::book(const QString& name):bkname(name),state("clean") {};$/;"	f	class:book	signature:(const QString& name)
+book	book.cpp	/^book::book(const QString& name, const QString& ibn, const QString& ath)$/;"	f	class:book	signature:(const QString& name, const QString& ibn, const QString& ath)
+book	book.cpp	/^book::book(const QString& name, const QString& ibn, const QString& ath, const QString& st)$/;"	f	class:book	signature:(const QString& name, const QString& ibn, const QString& ath, const QString& st)
 book	book.cpp	/^book::book(const book& bk)$/;"	f	class:book	signature:(const book& bk)
-book	book.cpp	/^book::book(const string& name):bkname(name),state("clean") {};$/;"	f	class:book	signature:(const string& name)
-book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath)
-book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath, const string& st)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath, const string& st)
 book	book.h	/^    book();$/;"	p	class:book	access:public	signature:()
+book	book.h	/^    book(const QString& name);$/;"	p	class:book	access:public	signature:(const QString& name)
+book	book.h	/^    book(const QString& name, const QString& ibn, const QString& ath);$/;"	p	class:book	access:public	signature:(const QString& name, const QString& ibn, const QString& ath)
+book	book.h	/^    book(const QString& name, const QString& ibn, const QString& ath, const QString& st);$/;"	p	class:book	access:public	signature:(const QString& name, const QString& ibn, const QString& ath, const QString& st)
 book	book.h	/^    book(const book& bk);\/\/复制构造函数$/;"	p	class:book	access:public	signature:(const book& bk)
-book	book.h	/^    book(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
-book	book.h	/^    book(const string& name, const string& ibn, const string& ath);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath)
-book	book.h	/^    book(const string& name, const string& ibn, const string& ath, const string& st);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath, const string& st)
 book	book.h	/^class book$/;"	c
-book::author	book.h	/^    string author;$/;"	m	class:book	access:private
-book::bkname	book.h	/^    string bkname;$/;"	m	class:book	access:private
+book::author	book.h	/^    QString author;$/;"	m	class:book	access:private
+book::bkname	book.h	/^    QString bkname;$/;"	m	class:book	access:private
 book::book	book.cpp	/^book::book()$/;"	f	class:book	signature:()
+book::book	book.cpp	/^book::book(const QString& name):bkname(name),state("clean") {};$/;"	f	class:book	signature:(const QString& name)
+book::book	book.cpp	/^book::book(const QString& name, const QString& ibn, const QString& ath)$/;"	f	class:book	signature:(const QString& name, const QString& ibn, const QString& ath)
+book::book	book.cpp	/^book::book(const QString& name, const QString& ibn, const QString& ath, const QString& st)$/;"	f	class:book	signature:(const QString& name, const QString& ibn, const QString& ath, const QString& st)
 book::book	book.cpp	/^book::book(const book& bk)$/;"	f	class:book	signature:(const book& bk)
-book::book	book.cpp	/^book::book(const string& name):bkname(name),state("clean") {};$/;"	f	class:book	signature:(const string& name)
-book::book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath)
-book::book	book.cpp	/^book::book(const string& name, const string& ibn, const string& ath, const string& st)$/;"	f	class:book	signature:(const string& name, const string& ibn, const string& ath, const string& st)
 book::book	book.h	/^    book();$/;"	p	class:book	access:public	signature:()
+book::book	book.h	/^    book(const QString& name);$/;"	p	class:book	access:public	signature:(const QString& name)
+book::book	book.h	/^    book(const QString& name, const QString& ibn, const QString& ath);$/;"	p	class:book	access:public	signature:(const QString& name, const QString& ibn, const QString& ath)
+book::book	book.h	/^    book(const QString& name, const QString& ibn, const QString& ath, const QString& st);$/;"	p	class:book	access:public	signature:(const QString& name, const QString& ibn, const QString& ath, const QString& st)
 book::book	book.h	/^    book(const book& bk);\/\/复制构造函数$/;"	p	class:book	access:public	signature:(const book& bk)
-book::book	book.h	/^    book(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
-book::book	book.h	/^    book(const string& name, const string& ibn, const string& ath);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath)
-book::book	book.h	/^    book(const string& name, const string& ibn, const string& ath, const string& st);$/;"	p	class:book	access:public	signature:(const string& name, const string& ibn, const string& ath, const string& st)
-book::getauthor	book.cpp	/^string book::getauthor() const$/;"	f	class:book	signature:() const
-book::getauthor	book.h	/^    string getauthor() const;$/;"	p	class:book	access:public	signature:() const
-book::getbkname	book.cpp	/^string book::getbkname() const$/;"	f	class:book	signature:() const
-book::getbkname	book.h	/^    string getbkname() const;$/;"	p	class:book	access:public	signature:() const
-book::getinfor	book.cpp	/^void book::getinfor()$/;"	f	class:book	signature:()
-book::getinfor	book.h	/^    void getinfor();$/;"	p	class:book	access:public	signature:()
-book::getisbn	book.cpp	/^string book::getisbn() const$/;"	f	class:book	signature:() const
-book::getisbn	book.h	/^    string getisbn() const;$/;"	p	class:book	access:public	signature:() const
-book::getstate	book.cpp	/^void book::getstate()$/;"	f	class:book	signature:()
-book::getstate	book.h	/^    void getstate();$/;"	p	class:book	access:public	signature:()
-book::isbn	book.h	/^    string isbn;$/;"	m	class:book	access:private
+book::getauthor	book.cpp	/^QString book::getauthor() const$/;"	f	class:book	signature:() const
+book::getauthor	book.h	/^    QString getauthor() const;$/;"	p	class:book	access:public	signature:() const
+book::getbkname	book.cpp	/^QString book::getbkname() const$/;"	f	class:book	signature:() const
+book::getbkname	book.h	/^    QString getbkname() const;$/;"	p	class:book	access:public	signature:() const
+book::getisbn	book.cpp	/^QString book::getisbn() const$/;"	f	class:book	signature:() const
+book::getisbn	book.h	/^    QString getisbn() const;$/;"	p	class:book	access:public	signature:() const
+book::getstate	book.cpp	/^QString book::getstate() const$/;"	f	class:book	signature:() const
+book::getstate	book.h	/^    QString getstate() const;$/;"	p	class:book	access:public	signature:() const
+book::isbn	book.h	/^    QString isbn;$/;"	m	class:book	access:private
 book::operator =	book.cpp	/^book& book::operator=(const book& bk)$/;"	f	class:book	signature:(const book& bk)
 book::operator =	book.h	/^    book& operator=(const book& bk);\/\/赋值操作符$/;"	p	class:book	access:public	signature:(const book& bk)
-book::setauthor	book.cpp	/^void book::setauthor(const string& author)$/;"	f	class:book	signature:(const string& author)
-book::setauthor	book.h	/^    void setauthor(const string& author);$/;"	p	class:book	access:public	signature:(const string& author)
-book::setbkname	book.cpp	/^void book::setbkname(const string& bkname)$/;"	f	class:book	signature:(const string& bkname)
-book::setbkname	book.h	/^    void setbkname(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
-book::setisbn	book.cpp	/^void book::setisbn(const string& isbn)$/;"	f	class:book	signature:(const string& isbn)
-book::setisbn	book.h	/^    void setisbn(const string& isbn);$/;"	p	class:book	access:public	signature:(const string& isbn)
-book::setstate	book.cpp	/^void book::setstate(const string& state)$/;"	f	class:book	signature:(const string& state)
-book::setstate	book.h	/^    void setstate(const string& state);$/;"	p	class:book	access:public	signature:(const string& state)
-book::state	book.h	/^    string state;$/;"	m	class:book	access:private
-bookfilename	manager.h	/^    string bookfilename;$/;"	m	class:manager	access:private
+book::setauthor	book.cpp	/^void book::setauthor(const QString& author)$/;"	f	class:book	signature:(const QString& author)
+book::setauthor	book.h	/^    void setauthor(const QString& author);$/;"	p	class:book	access:public	signature:(const QString& author)
+book::setbkname	book.cpp	/^void book::setbkname(const QString& bkname)$/;"	f	class:book	signature:(const QString& bkname)
+book::setbkname	book.h	/^    void setbkname(const QString& name);$/;"	p	class:book	access:public	signature:(const QString& name)
+book::setisbn	book.cpp	/^void book::setisbn(const QString& isbn)$/;"	f	class:book	signature:(const QString& isbn)
+book::setisbn	book.h	/^    void setisbn(const QString& isbn);$/;"	p	class:book	access:public	signature:(const QString& isbn)
+book::setstate	book.cpp	/^void book::setstate(const QString& state)$/;"	f	class:book	signature:(const QString& state)
+book::setstate	book.h	/^    void setstate(const QString& state);$/;"	p	class:book	access:public	signature:(const QString& state)
+book::state	book.h	/^    QString state;$/;"	m	class:book	access:private
+bookTableView	searchwindow.h	/^		QTableView *bookTableView;$/;"	m	class:SearchWindow	access:private
+bookdetailbutton	managerwindow.h	/^		QPushButton *bookdetailbutton;$/;"	m	class:ManagerWindow	access:private
+bookfilename	manager.h	/^    QString bookfilename;$/;"	m	class:manager	access:private
+bookinforlabel	managerwindow.h	/^		QLabel *bookinforlabel;$/;"	m	class:ManagerWindow	access:private
 booknum	manager.h	/^    int booknum;\/\/书的数目$/;"	m	class:manager	access:private
 booknum	user.h	/^    int booknum;\/\/借书的数量$/;"	m	class:user	access:private
-booktree	manager.h	/^    redblacktree<string,book> booktree;\/\/图书指针的红黑树$/;"	m	class:manager	access:private
-borrowbook	manager.cpp	/^void manager::borrowbook()$/;"	f	class:manager	signature:()
-borrowbook	manager.h	/^    void borrowbook();\/\/借书$/;"	p	class:manager	access:public	signature:()
+booktable	userwindow.h	/^		QTableView *booktable;$/;"	m	class:userWindow	access:private
+booktree	manager.h	/^    redblacktree<QString,book> booktree;\/\/图书指针的红黑树$/;"	m	class:manager	access:private
+bookview	userwindow.h	/^		QDialog *bookview;$/;"	m	class:userWindow	access:private
+borrowbook	manager.cpp	/^int manager::borrowbook(user *&usr, const QString& bkname)$/;"	f	class:manager	signature:(user *&usr, const QString& bkname)
+borrowbook	manager.h	/^    int borrowbook(user *&usr,const QString& bkname);\/\/借书$/;"	p	class:manager	access:public	signature:(user *&usr,const QString& bkname)
+borrowbook	searchwindow.cpp	/^void SearchWindow::borrowbook()$/;"	f	class:SearchWindow	signature:()
+borrowbook	searchwindow.h	/^		void borrowbook();$/;"	p	class:SearchWindow	access:private	signature:()
+borrowbutton	searchwindow.h	/^		QPushButton *borrowbutton;$/;"	m	class:SearchWindow	access:private
+buttomlayout	mainwindow.h	/^    QHBoxLayout *buttomlayout;$/;"	m	class:MainWindow	access:private
+buttomrightgroup	searchwindow.h	/^		QGroupBox *buttomrightgroup;$/;"	m	class:SearchWindow	access:private
+buttomrightlayout	searchwindow.h	/^		QVBoxLayout *buttomrightlayout;$/;"	m	class:SearchWindow	access:private
+buttomspliter	searchwindow.h	/^		QSplitter *buttomspliter;$/;"	m	class:SearchWindow	access:private
+byauthorButton	searchwindow.h	/^		QPushButton *byauthorButton;$/;"	m	class:SearchWindow	access:private
+byauthorEdit	searchwindow.h	/^		QLineEdit *byauthorEdit;$/;"	m	class:SearchWindow	access:private
+byauthorLabel	searchwindow.h	/^		QLabel *byauthorLabel;$/;"	m	class:SearchWindow	access:private
+bybknameButton	searchwindow.h	/^		QPushButton *bybknameButton;$/;"	m	class:SearchWindow	access:private
+bybknameEdit	searchwindow.h	/^		QLineEdit *bybknameEdit;$/;"	m	class:SearchWindow	access:private
+bybknameLabel	searchwindow.h	/^		QLabel *bybknameLabel;$/;"	m	class:SearchWindow	access:private
+bykeyButton	searchwindow.h	/^		QPushButton *bykeyButton;$/;"	m	class:SearchWindow	access:private
+bykeyEdit	searchwindow.h	/^		QLineEdit *bykeyEdit;$/;"	m	class:SearchWindow	access:private
+bykeyLabel	searchwindow.h	/^		QLabel *bykeyLabel;$/;"	m	class:SearchWindow	access:private
 cancelButton	register.h	/^		QPushButton *cancelButton;$/;"	m	class:Register	access:private
+cancelButton	userinfor.h	/^	QPushButton *cancelButton;$/;"	m	class:userinfor	access:private
+canceladdbutton	managerwindow.h	/^		QPushButton *canceladdbutton;$/;"	m	class:ManagerWindow	access:private
+cancelbutton	searchwindow.h	/^		QPushButton *cancelbutton;$/;"	m	class:SearchWindow	access:private
+change	userinfor.cpp	/^void userinfor::change()$/;"	f	class:userinfor	signature:()
+change	userinfor.h	/^		void change();$/;"	p	class:userinfor	access:private	signature:()
+changeButton	userinfor.h	/^	QPushButton *changeButton;$/;"	m	class:userinfor	access:private
+changekey	userinfor.cpp	/^void userinfor::changekey()$/;"	f	class:userinfor	signature:()
+changekey	userinfor.h	/^		void changekey();$/;"	p	class:userinfor	access:private	signature:()
+cleanaddwindow	managerwindow.cpp	/^void ManagerWindow::cleanaddwindow()$/;"	f	class:ManagerWindow	signature:()
+cleanaddwindow	managerwindow.h	/^		void cleanaddwindow();$/;"	p	class:ManagerWindow	access:private	signature:()
+clear	redblacktree.h	/^    void clear();$/;"	p	class:redblacktree	access:public	signature:()
+clear	redblacktree.h	/^void redblacktree<K,T>::clear()$/;"	f	class:redblacktree	signature:()
 color	redblacktree.h	/^    Color color;$/;"	m	class:node	access:private
+createAction	mainwindow.cpp	/^void MainWindow::createAction()$/;"	f	class:MainWindow	signature:()
+createAction	mainwindow.h	/^    void createAction();$/;"	p	class:MainWindow	access:private	signature:()
+createCenter	mainwindow.cpp	/^void MainWindow::createCenter()$/;"	f	class:MainWindow	signature:()
+createCenter	mainwindow.h	/^    void createCenter();$/;"	p	class:MainWindow	access:private	signature:()
+createMenu	mainwindow.cpp	/^void MainWindow::createMenu()$/;"	f	class:MainWindow	signature:()
+createMenu	mainwindow.h	/^    void createMenu();$/;"	p	class:MainWindow	access:private	signature:()
+createStatusBar	mainwindow.cpp	/^void MainWindow::createStatusBar()$/;"	f	class:MainWindow	signature:()
+createStatusBar	mainwindow.h	/^    void createStatusBar();$/;"	p	class:MainWindow	access:private	signature:()
+createaddwindow	managerwindow.cpp	/^void ManagerWindow::createaddwindow()$/;"	f	class:ManagerWindow	signature:()
+createaddwindow	managerwindow.h	/^		void createaddwindow();$/;"	p	class:ManagerWindow	access:private	signature:()
+createbookwindow	userwindow.cpp	/^void userWindow::createbookwindow()$/;"	f	class:userWindow	signature:()
+createbookwindow	userwindow.h	/^		void createbookwindow();$/;"	p	class:userWindow	access:private	signature:()
+createdelwindow	userwindow.cpp	/^void userWindow::createdelwindow()$/;"	f	class:userWindow	signature:()
+createdelwindow	userwindow.h	/^		void createdelwindow();$/;"	p	class:userWindow	access:private	signature:()
+createinforwindow	managerwindow.cpp	/^void ManagerWindow::createinforwindow()$/;"	f	class:ManagerWindow	signature:()
+createinforwindow	managerwindow.h	/^		void createinforwindow();$/;"	p	class:ManagerWindow	access:private	signature:()
+createresultable	searchwindow.cpp	/^void SearchWindow::createresultable()$/;"	f	class:SearchWindow	signature:()
+createresultable	searchwindow.h	/^		void createresultable();$/;"	p	class:SearchWindow	access:private	signature:()
+createsearchwidget	searchwindow.cpp	/^void SearchWindow::createsearchwidget()$/;"	f	class:SearchWindow	signature:()
+createsearchwidget	searchwindow.h	/^		void createsearchwidget();$/;"	p	class:SearchWindow	access:private	signature:()
 data	redblacktree.h	/^    T data;$/;"	m	class:node	access:private
 delbook	Author.cpp	/^void Author::delbook(book*& bk)$/;"	f	class:Author	signature:(book*& bk)
 delbook	Author.h	/^    void delbook(book*& bk);\/\/ɾ��ͼ��$/;"	p	class:Author	access:public	signature:(book*& bk)
-delbook	keywords.cpp	/^void keywords::delbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
-delbook	keywords.h	/^    void delbook(book*& bk);$/;"	p	class:keywords	access:public	signature:(book*& bk)
-delbook	manager.cpp	/^void manager::delbook()$/;"	f	class:manager	signature:()
-delbook	manager.h	/^    void delbook();\/\/从书库里面删除书$/;"	p	class:manager	access:public	signature:()
-deluser	manager.cpp	/^void manager::deluser()$/;"	f	class:manager	signature:()
-deluser	manager.h	/^    void deluser();\/\/用户注销账号$/;"	p	class:manager	access:public	signature:()
-email	user.h	/^    string email;\/\/邮箱$/;"	m	class:user	access:private
+delbook	manager.cpp	/^bool manager::delbook(QString& bkname)$/;"	f	class:manager	signature:(QString& bkname)
+delbook	manager.h	/^    bool delbook(QString& bkname);\/\/从书库里面删除书$/;"	p	class:manager	access:public	signature:(QString& bkname)
+delbutton	searchwindow.h	/^		QPushButton *delbutton;$/;"	m	class:SearchWindow	access:private
+deleteAccount	userwindow.h	/^		QDialog *deleteAccount;$/;"	m	class:userWindow	access:private
+deletebook	searchwindow.cpp	/^void SearchWindow::deletebook()$/;"	f	class:SearchWindow	signature:()
+deletebook	searchwindow.h	/^		void deletebook();$/;"	p	class:SearchWindow	access:private	signature:()
+deluser	manager.cpp	/^void manager::deluser(user *&delusr)$/;"	f	class:manager	signature:(user *&delusr)
+deluser	manager.h	/^    void deluser(user *&delusr);\/\/用户注销账号$/;"	p	class:manager	access:public	signature:(user *&delusr)
+delusr	userwindow.cpp	/^void userWindow::delusr()$/;"	f	class:userWindow	signature:()
+delusr	userwindow.h	/^		void delusr();$/;"	p	class:userWindow	access:private	signature:()
+email	user.h	/^    QString email;\/\/邮箱$/;"	m	class:user	access:private
 emailEdit	register.h	/^		QLineEdit *emailEdit;$/;"	m	class:Register	access:private
+emailEdit	userinfor.h	/^	QLineEdit *emailEdit;$/;"	m	class:userinfor	access:private
 emailLabel	register.h	/^		QLabel *emailLabel;$/;"	m	class:Register	access:private
+emailLabel	userinfor.h	/^	QLabel *emailLabel;$/;"	m	class:userinfor	access:private
 empty	redblacktree.h	/^    bool empty() const;$/;"	p	class:redblacktree	access:public	signature:() const
 empty	redblacktree.h	/^bool redblacktree<K,T>::empty() const$/;"	f	class:redblacktree	signature:() const
+exitAction	mainwindow.h	/^    QAction *exitAction;$/;"	m	class:MainWindow	access:private
+exitButton	mainwindow.h	/^    QPushButton *exitButton;$/;"	m	class:MainWindow	access:private
+fileMenu	mainwindow.h	/^    QMenu *fileMenu;$/;"	m	class:MainWindow	access:private
+fresh	managerwindow.cpp	/^void ManagerWindow::fresh()$/;"	f	class:ManagerWindow	signature:()
+fresh	managerwindow.h	/^		void fresh();$/;"	p	class:ManagerWindow	access:public	signature:()
+fresh	register.cpp	/^void Register::fresh()$/;"	f	class:Register	signature:()
+fresh	register.h	/^		void fresh();$/;"	p	class:Register	access:public	signature:()
 getStaticMetaObject	moc_mainwindow.cpp	/^const QMetaObject &MainWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindow	signature:()
+getStaticMetaObject	moc_managerwindow.cpp	/^const QMetaObject &ManagerWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:ManagerWindow	signature:()
 getStaticMetaObject	moc_register.cpp	/^const QMetaObject &Register::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Register	signature:()
-getauthor	Author.cpp	/^string Author::getauthor() const$/;"	f	class:Author	signature:() const
-getauthor	Author.h	/^    string getauthor() const;$/;"	p	class:Author	access:public	signature:() const
-getauthor	book.cpp	/^string book::getauthor() const$/;"	f	class:book	signature:() const
-getauthor	book.h	/^    string getauthor() const;$/;"	p	class:book	access:public	signature:() const
-getbkname	book.cpp	/^string book::getbkname() const$/;"	f	class:book	signature:() const
-getbkname	book.h	/^    string getbkname() const;$/;"	p	class:book	access:public	signature:() const
+getStaticMetaObject	moc_searchwindow.cpp	/^const QMetaObject &SearchWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:SearchWindow	signature:()
+getStaticMetaObject	moc_userinfor.cpp	/^const QMetaObject &userinfor::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:userinfor	signature:()
+getStaticMetaObject	moc_userwindow.cpp	/^const QMetaObject &userWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:userWindow	signature:()
+getallbook	manager.cpp	/^void manager::getallbook(QStandardItemModel &bookmodel)$/;"	f	class:manager	signature:(QStandardItemModel &bookmodel)
+getallbook	manager.h	/^    void getallbook(QStandardItemModel &bookmodel);$/;"	p	class:manager	access:public	signature:(QStandardItemModel &bookmodel)
+getalluser	manager.cpp	/^void manager::getalluser(node<QString,user>* root, node<QString,user>* nill, QStandardItemModel &usermodel)$/;"	f	class:manager	signature:(node<QString,user>* root, node<QString,user>* nill, QStandardItemModel &usermodel)
+getalluser	manager.cpp	/^void manger::getalluser(QStandardItemModel &usermodel)$/;"	f	class:manger	signature:(QStandardItemModel &usermodel)
+getalluser	manager.h	/^    void getalluser(QStandardItemModel &usermodel);$/;"	p	class:manager	access:public	signature:(QStandardItemModel &usermodel)
+getauthor	Author.cpp	/^QString Author::getauthor() const$/;"	f	class:Author	signature:() const
+getauthor	Author.h	/^    QString getauthor() const;$/;"	p	class:Author	access:public	signature:() const
+getauthor	book.cpp	/^QString book::getauthor() const$/;"	f	class:book	signature:() const
+getauthor	book.h	/^    QString getauthor() const;$/;"	p	class:book	access:public	signature:() const
+getauthorbklist	manager.cpp	/^list<book*> manager::getauthorbklist(Author *&auth)$/;"	f	class:manager	signature:(Author *&auth)
+getauthorbklist	manager.h	/^    list<book*> getauthorbklist(Author *&auth);$/;"	p	class:manager	access:public	signature:(Author *&auth)
+getbkname	book.cpp	/^QString book::getbkname() const$/;"	f	class:book	signature:() const
+getbkname	book.h	/^    QString getbkname() const;$/;"	p	class:book	access:public	signature:() const
 getbknum	Author.cpp	/^int Author::getbknum()$/;"	f	class:Author	signature:()
 getbknum	Author.h	/^    int getbknum();$/;"	p	class:Author	access:public	signature:()
-getbknum	keywords.cpp	/^int keywords::getbknum()$/;"	f	class:keywords	signature:()
-getbknum	keywords.h	/^    int getbknum();$/;"	p	class:keywords	access:public	signature:()
+getbooklist	user.cpp	/^book** user::getbooklist()$/;"	f	class:user	signature:()
+getbooklist	user.h	/^    book** getbooklist();$/;"	p	class:user	access:public	signature:()
 getbooknumb	user.cpp	/^int user::getbooknumb() const$/;"	f	class:user	signature:() const
 getbooknumb	user.h	/^    int getbooknumb() const;$/;"	p	class:user	access:public	signature:() const
-getemail	user.cpp	/^string user::getemail() const$/;"	f	class:user	signature:() const
-getemail	user.h	/^    string getemail() const;$/;"	p	class:user	access:public	signature:() const
-getinfor	book.cpp	/^void book::getinfor()$/;"	f	class:book	signature:()
-getinfor	book.h	/^    void getinfor();$/;"	p	class:book	access:public	signature:()
-getisbn	book.cpp	/^string book::getisbn() const$/;"	f	class:book	signature:() const
-getisbn	book.h	/^    string getisbn() const;$/;"	p	class:book	access:public	signature:() const
-getkeywords	keywords.cpp	/^string keywords::getkeywords() const$/;"	f	class:keywords	signature:() const
-getkeywords	keywords.h	/^    string getkeywords() const;$/;"	p	class:keywords	access:public	signature:() const
-getlibraryinfo	manager.cpp	/^void manager::getlibraryinfo()$/;"	f	class:manager	signature:()
-getlibraryinfo	manager.h	/^    void getlibraryinfo();\/\/得到图书馆的信息$/;"	p	class:manager	access:public	signature:()
-getname	user.cpp	/^string user::getname() const$/;"	f	class:user	signature:() const
-getname	user.h	/^    string getname() const;$/;"	p	class:user	access:public	signature:() const
-getnumber	user.cpp	/^string user::getnumber() const$/;"	f	class:user	signature:() const
-getnumber	user.h	/^    string getnumber() const;$/;"	p	class:user	access:public	signature:() const
+getbooknumber	manager.cpp	/^int manager::getbooknumber()$/;"	f	class:manager	signature:()
+getbooknumber	manager.h	/^    int getbooknumber();$/;"	p	class:manager	access:public	signature:()
+getemail	user.cpp	/^QString user::getemail() const$/;"	f	class:user	signature:() const
+getemail	user.h	/^    QString getemail() const;$/;"	p	class:user	access:public	signature:() const
+getisbn	book.cpp	/^QString book::getisbn() const$/;"	f	class:book	signature:() const
+getisbn	book.h	/^    QString getisbn() const;$/;"	p	class:book	access:public	signature:() const
+getname	user.cpp	/^QString user::getname() const$/;"	f	class:user	signature:() const
+getname	user.h	/^    QString getname() const;$/;"	p	class:user	access:public	signature:() const
+getnumber	user.cpp	/^QString user::getnumber() const$/;"	f	class:user	signature:() const
+getnumber	user.h	/^    QString getnumber() const;$/;"	p	class:user	access:public	signature:() const
 getsize	redblacktree.h	/^    int getsize() const;$/;"	p	class:redblacktree	access:public	signature:() const
 getsize	redblacktree.h	/^int redblacktree<K,T>::getsize() const$/;"	f	class:redblacktree	signature:() const
-getstate	book.cpp	/^void book::getstate()$/;"	f	class:book	signature:()
-getstate	book.h	/^    void getstate();$/;"	p	class:book	access:public	signature:()
-getuserinfo	manager.cpp	/^void manager::getuserinfo()$/;"	f	class:manager	signature:()
-getuserinfo	manager.h	/^    void getuserinfo();\/\/得到用户的信息$/;"	p	class:manager	access:public	signature:()
-isbn	book.h	/^    string isbn;$/;"	m	class:book	access:private
+getstate	book.cpp	/^QString book::getstate() const$/;"	f	class:book	signature:() const
+getstate	book.h	/^    QString getstate() const;$/;"	p	class:book	access:public	signature:() const
+getusernumber	manager.cpp	/^int manager::getusernumber()$/;"	f	class:manager	signature:()
+getusernumber	manager.h	/^    int getusernumber();$/;"	p	class:manager	access:public	signature:()
+helpMenu	mainwindow.h	/^    QMenu *helpMenu;$/;"	m	class:MainWindow	access:private
+imfor	userwindow.h	/^		userinfor *imfor;$/;"	m	class:userWindow	access:private
+imglabel	managerwindow.h	/^		QLabel *imglabel;$/;"	m	class:ManagerWindow	access:private
+imglabel	userwindow.h	/^		QLabel *imglabel;$/;"	m	class:userWindow	access:private
+inforgroup	managerwindow.h	/^		QGroupBox *inforgroup;$/;"	m	class:ManagerWindow	access:private
+inforlayout	managerwindow.h	/^		QGridLayout *inforlayout;$/;"	m	class:ManagerWindow	access:private
+isbn	book.h	/^    QString isbn;$/;"	m	class:book	access:private
+isbnedit	managerwindow.h	/^		QLineEdit *isbnedit;$/;"	m	class:ManagerWindow	access:private
+isbnedit	searchwindow.h	/^		QLineEdit *isbnedit;$/;"	m	class:SearchWindow	access:private
+isbnlabel	managerwindow.h	/^		QLabel *isbnlabel;$/;"	m	class:ManagerWindow	access:private
+isbnlabel	searchwindow.h	/^		QLabel *isbnlabel;$/;"	m	class:SearchWindow	access:private
 isbookfull	user.cpp	/^bool user::isbookfull() const$/;"	f	class:user	signature:() const
 isbookfull	user.h	/^    bool isbookfull() const;\/\/判断是否已经借满了书$/;"	p	class:user	access:private	signature:() const
-ismanagerkey	manager.cpp	/^bool manager::ismanagerkey() const$/;"	f	class:manager	signature:() const
-ismanagerkey	manager.h	/^    bool ismanagerkey() const;\/\/验证管理员密码$/;"	p	class:manager	access:public	signature:() const
-key	keywords.h	/^    string key;$/;"	m	class:keywords	access:private
+isexit	moc_register.cpp	/^void Register::isexit()$/;"	f	class:Register	signature:()
+isexit	moc_userwindow.cpp	/^void userWindow::isexit()$/;"	f	class:userWindow	signature:()
+isexit	register.h	/^		void isexit();$/;"	p	class:Register	access:private	signature:()
+isexit	userwindow.h	/^		void isexit();$/;"	p	class:userWindow	access:private	signature:()
+ismanager	mainwindow.h	/^    bool ismanager;$/;"	m	class:MainWindow	access:private
+ismanager	searchwindow.h	/^		bool ismanager;$/;"	m	class:SearchWindow	access:private
+ismanagerkey	manager.cpp	/^bool manager::ismanagerkey(const QString &inputkey) const$/;"	f	class:manager	signature:(const QString &inputkey) const
+ismanagerkey	manager.h	/^    bool ismanagerkey(const QString &inputkey) const;\/\/验证管理员密码$/;"	p	class:manager	access:public	signature:(const QString &inputkey) const
+isuser	mainwindow.h	/^    bool isuser;$/;"	m	class:MainWindow	access:private
+isuser	searchwindow.h	/^		bool isuser;$/;"	m	class:SearchWindow	access:private
 key	redblacktree.h	/^    K key;$/;"	m	class:node	access:private
-key	user.h	/^    string key;\/\/密码$/;"	m	class:user	access:private
+key	user.h	/^    QString key;\/\/密码$/;"	m	class:user	access:private
 keyEdit	register.h	/^		QLineEdit *keyEdit;$/;"	m	class:Register	access:private
+keyEdit	userinfor.h	/^	QLineEdit *keyEdit;$/;"	m	class:userinfor	access:private
 keyLabel	register.h	/^		QLabel *keyLabel;$/;"	m	class:Register	access:private
-keywords	keywords.cpp	/^keywords::keywords()$/;"	f	class:keywords	signature:()
-keywords	keywords.cpp	/^keywords::keywords(book*& bk, string& keywd)$/;"	f	class:keywords	signature:(book*& bk, string& keywd)
-keywords	keywords.h	/^    keywords();$/;"	p	class:keywords	access:public	signature:()
-keywords	keywords.h	/^    keywords(book*& bk, string& keywd);$/;"	p	class:keywords	access:public	signature:(book*& bk, string& keywd)
-keywords	keywords.h	/^class keywords$/;"	c
-keywords::addbook	keywords.cpp	/^void keywords::addbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
-keywords::addbook	keywords.h	/^    void addbook(book*& bk);\/\/增加关键字所对的图书$/;"	p	class:keywords	access:public	signature:(book*& bk)
-keywords::bklist	keywords.h	/^    list<book*> bklist;$/;"	m	class:keywords	access:private
-keywords::bknum	keywords.h	/^    int bknum;$/;"	m	class:keywords	access:private
-keywords::delbook	keywords.cpp	/^void keywords::delbook(book*& bk)$/;"	f	class:keywords	signature:(book*& bk)
-keywords::delbook	keywords.h	/^    void delbook(book*& bk);$/;"	p	class:keywords	access:public	signature:(book*& bk)
-keywords::getbknum	keywords.cpp	/^int keywords::getbknum()$/;"	f	class:keywords	signature:()
-keywords::getbknum	keywords.h	/^    int getbknum();$/;"	p	class:keywords	access:public	signature:()
-keywords::getkeywords	keywords.cpp	/^string keywords::getkeywords() const$/;"	f	class:keywords	signature:() const
-keywords::getkeywords	keywords.h	/^    string getkeywords() const;$/;"	p	class:keywords	access:public	signature:() const
-keywords::key	keywords.h	/^    string key;$/;"	m	class:keywords	access:private
-keywords::keywords	keywords.cpp	/^keywords::keywords()$/;"	f	class:keywords	signature:()
-keywords::keywords	keywords.cpp	/^keywords::keywords(book*& bk, string& keywd)$/;"	f	class:keywords	signature:(book*& bk, string& keywd)
-keywords::keywords	keywords.h	/^    keywords();$/;"	p	class:keywords	access:public	signature:()
-keywords::keywords	keywords.h	/^    keywords(book*& bk, string& keywd);$/;"	p	class:keywords	access:public	signature:(book*& bk, string& keywd)
-keywords::show	keywords.cpp	/^void keywords::show()$/;"	f	class:keywords	signature:()
-keywords::show	keywords.h	/^    void show(); \/\/显示含有该关键字的图书$/;"	p	class:keywords	access:public	signature:()
+keyLabel	userinfor.h	/^	QLabel *keyLabel;$/;"	m	class:userinfor	access:private
 left_rotate	redblacktree.h	/^    void left_rotate(node<K,T>* x);\/\/����$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
 left_rotate	redblacktree.h	/^void redblacktree<K,T>::left_rotate(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
 leftchild	redblacktree.h	/^    node<K,T>* leftchild;$/;"	m	class:node	access:private
-load	manager.cpp	/^void manager::load()$/;"	f	class:manager	signature:()
-load	manager.h	/^    void load();$/;"	p	class:manager	access:public	signature:()
-loadfile	manager.cpp	/^void manager::loadfile()$/;"	f	class:manager	signature:()
-loadfile	manager.h	/^    void loadfile();$/;"	p	class:manager	access:public	signature:()
-loadfileprocess	manager.cpp	/^bool manager::loadfileprocess()$/;"	f	class:manager	signature:()
-loadfileprocess	manager.h	/^    bool loadfileprocess();\/\/加载数据$/;"	p	class:manager	access:public	signature:()
+leftlayout	managerwindow.h	/^		QVBoxLayout *leftlayout;$/;"	m	class:ManagerWindow	access:private
+leftlayout	userwindow.h	/^		QVBoxLayout *leftlayout;$/;"	m	class:userWindow	access:private
+lefttoplayout	managerwindow.h	/^		QHBoxLayout *lefttoplayout;$/;"	m	class:ManagerWindow	access:private
+lefttoplayout	userwindow.h	/^		QHBoxLayout *lefttoplayout;$/;"	m	class:userWindow	access:private
+list	managerwindow.h	/^		QListWidget *list;$/;"	m	class:ManagerWindow	access:private
+list	userwindow.h	/^		QListWidget *list;$/;"	m	class:userWindow	access:private
+loadfileprocess	manager.cpp	/^void manager::loadfileprocess()$/;"	f	class:manager	signature:()
+loadfileprocess	manager.h	/^    void loadfileprocess();\/\/加载数据$/;"	p	class:manager	access:public	signature:()
 main	main.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
 mainLayout	register.h	/^		QGridLayout *mainLayout;$/;"	m	class:Register	access:private
+mainLayout	userinfor.h	/^	QGridLayout *mainLayout;$/;"	m	class:userinfor	access:private
+mainlayout	managerwindow.h	/^		QHBoxLayout *mainlayout;$/;"	m	class:ManagerWindow	access:private
+mainlayout	searchwindow.h	/^		QGridLayout *mainlayout;$/;"	m	class:SearchWindow	access:private
+mainlayout	userwindow.h	/^		QHBoxLayout *mainlayout;$/;"	m	class:userWindow	access:private
+mainmanager	mainwindow.h	/^    manager* mainmanager;$/;"	m	class:MainWindow	access:private
 manager	manager.cpp	/^manager::manager()$/;"	f	class:manager	signature:()
 manager	manager.h	/^    manager();$/;"	p	class:manager	access:public	signature:()
 manager	manager.h	/^class manager$/;"	c
-manager::Authortree	manager.h	/^    redblacktree<string,Author> Authortree;\/\/作者的红黑树$/;"	m	class:manager	access:private
-manager::addbook	manager.cpp	/^void manager::addbook()$/;"	f	class:manager	signature:()
-manager::addbook	manager.h	/^    void addbook();\/\/往书库里添书$/;"	p	class:manager	access:public	signature:()
-manager::addusr	manager.cpp	/^void manager::addusr()$/;"	f	class:manager	signature:()
-manager::addusr	manager.h	/^    void addusr();\/\/加入用户$/;"	p	class:manager	access:public	signature:()
-manager::addusr	manager.h	/^    void addusr(const string& uname, const string& unumber, const string& uemail, const string& ukey);$/;"	p	class:manager	access:public	signature:(const string& uname, const string& unumber, const string& uemail, const string& ukey)
-manager::bookfilename	manager.h	/^    string bookfilename;$/;"	m	class:manager	access:private
+manager::Authortree	manager.h	/^    redblacktree<QString,Author> Authortree;\/\/作者的红黑树$/;"	m	class:manager	access:private
+manager::addbook	manager.cpp	/^void manager::addbook(const QString& bkname, const QString& isbn, const QString& author)$/;"	f	class:manager	signature:(const QString& bkname, const QString& isbn, const QString& author)
+manager::addbook	manager.h	/^    void addbook(const QString& bkname, const QString& isbn, const QString& author);\/\/往书库里添书$/;"	p	class:manager	access:public	signature:(const QString& bkname, const QString& isbn, const QString& author)
+manager::addusr	manager.cpp	/^void manager::addusr(const QString& uname,const QString& unumber,const QString& uemail,const QString& ukey)$/;"	f	class:manager	signature:(const QString& uname,const QString& unumber,const QString& uemail,const QString& ukey)
+manager::addusr	manager.h	/^    void addusr(const QString& uname, const QString& unumber, const QString& uemail, const QString& ukey);$/;"	p	class:manager	access:public	signature:(const QString& uname, const QString& unumber, const QString& uemail, const QString& ukey)
+manager::bookfilename	manager.h	/^    QString bookfilename;$/;"	m	class:manager	access:private
 manager::booknum	manager.h	/^    int booknum;\/\/书的数目$/;"	m	class:manager	access:private
-manager::booktree	manager.h	/^    redblacktree<string,book> booktree;\/\/图书指针的红黑树$/;"	m	class:manager	access:private
-manager::borrowbook	manager.cpp	/^void manager::borrowbook()$/;"	f	class:manager	signature:()
-manager::borrowbook	manager.h	/^    void borrowbook();\/\/借书$/;"	p	class:manager	access:public	signature:()
-manager::delbook	manager.cpp	/^void manager::delbook()$/;"	f	class:manager	signature:()
-manager::delbook	manager.h	/^    void delbook();\/\/从书库里面删除书$/;"	p	class:manager	access:public	signature:()
-manager::deluser	manager.cpp	/^void manager::deluser()$/;"	f	class:manager	signature:()
-manager::deluser	manager.h	/^    void deluser();\/\/用户注销账号$/;"	p	class:manager	access:public	signature:()
-manager::getlibraryinfo	manager.cpp	/^void manager::getlibraryinfo()$/;"	f	class:manager	signature:()
-manager::getlibraryinfo	manager.h	/^    void getlibraryinfo();\/\/得到图书馆的信息$/;"	p	class:manager	access:public	signature:()
-manager::getuserinfo	manager.cpp	/^void manager::getuserinfo()$/;"	f	class:manager	signature:()
-manager::getuserinfo	manager.h	/^    void getuserinfo();\/\/得到用户的信息$/;"	p	class:manager	access:public	signature:()
-manager::ismanagerkey	manager.cpp	/^bool manager::ismanagerkey() const$/;"	f	class:manager	signature:() const
-manager::ismanagerkey	manager.h	/^    bool ismanagerkey() const;\/\/验证管理员密码$/;"	p	class:manager	access:public	signature:() const
-manager::load	manager.cpp	/^void manager::load()$/;"	f	class:manager	signature:()
-manager::load	manager.h	/^    void load();$/;"	p	class:manager	access:public	signature:()
-manager::loadfile	manager.cpp	/^void manager::loadfile()$/;"	f	class:manager	signature:()
-manager::loadfile	manager.h	/^    void loadfile();$/;"	p	class:manager	access:public	signature:()
-manager::loadfileprocess	manager.cpp	/^bool manager::loadfileprocess()$/;"	f	class:manager	signature:()
-manager::loadfileprocess	manager.h	/^    bool loadfileprocess();\/\/加载数据$/;"	p	class:manager	access:public	signature:()
+manager::booktree	manager.h	/^    redblacktree<QString,book> booktree;\/\/图书指针的红黑树$/;"	m	class:manager	access:private
+manager::borrowbook	manager.cpp	/^int manager::borrowbook(user *&usr, const QString& bkname)$/;"	f	class:manager	signature:(user *&usr, const QString& bkname)
+manager::borrowbook	manager.h	/^    int borrowbook(user *&usr,const QString& bkname);\/\/借书$/;"	p	class:manager	access:public	signature:(user *&usr,const QString& bkname)
+manager::delbook	manager.cpp	/^bool manager::delbook(QString& bkname)$/;"	f	class:manager	signature:(QString& bkname)
+manager::delbook	manager.h	/^    bool delbook(QString& bkname);\/\/从书库里面删除书$/;"	p	class:manager	access:public	signature:(QString& bkname)
+manager::deluser	manager.cpp	/^void manager::deluser(user *&delusr)$/;"	f	class:manager	signature:(user *&delusr)
+manager::deluser	manager.h	/^    void deluser(user *&delusr);\/\/用户注销账号$/;"	p	class:manager	access:public	signature:(user *&delusr)
+manager::getallbook	manager.cpp	/^void manager::getallbook(QStandardItemModel &bookmodel)$/;"	f	class:manager	signature:(QStandardItemModel &bookmodel)
+manager::getallbook	manager.h	/^    void getallbook(QStandardItemModel &bookmodel);$/;"	p	class:manager	access:public	signature:(QStandardItemModel &bookmodel)
+manager::getalluser	manager.cpp	/^void manager::getalluser(node<QString,user>* root, node<QString,user>* nill, QStandardItemModel &usermodel)$/;"	f	class:manager	signature:(node<QString,user>* root, node<QString,user>* nill, QStandardItemModel &usermodel)
+manager::getalluser	manager.h	/^    void getalluser(QStandardItemModel &usermodel);$/;"	p	class:manager	access:public	signature:(QStandardItemModel &usermodel)
+manager::getauthorbklist	manager.cpp	/^list<book*> manager::getauthorbklist(Author *&auth)$/;"	f	class:manager	signature:(Author *&auth)
+manager::getauthorbklist	manager.h	/^    list<book*> getauthorbklist(Author *&auth);$/;"	p	class:manager	access:public	signature:(Author *&auth)
+manager::getbooknumber	manager.cpp	/^int manager::getbooknumber()$/;"	f	class:manager	signature:()
+manager::getbooknumber	manager.h	/^    int getbooknumber();$/;"	p	class:manager	access:public	signature:()
+manager::getusernumber	manager.cpp	/^int manager::getusernumber()$/;"	f	class:manager	signature:()
+manager::getusernumber	manager.h	/^    int getusernumber();$/;"	p	class:manager	access:public	signature:()
+manager::ismanagerkey	manager.cpp	/^bool manager::ismanagerkey(const QString &inputkey) const$/;"	f	class:manager	signature:(const QString &inputkey) const
+manager::ismanagerkey	manager.h	/^    bool ismanagerkey(const QString &inputkey) const;\/\/验证管理员密码$/;"	p	class:manager	access:public	signature:(const QString &inputkey) const
+manager::loadfileprocess	manager.cpp	/^void manager::loadfileprocess()$/;"	f	class:manager	signature:()
+manager::loadfileprocess	manager.h	/^    void loadfileprocess();\/\/加载数据$/;"	p	class:manager	access:public	signature:()
 manager::manager	manager.cpp	/^manager::manager()$/;"	f	class:manager	signature:()
 manager::manager	manager.h	/^    manager();$/;"	p	class:manager	access:public	signature:()
-manager::managerkey	manager.h	/^    string managerkey;\/\/管理员密码$/;"	m	class:manager	access:private
-manager::returnbook	manager.cpp	/^void manager::returnbook()$/;"	f	class:manager	signature:()
-manager::returnbook	manager.h	/^    void returnbook();\/\/还书$/;"	p	class:manager	access:public	signature:()
+manager::managerkey	manager.h	/^    QString managerkey;\/\/管理员密码$/;"	m	class:manager	access:private
+manager::returnbook	manager.cpp	/^void manager::returnbook(user *&usr, const QString& bkname)$/;"	f	class:manager	signature:(user *&usr, const QString& bkname)
+manager::returnbook	manager.h	/^    void returnbook(user *&usr,const QString& bkname);\/\/还书$/;"	p	class:manager	access:public	signature:(user *&usr,const QString& bkname)
 manager::savebook	manager.cpp	/^void manager::savebook()$/;"	f	class:manager	signature:()
-manager::savebook	manager.cpp	/^void manager::savebook(node<string,book>* root, node<string,book>* nill)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill)
+manager::savebook	manager.cpp	/^void manager::savebook(node<QString,book>* root, node<QString,book>* nill, QTextStream& outbkfile)$/;"	f	class:manager	signature:(node<QString,book>* root, node<QString,book>* nill, QTextStream& outbkfile)
 manager::savebook	manager.h	/^    void savebook();$/;"	p	class:manager	access:public	signature:()
-manager::savebook	manager.h	/^    void savebook(node<string,book>* root, node<string,book>* nill);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill)
+manager::savebook	manager.h	/^    void savebook(node<QString,book>* root, node<QString,book>* nill,QTextStream& outbkfile);$/;"	p	class:manager	access:public	signature:(node<QString,book>* root, node<QString,book>* nill,QTextStream& outbkfile)
 manager::savechanges	manager.cpp	/^void manager::savechanges()$/;"	f	class:manager	signature:()
 manager::savechanges	manager.h	/^    void savechanges();\/\/保存库的变化$/;"	p	class:manager	access:public	signature:()
 manager::saveuser	manager.cpp	/^void manager::saveuser()$/;"	f	class:manager	signature:()
-manager::saveuser	manager.cpp	/^void manager::saveuser(node<string,user>* root, node<string,user>* nill)$/;"	f	class:manager	signature:(node<string,user>* root, node<string,user>* nill)
+manager::saveuser	manager.cpp	/^void manager::saveuser(node<QString,user>* root, node<QString,user>* nill, QTextStream& outurfile)$/;"	f	class:manager	signature:(node<QString,user>* root, node<QString,user>* nill, QTextStream& outurfile)
 manager::saveuser	manager.h	/^    void saveuser();$/;"	p	class:manager	access:public	signature:()
-manager::saveuser	manager.h	/^    void saveuser(node<string,user>* root, node<string,user>* nill);$/;"	p	class:manager	access:public	signature:(node<string,user>* root, node<string,user>* nill)
-manager::searchAuthor	manager.cpp	/^bool manager::searchAuthor(const string& athname, Author*& srAuthor) const$/;"	f	class:manager	signature:(const string& athname, Author*& srAuthor) const
-manager::searchAuthor	manager.cpp	/^void manager::searchAuthor()$/;"	f	class:manager	signature:()
-manager::searchAuthor	manager.h	/^    bool searchAuthor(const string& athname, Author*& srAuthor) const;\/\/搜索作者$/;"	p	class:manager	access:public	signature:(const string& athname, Author*& srAuthor) const
-manager::searchAuthor	manager.h	/^    void searchAuthor();\/\/查找作者$/;"	p	class:manager	access:public	signature:()
-manager::searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname) const$/;"	f	class:manager	signature:(const string& bookname) const
-manager::searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname,book*& srbook) const$/;"	f	class:manager	signature:(const string& bookname,book*& srbook) const
-manager::searchbook	manager.cpp	/^void manager::searchbook()$/;"	f	class:manager	signature:()
-manager::searchbook	manager.h	/^    bool searchbook(const string& bookname) const;$/;"	p	class:manager	access:public	signature:(const string& bookname) const
-manager::searchbook	manager.h	/^    bool searchbook(const string& bookname,book*& srbook) const;\/\/搜索图书，按照书名搜索$/;"	p	class:manager	access:public	signature:(const string& bookname,book*& srbook) const
-manager::searchbook	manager.h	/^    void searchbook();\/\/查找书籍$/;"	p	class:manager	access:public	signature:()
-manager::searchbykey	manager.cpp	/^void manager::searchbykey()$/;"	f	class:manager	signature:()
-manager::searchbykey	manager.h	/^    void searchbykey();\/\/按照关键字查找$/;"	p	class:manager	access:public	signature:()
-manager::searchkey	manager.cpp	/^void manager::searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
-manager::searchkey	manager.h	/^    void searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
-manager::searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname) const$/;"	f	class:manager	signature:(const string& usrname) const
-manager::searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname, user*& sruser) const$/;"	f	class:manager	signature:(const string& usrname, user*& sruser) const
-manager::searchuser	manager.h	/^    bool searchuser(const string& usrname) const;$/;"	p	class:manager	access:public	signature:(const string& usrname) const
-manager::searchuser	manager.h	/^    bool searchuser(const string& usrname,user*& srusr) const;\/\/搜寻用户$/;"	p	class:manager	access:public	signature:(const string& usrname,user*& srusr) const
-manager::userfilename	manager.h	/^    string userfilename;$/;"	m	class:manager	access:private
-manager::userkey	manager.cpp	/^bool manager::userkey(user* ur) const$/;"	f	class:manager	signature:(user* ur) const
-manager::userkey	manager.h	/^    bool userkey(user* ur) const;\/\/验证用户的密码$/;"	p	class:manager	access:public	signature:(user* ur) const
+manager::saveuser	manager.h	/^    void saveuser(node<QString,user>* root, node<QString,user>* nill,QTextStream& outurfile);$/;"	p	class:manager	access:public	signature:(node<QString,user>* root, node<QString,user>* nill,QTextStream& outurfile)
+manager::searchAuthor	manager.cpp	/^bool manager::searchAuthor(const QString& athname) const$/;"	f	class:manager	signature:(const QString& athname) const
+manager::searchAuthor	manager.cpp	/^bool manager::searchAuthor(const QString& athname, Author*& srAuthor) const$/;"	f	class:manager	signature:(const QString& athname, Author*& srAuthor) const
+manager::searchAuthor	manager.h	/^    bool searchAuthor(const QString& athname) const;$/;"	p	class:manager	access:public	signature:(const QString& athname) const
+manager::searchAuthor	manager.h	/^    bool searchAuthor(const QString& athname, Author*& srAuthor) const;\/\/搜索作者$/;"	p	class:manager	access:public	signature:(const QString& athname, Author*& srAuthor) const
+manager::searchbook	manager.cpp	/^bool manager::searchbook(const QString& bookname) const$/;"	f	class:manager	signature:(const QString& bookname) const
+manager::searchbook	manager.cpp	/^bool manager::searchbook(const QString& bookname,book*& srbook) const$/;"	f	class:manager	signature:(const QString& bookname,book*& srbook) const
+manager::searchbook	manager.h	/^    bool searchbook(const QString& bookname) const;$/;"	p	class:manager	access:public	signature:(const QString& bookname) const
+manager::searchbook	manager.h	/^    bool searchbook(const QString& bookname,book*& srbook) const;\/\/搜索图书，按照书名搜索$/;"	p	class:manager	access:public	signature:(const QString& bookname,book*& srbook) const
+manager::searchbykey	manager.cpp	/^void manager::searchbykey(const QString& key,list<book*>& bklist)$/;"	f	class:manager	signature:(const QString& key,list<book*>& bklist)
+manager::searchbykey	manager.h	/^    void searchbykey(const QString& key,list<book*> &bklist);\/\/按照关键字查找$/;"	p	class:manager	access:public	signature:(const QString& key,list<book*> &bklist)
+manager::searchkey	manager.cpp	/^void manager::searchkey(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist)$/;"	f	class:manager	signature:(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist)
+manager::searchkey	manager.h	/^    void searchkey(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist);$/;"	p	class:manager	access:public	signature:(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist)
+manager::searchuser	manager.cpp	/^bool manager::searchuser(const QString& usrname) const$/;"	f	class:manager	signature:(const QString& usrname) const
+manager::searchuser	manager.cpp	/^bool manager::searchuser(const QString& usrname, user*& sruser) const$/;"	f	class:manager	signature:(const QString& usrname, user*& sruser) const
+manager::searchuser	manager.h	/^    bool searchuser(const QString& usrname) const;$/;"	p	class:manager	access:public	signature:(const QString& usrname) const
+manager::searchuser	manager.h	/^    bool searchuser(const QString& usrname,user*& srusr) const;\/\/搜寻用户$/;"	p	class:manager	access:public	signature:(const QString& usrname,user*& srusr) const
+manager::setdafaultfile	manager.cpp	/^void manager::setdafaultfile(const QString& bkfilem, const QString& usrfilem)$/;"	f	class:manager	signature:(const QString& bkfilem, const QString& usrfilem)
+manager::setdafaultfile	manager.h	/^    void setdafaultfile(const QString& bkfilem,const QString& usrfilem);$/;"	p	class:manager	access:public	signature:(const QString& bkfilem,const QString& usrfilem)
+manager::updateusr	manager.cpp	/^void manager::updateusr(user *& usr, const QString& unumber, const QString& uemail, const QString& ukey)$/;"	f	class:manager	signature:(user *& usr, const QString& unumber, const QString& uemail, const QString& ukey)
+manager::updateusr	manager.cpp	/^void manager::updateusr(user*& usr, const QString& unumber, const QString& uemail)$/;"	f	class:manager	signature:(user*& usr, const QString& unumber, const QString& uemail)
+manager::updateusr	manager.h	/^    void updateusr(user*& usr, const QString& unumber, const QString& uemail, const QString& ukey);$/;"	p	class:manager	access:public	signature:(user*& usr, const QString& unumber, const QString& uemail, const QString& ukey)
+manager::updateusr	manager.h	/^    void updateusr(user*& usr,const QString& unumber, const QString& uemail);$/;"	p	class:manager	access:public	signature:(user*& usr,const QString& unumber, const QString& uemail)
+manager::userfilename	manager.h	/^    QString userfilename;$/;"	m	class:manager	access:private
+manager::userkey	manager.cpp	/^bool manager::userkey(user*& ur,const QString& inkey) const$/;"	f	class:manager	signature:(user*& ur,const QString& inkey) const
+manager::userkey	manager.h	/^    bool userkey(user*& ur,const QString& inkey) const;\/\/验证用户的密码$/;"	p	class:manager	access:public	signature:(user*& ur,const QString& inkey) const
 manager::usernum	manager.h	/^    int usernum;\/\/用户数量$/;"	m	class:manager	access:private
-manager::usertree	manager.h	/^    redblacktree<string,user> usertree;\/\/用户的红黑树$/;"	m	class:manager	access:private
-managerkey	manager.h	/^    string managerkey;\/\/管理员密码$/;"	m	class:manager	access:private
+manager::usertree	manager.h	/^    redblacktree<QString,user> usertree;\/\/用户的红黑树$/;"	m	class:manager	access:private
+managerButton	mainwindow.h	/^    QPushButton *managerButton;$/;"	m	class:MainWindow	access:private
+managerkey	manager.h	/^    QString managerkey;\/\/管理员密码$/;"	m	class:manager	access:private
+managerlog	mainwindow.cpp	/^void MainWindow::managerlog()$/;"	f	class:MainWindow	signature:()
+managerlog	mainwindow.h	/^	void managerlog();$/;"	p	class:MainWindow	access:private	signature:()
+manawidget	mainwindow.h	/^    ManagerWindow* manawidget;$/;"	m	class:MainWindow	access:private
+manger::getalluser	manager.cpp	/^void manger::getalluser(QStandardItemModel &usermodel)$/;"	f	class:manger	signature:(QStandardItemModel &usermodel)
 metaObject	moc_mainwindow.cpp	/^const QMetaObject *MainWindow::metaObject() const$/;"	f	class:MainWindow	signature:() const
+metaObject	moc_managerwindow.cpp	/^const QMetaObject *ManagerWindow::metaObject() const$/;"	f	class:ManagerWindow	signature:() const
 metaObject	moc_register.cpp	/^const QMetaObject *Register::metaObject() const$/;"	f	class:Register	signature:() const
+metaObject	moc_searchwindow.cpp	/^const QMetaObject *SearchWindow::metaObject() const$/;"	f	class:SearchWindow	signature:() const
+metaObject	moc_userinfor.cpp	/^const QMetaObject *userinfor::metaObject() const$/;"	f	class:userinfor	signature:() const
+metaObject	moc_userwindow.cpp	/^const QMetaObject *userWindow::metaObject() const$/;"	f	class:userWindow	signature:() const
 mid_tree_walk	redblacktree.h	/^    void mid_tree_walk();\/\/���������������$/;"	p	class:redblacktree	access:public	signature:()
 mid_tree_walk	redblacktree.h	/^    void mid_tree_walk(node<K,T>* root);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* root)
 mid_tree_walk	redblacktree.h	/^void redblacktree<K,T>::mid_tree_walk()$/;"	f	class:redblacktree	signature:()
 mid_tree_walk	redblacktree.h	/^void redblacktree<K,T>::mid_tree_walk(node<K,T>* root)$/;"	f	class:redblacktree	signature:(node<K,T>* root)
+model	searchwindow.h	/^		QStandardItemModel *model;$/;"	m	class:SearchWindow	access:private
+model	userwindow.h	/^		QStandardItemModel *model;$/;"	m	class:userWindow	access:private
 mybook	user.h	/^    book* mybook[BORROWBOOKLIMIT];\/\/借的书$/;"	m	class:user	access:private
-name	user.h	/^    string name;\/\/姓名$/;"	m	class:user	access:private
+name	user.h	/^    QString name;\/\/姓名$/;"	m	class:user	access:private
 nameEdit	register.h	/^		QLineEdit *nameEdit;$/;"	m	class:Register	access:private
+nameEdit	userinfor.h	/^	QLineEdit *nameEdit;$/;"	m	class:userinfor	access:private
 nameLabel	register.h	/^		QLabel *nameLabel;$/;"	m	class:Register	access:private
+nameLabel	userinfor.h	/^	QLabel *nameLabel;$/;"	m	class:userinfor	access:private
+namelabel	managerwindow.h	/^		QLabel *namelabel;$/;"	m	class:ManagerWindow	access:private
+namelabel	userwindow.h	/^		QLabel *namelabel;$/;"	m	class:userWindow	access:private
 nill	redblacktree.h	/^    node<K,T>* nill;\/\/����NULL$/;"	m	class:redblacktree	access:private
 node	redblacktree.h	/^    node()$/;"	f	class:node	access:private	signature:()
 node	redblacktree.h	/^    node(const Color& color)$/;"	f	class:node	access:private	signature:(const Color& color)
@@ -380,28 +704,68 @@ node::node	redblacktree.h	/^    node(const T& data, const K& key, const Color& c
 node::operator =	redblacktree.h	/^    node<K,T>& operator = (const node<K,T>& Node)\/\/���ظ�ֵ����$/;"	f	class:node	access:private	signature:(const node<K,T>& Node)
 node::parent	redblacktree.h	/^    node<K,T>* parent;$/;"	m	class:node	access:private
 node::rightchild	redblacktree.h	/^    node<K,T>* rightchild;$/;"	m	class:node	access:private
-number	user.h	/^    string number;\/\/学号$/;"	m	class:user	access:private
+number	user.h	/^    QString number;\/\/学号$/;"	m	class:user	access:private
 okButton	register.h	/^		QPushButton *okButton;$/;"	m	class:Register	access:private
+okopen	mainwindow.cpp	/^void MainWindow::okopen()$/;"	f	class:MainWindow	signature:()
+okopen	mainwindow.h	/^	void okopen();$/;"	p	class:MainWindow	access:private	signature:()
+oktoopen	mainwindow.h	/^    QPushButton *oktoopen;$/;"	m	class:MainWindow	access:private
+okupdatebutton	searchwindow.h	/^		QPushButton *okupdatebutton;$/;"	m	class:SearchWindow	access:private
+on_lineEdit_textChanged	managerwindow.cpp	/^void ManagerWindow::on_lineEdit_textChanged()$/;"	f	class:ManagerWindow	signature:()
+on_lineEdit_textChanged	managerwindow.h	/^		void on_lineEdit_textChanged();$/;"	p	class:ManagerWindow	access:private	signature:()
+on_lineEdit_textChanged	searchwindow.cpp	/^void SearchWindow::on_lineEdit_textChanged()$/;"	f	class:SearchWindow	signature:()
+on_lineEdit_textChanged	searchwindow.h	/^		void on_lineEdit_textChanged();$/;"	p	class:SearchWindow	access:private	signature:()
+on_lineEdit_textChanged	userinfor.cpp	/^void userinfor::on_lineEdit_textChanged()$/;"	f	class:userinfor	signature:()
+on_lineEdit_textChanged	userinfor.h	/^		void on_lineEdit_textChanged();$/;"	p	class:userinfor	access:private	signature:()
+open	mainwindow.cpp	/^void MainWindow::open()$/;"	f	class:MainWindow	signature:()
+open	mainwindow.h	/^	void open();$/;"	p	class:MainWindow	access:private	signature:()
+openbkfile	mainwindow.cpp	/^void MainWindow::openbkfile()$/;"	f	class:MainWindow	signature:()
+openbkfile	mainwindow.h	/^	void openbkfile();$/;"	p	class:MainWindow	access:private	signature:()
+opendialog	mainwindow.h	/^    QDialog *opendialog;$/;"	m	class:MainWindow	access:private
+openfileAction	mainwindow.h	/^    QAction *openfileAction;$/;"	m	class:MainWindow	access:private
+openusrfile	mainwindow.cpp	/^void MainWindow::openusrfile()$/;"	f	class:MainWindow	signature:()
+openusrfile	mainwindow.h	/^	void openusrfile();$/;"	p	class:MainWindow	access:private	signature:()
 operator =	book.cpp	/^book& book::operator=(const book& bk)$/;"	f	class:book	signature:(const book& bk)
 operator =	book.h	/^    book& operator=(const book& bk);\/\/赋值操作符$/;"	p	class:book	access:public	signature:(const book& bk)
 operator =	redblacktree.h	/^    node<K,T>& operator = (const node<K,T>& Node)\/\/���ظ�ֵ����$/;"	f	class:node	access:private	signature:(const node<K,T>& Node)
 operator =	user.cpp	/^user& user::operator=(const user &usr)$/;"	f	class:user	signature:(const user &usr)
 operator =	user.h	/^    user& operator=(const user &usr);\/\/赋值操作符$/;"	p	class:user	access:public	signature:(const user &usr)
-outbkfile	manager.cpp	/^fstream outbkfile;\/\/����ȫ�ֱ���$/;"	v
-outurfile	manager.cpp	/^fstream outurfile;\/\/ȫ�ֱ���$/;"	v
 parent	redblacktree.h	/^    node<K,T>* parent;$/;"	m	class:node	access:private
+passwdButton	userinfor.h	/^	QPushButton *passwdButton;$/;"	m	class:userinfor	access:private
 pre_tree_walk	redblacktree.h	/^    void pre_tree_walk();\/\/ǰ�����$/;"	p	class:redblacktree	access:public	signature:()
 pre_tree_walk	redblacktree.h	/^    void pre_tree_walk(node<K,T>* root);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* root)
 pre_tree_walk	redblacktree.h	/^void redblacktree<K,T>::pre_tree_walk()$/;"	f	class:redblacktree	signature:()
 pre_tree_walk	redblacktree.h	/^void redblacktree<K,T>::pre_tree_walk(node<K,T>* root)$/;"	f	class:redblacktree	signature:(node<K,T>* root)
+qCleanupResources_resourse	qrc_resourse.cpp	/^int QT_MANGLE_NAMESPACE(qCleanupResources_resourse)()$/;"	f	signature:()
+qInitResources_resourse	qrc_resourse.cpp	/^int QT_MANGLE_NAMESPACE(qInitResources_resourse)()$/;"	f	signature:()
+qRegisterResourceData	qrc_resourse.cpp	/^extern Q_CORE_EXPORT bool qRegisterResourceData$/;"	p	file:	signature:(int, const unsigned char *, const unsigned char *, const unsigned char *)
+qUnregisterResourceData	qrc_resourse.cpp	/^extern Q_CORE_EXPORT bool qUnregisterResourceData$/;"	p	file:	signature:(int, const unsigned char *, const unsigned char *, const unsigned char *)
 qt_meta_data_MainWindow	moc_mainwindow.cpp	/^static const uint qt_meta_data_MainWindow[] = {$/;"	v	file:
+qt_meta_data_ManagerWindow	moc_managerwindow.cpp	/^static const uint qt_meta_data_ManagerWindow[] = {$/;"	v	file:
 qt_meta_data_Register	moc_register.cpp	/^static const uint qt_meta_data_Register[] = {$/;"	v	file:
+qt_meta_data_SearchWindow	moc_searchwindow.cpp	/^static const uint qt_meta_data_SearchWindow[] = {$/;"	v	file:
+qt_meta_data_userWindow	moc_userwindow.cpp	/^static const uint qt_meta_data_userWindow[] = {$/;"	v	file:
+qt_meta_data_userinfor	moc_userinfor.cpp	/^static const uint qt_meta_data_userinfor[] = {$/;"	v	file:
 qt_meta_stringdata_MainWindow	moc_mainwindow.cpp	/^static const char qt_meta_stringdata_MainWindow[] = {$/;"	v	file:
+qt_meta_stringdata_ManagerWindow	moc_managerwindow.cpp	/^static const char qt_meta_stringdata_ManagerWindow[] = {$/;"	v	file:
 qt_meta_stringdata_Register	moc_register.cpp	/^static const char qt_meta_stringdata_Register[] = {$/;"	v	file:
+qt_meta_stringdata_SearchWindow	moc_searchwindow.cpp	/^static const char qt_meta_stringdata_SearchWindow[] = {$/;"	v	file:
+qt_meta_stringdata_userWindow	moc_userwindow.cpp	/^static const char qt_meta_stringdata_userWindow[] = {$/;"	v	file:
+qt_meta_stringdata_userinfor	moc_userinfor.cpp	/^static const char qt_meta_stringdata_userinfor[] = {$/;"	v	file:
 qt_metacall	moc_mainwindow.cpp	/^int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	moc_managerwindow.cpp	/^int ManagerWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:ManagerWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
 qt_metacall	moc_register.cpp	/^int Register::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Register	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	moc_searchwindow.cpp	/^int SearchWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:SearchWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	moc_userinfor.cpp	/^int userinfor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:userinfor	signature:(QMetaObject::Call _c, int _id, void **_a)
+qt_metacall	moc_userwindow.cpp	/^int userWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:userWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
 qt_metacast	moc_mainwindow.cpp	/^void *MainWindow::qt_metacast(const char *_clname)$/;"	f	class:MainWindow	signature:(const char *_clname)
+qt_metacast	moc_managerwindow.cpp	/^void *ManagerWindow::qt_metacast(const char *_clname)$/;"	f	class:ManagerWindow	signature:(const char *_clname)
 qt_metacast	moc_register.cpp	/^void *Register::qt_metacast(const char *_clname)$/;"	f	class:Register	signature:(const char *_clname)
+qt_metacast	moc_searchwindow.cpp	/^void *SearchWindow::qt_metacast(const char *_clname)$/;"	f	class:SearchWindow	signature:(const char *_clname)
+qt_metacast	moc_userinfor.cpp	/^void *userinfor::qt_metacast(const char *_clname)$/;"	f	class:userinfor	signature:(const char *_clname)
+qt_metacast	moc_userwindow.cpp	/^void *userWindow::qt_metacast(const char *_clname)$/;"	f	class:userWindow	signature:(const char *_clname)
+qt_resource_data	qrc_resourse.cpp	/^static const unsigned char qt_resource_data[] = {$/;"	v	file:
+qt_resource_name	qrc_resourse.cpp	/^static const unsigned char qt_resource_name[] = {$/;"	v	file:
+qt_resource_struct	qrc_resourse.cpp	/^static const unsigned char qt_resource_struct[] = {$/;"	v	file:
 rbsearch	redblacktree.h	/^    node<K,T>* rbsearch(const K& srkey) const;\/\/����$/;"	p	class:redblacktree	access:private	signature:(const K& srkey) const
 rbsearch	redblacktree.h	/^node<K,T>* redblacktree<K,T>::rbsearch(const K& srkey) const$/;"	f	class:redblacktree	signature:(const K& srkey) const
 red	redblacktree.h	/^enum Color {black = 0, red};$/;"	e	enum:Color
@@ -417,6 +781,8 @@ redblacktree::RB_insert	redblacktree.h	/^    node<K,T>* RB_insert(const T& data,
 redblacktree::RB_insert	redblacktree.h	/^node<K,T>* redblacktree<K,T>::RB_insert(const T& data, const K& insrtkey)\/\/�����㷨$/;"	f	class:redblacktree	signature:(const T& data, const K& insrtkey)
 redblacktree::RB_insert_fixup	redblacktree.h	/^    void RB_insert_fixup(node<K,T>* x);\/\/�������$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
 redblacktree::RB_insert_fixup	redblacktree.h	/^void redblacktree<K,T>::RB_insert_fixup(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+redblacktree::clear	redblacktree.h	/^    void clear();$/;"	p	class:redblacktree	access:public	signature:()
+redblacktree::clear	redblacktree.h	/^void redblacktree<K,T>::clear()$/;"	f	class:redblacktree	signature:()
 redblacktree::empty	redblacktree.h	/^    bool empty() const;$/;"	p	class:redblacktree	access:public	signature:() const
 redblacktree::empty	redblacktree.h	/^bool redblacktree<K,T>::empty() const$/;"	f	class:redblacktree	signature:() const
 redblacktree::getsize	redblacktree.h	/^    int getsize() const;$/;"	p	class:redblacktree	access:public	signature:() const
@@ -452,74 +818,130 @@ redblacktree::tree_min	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_min(n
 redblacktree::tree_successor	redblacktree.h	/^    node<K,T>* tree_successor(node<K,T>* x);\/\/��ڵ�ĺ��$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
 redblacktree::tree_successor	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_successor(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
 redblacktree::~redblacktree	redblacktree.h	/^    ~redblacktree()$/;"	f	class:redblacktree	access:public	signature:()
-returnbook	manager.cpp	/^void manager::returnbook()$/;"	f	class:manager	signature:()
-returnbook	manager.h	/^    void returnbook();\/\/还书$/;"	p	class:manager	access:public	signature:()
-returnbook	user.cpp	/^void user::returnbook(book* rbook)$/;"	f	class:user	signature:(book* rbook)
-returnbook	user.h	/^    void returnbook(book* rbook);\/\/用户还书$/;"	p	class:user	access:public	signature:(book* rbook)
+refresh	searchwindow.cpp	/^void SearchWindow::refresh()$/;"	f	class:SearchWindow	signature:()
+refresh	searchwindow.h	/^		void refresh();$/;"	p	class:SearchWindow	access:public	signature:()
+refreshtable	searchwindow.cpp	/^void SearchWindow::refreshtable()$/;"	f	class:SearchWindow	signature:()
+refreshtable	searchwindow.h	/^		void refreshtable();$/;"	p	class:SearchWindow	access:private	signature:()
+regis	mainwindow.cpp	/^void MainWindow::regis()$/;"	f	class:MainWindow	signature:()
+regis	mainwindow.h	/^	void regis();$/;"	p	class:MainWindow	access:private	signature:()
+registerButton	mainwindow.h	/^    QPushButton *registerButton;$/;"	m	class:MainWindow	access:private
+remain	managerwindow.cpp	/^void ManagerWindow::remain()$/;"	f	class:ManagerWindow	signature:()
+remain	managerwindow.h	/^		void remain();$/;"	p	class:ManagerWindow	access:private	signature:()
+remain	userwindow.cpp	/^void userWindow::remain()\/\/回到用户信息$/;"	f	class:userWindow	signature:()
+remain	userwindow.h	/^		void remain();$/;"	p	class:userWindow	access:private	signature:()
+returnbook	manager.cpp	/^void manager::returnbook(user *&usr, const QString& bkname)$/;"	f	class:manager	signature:(user *&usr, const QString& bkname)
+returnbook	manager.h	/^    void returnbook(user *&usr,const QString& bkname);\/\/还书$/;"	p	class:manager	access:public	signature:(user *&usr,const QString& bkname)
+returnbook	user.cpp	/^bool user::returnbook(book* rbook)$/;"	f	class:user	signature:(book* rbook)
+returnbook	user.h	/^    bool returnbook(book* rbook);\/\/用户还书$/;"	p	class:user	access:public	signature:(book* rbook)
+returnbook	userwindow.cpp	/^void userWindow::returnbook()$/;"	f	class:userWindow	signature:()
+returnbook	userwindow.h	/^		void returnbook();$/;"	p	class:userWindow	access:private	signature:()
+returnbutton	userwindow.h	/^		QPushButton *returnbutton;$/;"	m	class:userWindow	access:private
+rig	mainwindow.h	/^    Register* rig;$/;"	m	class:MainWindow	access:private
 right_rotate	redblacktree.h	/^    void right_rotate(node<K,T>* x);\/\/����$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
 right_rotate	redblacktree.h	/^void redblacktree<K,T>::right_rotate(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
 rightchild	redblacktree.h	/^    node<K,T>* rightchild;$/;"	m	class:node	access:private
+rmain	mainwindow.cpp	/^void MainWindow::rmain()$/;"	f	class:MainWindow	signature:()
+rmain	mainwindow.h	/^	void rmain();$/;"	p	class:MainWindow	access:private	signature:()
+rmanager	managerwindow.h	/^		manager *rmanager;$/;"	m	class:ManagerWindow	access:private
 rmanager	register.h	/^		manager *rmanager;$/;"	m	class:Register	access:private
+rmanager	searchwindow.h	/^		manager* rmanager;$/;"	m	class:SearchWindow	access:private
+rmanager	userinfor.h	/^	manager *rmanager;$/;"	m	class:userinfor	access:private
+rmanager	userwindow.h	/^		manager *rmanager;$/;"	m	class:userWindow	access:private
 root	redblacktree.h	/^    node<K,T>* root;$/;"	m	class:redblacktree	access:private
+rowselected	searchwindow.cpp	/^void SearchWindow::rowselected()$/;"	f	class:SearchWindow	signature:()
+rowselected	searchwindow.h	/^		void rowselected();$/;"	p	class:SearchWindow	access:private	signature:()
+rowselected	userwindow.cpp	/^void userWindow::rowselected()$/;"	f	class:userWindow	signature:()
+rowselected	userwindow.h	/^		void rowselected();$/;"	p	class:userWindow	access:private	signature:()
+rusr	searchwindow.h	/^		user* rusr;$/;"	m	class:SearchWindow	access:private
+rusr	userinfor.h	/^	user *rusr;$/;"	m	class:userinfor	access:private
+rusr	userwindow.h	/^		user * rusr;$/;"	m	class:userWindow	access:private
 savebook	manager.cpp	/^void manager::savebook()$/;"	f	class:manager	signature:()
-savebook	manager.cpp	/^void manager::savebook(node<string,book>* root, node<string,book>* nill)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill)
+savebook	manager.cpp	/^void manager::savebook(node<QString,book>* root, node<QString,book>* nill, QTextStream& outbkfile)$/;"	f	class:manager	signature:(node<QString,book>* root, node<QString,book>* nill, QTextStream& outbkfile)
 savebook	manager.h	/^    void savebook();$/;"	p	class:manager	access:public	signature:()
-savebook	manager.h	/^    void savebook(node<string,book>* root, node<string,book>* nill);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill)
+savebook	manager.h	/^    void savebook(node<QString,book>* root, node<QString,book>* nill,QTextStream& outbkfile);$/;"	p	class:manager	access:public	signature:(node<QString,book>* root, node<QString,book>* nill,QTextStream& outbkfile)
 savechanges	manager.cpp	/^void manager::savechanges()$/;"	f	class:manager	signature:()
 savechanges	manager.h	/^    void savechanges();\/\/保存库的变化$/;"	p	class:manager	access:public	signature:()
 saveuser	manager.cpp	/^void manager::saveuser()$/;"	f	class:manager	signature:()
-saveuser	manager.cpp	/^void manager::saveuser(node<string,user>* root, node<string,user>* nill)$/;"	f	class:manager	signature:(node<string,user>* root, node<string,user>* nill)
+saveuser	manager.cpp	/^void manager::saveuser(node<QString,user>* root, node<QString,user>* nill, QTextStream& outurfile)$/;"	f	class:manager	signature:(node<QString,user>* root, node<QString,user>* nill, QTextStream& outurfile)
 saveuser	manager.h	/^    void saveuser();$/;"	p	class:manager	access:public	signature:()
-saveuser	manager.h	/^    void saveuser(node<string,user>* root, node<string,user>* nill);$/;"	p	class:manager	access:public	signature:(node<string,user>* root, node<string,user>* nill)
+saveuser	manager.h	/^    void saveuser(node<QString,user>* root, node<QString,user>* nill,QTextStream& outurfile);$/;"	p	class:manager	access:public	signature:(node<QString,user>* root, node<QString,user>* nill,QTextStream& outurfile)
+search	mainwindow.cpp	/^void MainWindow::search()$/;"	f	class:MainWindow	signature:()
+search	mainwindow.h	/^	void search();$/;"	p	class:MainWindow	access:private	signature:()
 search	redblacktree.h	/^    bool search(const K& srkey) const;$/;"	p	class:redblacktree	access:public	signature:(const K& srkey) const
 search	redblacktree.h	/^    bool search(const K& srkey, T*& data) const;$/;"	p	class:redblacktree	access:public	signature:(const K& srkey, T*& data) const
 search	redblacktree.h	/^bool redblacktree<K,T>::search(const K& srkey) const$/;"	f	class:redblacktree	signature:(const K& srkey) const
 search	redblacktree.h	/^bool redblacktree<K,T>::search(const K& srkey,  T*& datapoint) const$/;"	f	class:redblacktree	signature:(const K& srkey, T*& datapoint) const
-searchAuthor	manager.cpp	/^bool manager::searchAuthor(const string& athname, Author*& srAuthor) const$/;"	f	class:manager	signature:(const string& athname, Author*& srAuthor) const
-searchAuthor	manager.cpp	/^void manager::searchAuthor()$/;"	f	class:manager	signature:()
-searchAuthor	manager.h	/^    bool searchAuthor(const string& athname, Author*& srAuthor) const;\/\/搜索作者$/;"	p	class:manager	access:public	signature:(const string& athname, Author*& srAuthor) const
-searchAuthor	manager.h	/^    void searchAuthor();\/\/查找作者$/;"	p	class:manager	access:public	signature:()
-searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname) const$/;"	f	class:manager	signature:(const string& bookname) const
-searchbook	manager.cpp	/^bool manager::searchbook(const string& bookname,book*& srbook) const$/;"	f	class:manager	signature:(const string& bookname,book*& srbook) const
-searchbook	manager.cpp	/^void manager::searchbook()$/;"	f	class:manager	signature:()
-searchbook	manager.h	/^    bool searchbook(const string& bookname) const;$/;"	p	class:manager	access:public	signature:(const string& bookname) const
-searchbook	manager.h	/^    bool searchbook(const string& bookname,book*& srbook) const;\/\/搜索图书，按照书名搜索$/;"	p	class:manager	access:public	signature:(const string& bookname,book*& srbook) const
-searchbook	manager.h	/^    void searchbook();\/\/查找书籍$/;"	p	class:manager	access:public	signature:()
-searchbykey	manager.cpp	/^void manager::searchbykey()$/;"	f	class:manager	signature:()
-searchbykey	manager.h	/^    void searchbykey();\/\/按照关键字查找$/;"	p	class:manager	access:public	signature:()
-searchkey	manager.cpp	/^void manager::searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)$/;"	f	class:manager	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
-searchkey	manager.h	/^    void searchkey(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos);$/;"	p	class:manager	access:public	signature:(node<string,book>* root, node<string,book>* nill,string& key, string::size_type& pos)
-searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname) const$/;"	f	class:manager	signature:(const string& usrname) const
-searchuser	manager.cpp	/^bool manager::searchuser(const string& usrname, user*& sruser) const$/;"	f	class:manager	signature:(const string& usrname, user*& sruser) const
-searchuser	manager.h	/^    bool searchuser(const string& usrname) const;$/;"	p	class:manager	access:public	signature:(const string& usrname) const
-searchuser	manager.h	/^    bool searchuser(const string& usrname,user*& srusr) const;\/\/搜寻用户$/;"	p	class:manager	access:public	signature:(const string& usrname,user*& srusr) const
-setauthor	book.cpp	/^void book::setauthor(const string& author)$/;"	f	class:book	signature:(const string& author)
-setauthor	book.h	/^    void setauthor(const string& author);$/;"	p	class:book	access:public	signature:(const string& author)
-setbkname	book.cpp	/^void book::setbkname(const string& bkname)$/;"	f	class:book	signature:(const string& bkname)
-setbkname	book.h	/^    void setbkname(const string& name);$/;"	p	class:book	access:public	signature:(const string& name)
-setemail	user.cpp	/^void user::setemail(const string& email)$/;"	f	class:user	signature:(const string& email)
-setemail	user.h	/^    void setemail(const string& email);$/;"	p	class:user	access:public	signature:(const string& email)
-setisbn	book.cpp	/^void book::setisbn(const string& isbn)$/;"	f	class:book	signature:(const string& isbn)
-setisbn	book.h	/^    void setisbn(const string& isbn);$/;"	p	class:book	access:public	signature:(const string& isbn)
-setname	user.cpp	/^void user::setname(const string& name)$/;"	f	class:user	signature:(const string& name)
-setname	user.h	/^    void setname(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
-setnumber	user.cpp	/^void  user::setnumber(const string& number)$/;"	f	class:user	signature:(const string& number)
-setnumber	user.h	/^    void setnumber(const string& number);$/;"	p	class:user	access:public	signature:(const string& number)
-setstate	book.cpp	/^void book::setstate(const string& state)$/;"	f	class:book	signature:(const string& state)
-setstate	book.h	/^    void setstate(const string& state);$/;"	p	class:book	access:public	signature:(const string& state)
-show	Author.cpp	/^void  Author::show()$/;"	f	class:Author	signature:()
-show	Author.h	/^    void  show();\/\/��ʾͼ��$/;"	p	class:Author	access:public	signature:()
-show	keywords.cpp	/^void keywords::show()$/;"	f	class:keywords	signature:()
-show	keywords.h	/^    void show(); \/\/显示含有该关键字的图书$/;"	p	class:keywords	access:public	signature:()
-showinfo	user.cpp	/^void user::showinfo()$/;"	f	class:user	signature:()
-showinfo	user.h	/^    void showinfo();$/;"	p	class:user	access:public	signature:()
+searchAuthor	manager.cpp	/^bool manager::searchAuthor(const QString& athname) const$/;"	f	class:manager	signature:(const QString& athname) const
+searchAuthor	manager.cpp	/^bool manager::searchAuthor(const QString& athname, Author*& srAuthor) const$/;"	f	class:manager	signature:(const QString& athname, Author*& srAuthor) const
+searchAuthor	manager.h	/^    bool searchAuthor(const QString& athname) const;$/;"	p	class:manager	access:public	signature:(const QString& athname) const
+searchAuthor	manager.h	/^    bool searchAuthor(const QString& athname, Author*& srAuthor) const;\/\/搜索作者$/;"	p	class:manager	access:public	signature:(const QString& athname, Author*& srAuthor) const
+searchButton	mainwindow.h	/^    QPushButton *searchButton;$/;"	m	class:MainWindow	access:private
+searchbook	manager.cpp	/^bool manager::searchbook(const QString& bookname) const$/;"	f	class:manager	signature:(const QString& bookname) const
+searchbook	manager.cpp	/^bool manager::searchbook(const QString& bookname,book*& srbook) const$/;"	f	class:manager	signature:(const QString& bookname,book*& srbook) const
+searchbook	manager.h	/^    bool searchbook(const QString& bookname) const;$/;"	p	class:manager	access:public	signature:(const QString& bookname) const
+searchbook	manager.h	/^    bool searchbook(const QString& bookname,book*& srbook) const;\/\/搜索图书，按照书名搜索$/;"	p	class:manager	access:public	signature:(const QString& bookname,book*& srbook) const
+searchbyauthor	searchwindow.cpp	/^void SearchWindow::searchbyauthor()$/;"	f	class:SearchWindow	signature:()
+searchbyauthor	searchwindow.h	/^		void searchbyauthor();$/;"	p	class:SearchWindow	access:private	signature:()
+searchbybkname	searchwindow.cpp	/^void SearchWindow::searchbybkname()$/;"	f	class:SearchWindow	signature:()
+searchbybkname	searchwindow.h	/^		void searchbybkname();$/;"	p	class:SearchWindow	access:private	signature:()
+searchbykey	manager.cpp	/^void manager::searchbykey(const QString& key,list<book*>& bklist)$/;"	f	class:manager	signature:(const QString& key,list<book*>& bklist)
+searchbykey	manager.h	/^    void searchbykey(const QString& key,list<book*> &bklist);\/\/按照关键字查找$/;"	p	class:manager	access:public	signature:(const QString& key,list<book*> &bklist)
+searchbykey	searchwindow.cpp	/^void SearchWindow::searchbykey()$/;"	f	class:SearchWindow	signature:()
+searchbykey	searchwindow.h	/^		void searchbykey();$/;"	p	class:SearchWindow	access:private	signature:()
+searchkey	manager.cpp	/^void manager::searchkey(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist)$/;"	f	class:manager	signature:(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist)
+searchkey	manager.h	/^    void searchkey(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist);$/;"	p	class:manager	access:public	signature:(node<QString,book>* root, node<QString,book>* nill,const QString& key,list<book*> &bklist)
+searchuser	manager.cpp	/^bool manager::searchuser(const QString& usrname) const$/;"	f	class:manager	signature:(const QString& usrname) const
+searchuser	manager.cpp	/^bool manager::searchuser(const QString& usrname, user*& sruser) const$/;"	f	class:manager	signature:(const QString& usrname, user*& sruser) const
+searchuser	manager.h	/^    bool searchuser(const QString& usrname) const;$/;"	p	class:manager	access:public	signature:(const QString& usrname) const
+searchuser	manager.h	/^    bool searchuser(const QString& usrname,user*& srusr) const;\/\/搜寻用户$/;"	p	class:manager	access:public	signature:(const QString& usrname,user*& srusr) const
+searchwin	mainwindow.h	/^    SearchWindow* searchwin;$/;"	m	class:MainWindow	access:private
+searchwin	managerwindow.h	/^		SearchWindow *searchwin;$/;"	m	class:ManagerWindow	access:private
+searchwin	userwindow.h	/^		SearchWindow *searchwin;$/;"	m	class:userWindow	access:private
+setCurrent	managerwindow.cpp	/^void ManagerWindow::setCurrent(int index)$/;"	f	class:ManagerWindow	signature:(int index)
+setCurrent	managerwindow.h	/^		void setCurrent(int index);$/;"	p	class:ManagerWindow	access:private	signature:(int index)
+setCurrent	userwindow.cpp	/^void userWindow::setCurrent(int index)$/;"	f	class:userWindow	signature:(int index)
+setCurrent	userwindow.h	/^		void setCurrent(int index);$/;"	p	class:userWindow	access:private	signature:(int index)
+setauthor	book.cpp	/^void book::setauthor(const QString& author)$/;"	f	class:book	signature:(const QString& author)
+setauthor	book.h	/^    void setauthor(const QString& author);$/;"	p	class:book	access:public	signature:(const QString& author)
+setbkname	book.cpp	/^void book::setbkname(const QString& bkname)$/;"	f	class:book	signature:(const QString& bkname)
+setbkname	book.h	/^    void setbkname(const QString& name);$/;"	p	class:book	access:public	signature:(const QString& name)
+setdafaultfile	manager.cpp	/^void manager::setdafaultfile(const QString& bkfilem, const QString& usrfilem)$/;"	f	class:manager	signature:(const QString& bkfilem, const QString& usrfilem)
+setdafaultfile	manager.h	/^    void setdafaultfile(const QString& bkfilem,const QString& usrfilem);$/;"	p	class:manager	access:public	signature:(const QString& bkfilem,const QString& usrfilem)
+setemail	user.cpp	/^void user::setemail(const QString& email)$/;"	f	class:user	signature:(const QString& email)
+setemail	user.h	/^    void setemail(const QString& email);$/;"	p	class:user	access:public	signature:(const QString& email)
+setisbn	book.cpp	/^void book::setisbn(const QString& isbn)$/;"	f	class:book	signature:(const QString& isbn)
+setisbn	book.h	/^    void setisbn(const QString& isbn);$/;"	p	class:book	access:public	signature:(const QString& isbn)
+setname	user.cpp	/^void user::setname(const QString& name)$/;"	f	class:user	signature:(const QString& name)
+setname	user.h	/^    void setname(const QString& name);$/;"	p	class:user	access:public	signature:(const QString& name)
+setnumber	user.cpp	/^void  user::setnumber(const QString& number)$/;"	f	class:user	signature:(const QString& number)
+setnumber	user.h	/^    void setnumber(const QString& number);$/;"	p	class:user	access:public	signature:(const QString& number)
+setstate	book.cpp	/^void book::setstate(const QString& state)$/;"	f	class:book	signature:(const QString& state)
+setstate	book.h	/^    void setstate(const QString& state);$/;"	p	class:book	access:public	signature:(const QString& state)
+show	searchwindow.cpp	/^void SearchWindow::show(list<book*> &bklist)$/;"	f	class:SearchWindow	signature:(list<book*> &bklist)
+show	searchwindow.h	/^		void show(list<book*> &bklist);$/;"	p	class:SearchWindow	access:private	signature:(list<book*> &bklist)
+showallbook	managerwindow.cpp	/^void ManagerWindow::showallbook()$/;"	f	class:ManagerWindow	signature:()
+showallbook	managerwindow.h	/^		void showallbook();$/;"	p	class:ManagerWindow	access:private	signature:()
+showalluser	managerwindow.cpp	/^void ManagerWindow::showalluser()$/;"	f	class:ManagerWindow	signature:()
+showalluser	managerwindow.h	/^		void showalluser();$/;"	p	class:ManagerWindow	access:private	signature:()
 size	redblacktree.h	/^    int size;$/;"	m	class:redblacktree	access:private
 sleep	mainwindow.cpp	/^void sleep(unsigned long nSeconde)  $/;"	f	signature:(unsigned long nSeconde)
-state	book.h	/^    string state;$/;"	m	class:book	access:private
+stack	managerwindow.h	/^		QStackedWidget *stack;$/;"	m	class:ManagerWindow	access:private
+stack	userwindow.h	/^		QStackedWidget *stack;$/;"	m	class:userWindow	access:private
+state	book.h	/^    QString state;$/;"	m	class:book	access:private
 staticMetaObject	moc_mainwindow.cpp	/^const QMetaObject MainWindow::staticMetaObject = {$/;"	m	class:MainWindow	file:
+staticMetaObject	moc_managerwindow.cpp	/^const QMetaObject ManagerWindow::staticMetaObject = {$/;"	m	class:ManagerWindow	file:
 staticMetaObject	moc_register.cpp	/^const QMetaObject Register::staticMetaObject = {$/;"	m	class:Register	file:
+staticMetaObject	moc_searchwindow.cpp	/^const QMetaObject SearchWindow::staticMetaObject = {$/;"	m	class:SearchWindow	file:
+staticMetaObject	moc_userinfor.cpp	/^const QMetaObject userinfor::staticMetaObject = {$/;"	m	class:userinfor	file:
+staticMetaObject	moc_userwindow.cpp	/^const QMetaObject userWindow::staticMetaObject = {$/;"	m	class:userWindow	file:
 studentNumberEdit	register.h	/^		QLineEdit *studentNumberEdit;$/;"	m	class:Register	access:private
+studentNumberEdit	userinfor.h	/^	QLineEdit *studentNumberEdit;$/;"	m	class:userinfor	access:private
 studentNumberLabel	register.h	/^		QLabel *studentNumberLabel;$/;"	m	class:Register	access:private
+studentNumberLabel	userinfor.h	/^	QLabel *studentNumberLabel;$/;"	m	class:userinfor	access:private
+swidget	mainwindow.h	/^    QStackedWidget *swidget;$/;"	m	class:MainWindow	access:private
+tmp	managerwindow.h	/^		QLabel *tmp;$/;"	m	class:ManagerWindow	access:private
+toplayout	mainwindow.h	/^    QHBoxLayout *toplayout;$/;"	m	class:MainWindow	access:private
+topwidget	searchwindow.h	/^		QGroupBox* topwidget;$/;"	m	class:SearchWindow	access:private
 tree_destroy	redblacktree.h	/^    void tree_destroy(node<K,T>* current);$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* current)
 tree_destroy	redblacktree.h	/^void redblacktree<K,T>::tree_destroy(node<K,T>* current)$/;"	f	class:redblacktree	signature:(node<K,T>* current)
 tree_max	redblacktree.h	/^    node<K,T>* tree_max(node<K,T>* rt);\/\/���������С$/;"	p	class:redblacktree	access:public	signature:(node<K,T>* rt)
@@ -528,58 +950,171 @@ tree_min	redblacktree.h	/^    node<K,T>* tree_min(node<K,T>* rt);$/;"	p	class:re
 tree_min	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_min(node<K,T>* rt)$/;"	f	class:redblacktree	signature:(node<K,T>* rt)
 tree_successor	redblacktree.h	/^    node<K,T>* tree_successor(node<K,T>* x);\/\/��ڵ�ĺ��$/;"	p	class:redblacktree	access:private	signature:(node<K,T>* x)
 tree_successor	redblacktree.h	/^node<K,T>* redblacktree<K,T>::tree_successor(node<K,T>* x)$/;"	f	class:redblacktree	signature:(node<K,T>* x)
+ulogin	mainwindow.cpp	/^void MainWindow::ulogin()$/;"	f	class:MainWindow	signature:()
+ulogin	mainwindow.h	/^	void ulogin();$/;"	p	class:MainWindow	access:private	signature:()
+updatebkprocess	searchwindow.cpp	/^void SearchWindow::updatebkprocess()$/;"	f	class:SearchWindow	signature:()
+updatebkprocess	searchwindow.h	/^		void updatebkprocess();$/;"	p	class:SearchWindow	access:private	signature:()
+updatebkwin	searchwindow.h	/^		QGroupBox *updatebkwin;$/;"	m	class:SearchWindow	access:private
+updatebook	searchwindow.cpp	/^void SearchWindow::updatebook()$/;"	f	class:SearchWindow	signature:()
+updatebook	searchwindow.h	/^		void updatebook();$/;"	p	class:SearchWindow	access:private	signature:()
+updatebutton	searchwindow.h	/^		QPushButton *updatebutton;$/;"	m	class:SearchWindow	access:private
+updateinfor	managerwindow.cpp	/^void ManagerWindow::updateinfor()$/;"	f	class:ManagerWindow	signature:()
+updateinfor	managerwindow.h	/^		void updateinfor();$/;"	p	class:ManagerWindow	access:private	signature:()
+updatelayout	searchwindow.h	/^		QGridLayout *updatelayout;$/;"	m	class:SearchWindow	access:private
+updatemybook	userwindow.cpp	/^void userWindow::updatemybook()\/\/更新$/;"	f	class:userWindow	signature:()
+updatemybook	userwindow.h	/^		void updatemybook();$/;"	p	class:userWindow	access:private	signature:()
+updateusr	manager.cpp	/^void manager::updateusr(user *& usr, const QString& unumber, const QString& uemail, const QString& ukey)$/;"	f	class:manager	signature:(user *& usr, const QString& unumber, const QString& uemail, const QString& ukey)
+updateusr	manager.cpp	/^void manager::updateusr(user*& usr, const QString& unumber, const QString& uemail)$/;"	f	class:manager	signature:(user*& usr, const QString& unumber, const QString& uemail)
+updateusr	manager.h	/^    void updateusr(user*& usr, const QString& unumber, const QString& uemail, const QString& ukey);$/;"	p	class:manager	access:public	signature:(user*& usr, const QString& unumber, const QString& uemail, const QString& ukey)
+updateusr	manager.h	/^    void updateusr(user*& usr,const QString& unumber, const QString& uemail);$/;"	p	class:manager	access:public	signature:(user*& usr,const QString& unumber, const QString& uemail)
 user	user.cpp	/^user::user()$/;"	f	class:user	signature:()
-user	user.cpp	/^user::user(const string& name)$/;"	f	class:user	signature:(const string& name)
-user	user.cpp	/^user::user(const string& name, const string& number, const string& email, const string& key)$/;"	f	class:user	signature:(const string& name, const string& number, const string& email, const string& key)
+user	user.cpp	/^user::user(const QString& name)$/;"	f	class:user	signature:(const QString& name)
+user	user.cpp	/^user::user(const QString& name, const QString& number, const QString& email, const QString& key)$/;"	f	class:user	signature:(const QString& name, const QString& number, const QString& email, const QString& key)
 user	user.cpp	/^user::user(const user &usr)$/;"	f	class:user	signature:(const user &usr)
 user	user.h	/^    user();$/;"	p	class:user	access:public	signature:()
-user	user.h	/^    user(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
-user	user.h	/^    user(const string& name, const string& number, const string& email, const string& key);$/;"	p	class:user	access:public	signature:(const string& name, const string& number, const string& email, const string& key)
+user	user.h	/^    user(const QString& name);$/;"	p	class:user	access:public	signature:(const QString& name)
+user	user.h	/^    user(const QString& name, const QString& number, const QString& email, const QString& key);$/;"	p	class:user	access:public	signature:(const QString& name, const QString& number, const QString& email, const QString& key)
 user	user.h	/^    user(const user &usr);\/\/复制构造函数$/;"	p	class:user	access:public	signature:(const user &usr)
 user	user.h	/^class user$/;"	c
 user::addbook	user.cpp	/^bool user::addbook(book* newbook)$/;"	f	class:user	signature:(book* newbook)
 user::addbook	user.h	/^    bool addbook(book* newbook);\/\/用户借书$/;"	p	class:user	access:public	signature:(book* newbook)
 user::booknum	user.h	/^    int booknum;\/\/借书的数量$/;"	m	class:user	access:private
-user::email	user.h	/^    string email;\/\/邮箱$/;"	m	class:user	access:private
+user::email	user.h	/^    QString email;\/\/邮箱$/;"	m	class:user	access:private
+user::getbooklist	user.cpp	/^book** user::getbooklist()$/;"	f	class:user	signature:()
+user::getbooklist	user.h	/^    book** getbooklist();$/;"	p	class:user	access:public	signature:()
 user::getbooknumb	user.cpp	/^int user::getbooknumb() const$/;"	f	class:user	signature:() const
 user::getbooknumb	user.h	/^    int getbooknumb() const;$/;"	p	class:user	access:public	signature:() const
-user::getemail	user.cpp	/^string user::getemail() const$/;"	f	class:user	signature:() const
-user::getemail	user.h	/^    string getemail() const;$/;"	p	class:user	access:public	signature:() const
-user::getname	user.cpp	/^string user::getname() const$/;"	f	class:user	signature:() const
-user::getname	user.h	/^    string getname() const;$/;"	p	class:user	access:public	signature:() const
-user::getnumber	user.cpp	/^string user::getnumber() const$/;"	f	class:user	signature:() const
-user::getnumber	user.h	/^    string getnumber() const;$/;"	p	class:user	access:public	signature:() const
+user::getemail	user.cpp	/^QString user::getemail() const$/;"	f	class:user	signature:() const
+user::getemail	user.h	/^    QString getemail() const;$/;"	p	class:user	access:public	signature:() const
+user::getname	user.cpp	/^QString user::getname() const$/;"	f	class:user	signature:() const
+user::getname	user.h	/^    QString getname() const;$/;"	p	class:user	access:public	signature:() const
+user::getnumber	user.cpp	/^QString user::getnumber() const$/;"	f	class:user	signature:() const
+user::getnumber	user.h	/^    QString getnumber() const;$/;"	p	class:user	access:public	signature:() const
 user::isbookfull	user.cpp	/^bool user::isbookfull() const$/;"	f	class:user	signature:() const
 user::isbookfull	user.h	/^    bool isbookfull() const;\/\/判断是否已经借满了书$/;"	p	class:user	access:private	signature:() const
-user::key	user.h	/^    string key;\/\/密码$/;"	m	class:user	access:private
+user::key	user.h	/^    QString key;\/\/密码$/;"	m	class:user	access:private
 user::mybook	user.h	/^    book* mybook[BORROWBOOKLIMIT];\/\/借的书$/;"	m	class:user	access:private
-user::name	user.h	/^    string name;\/\/姓名$/;"	m	class:user	access:private
-user::number	user.h	/^    string number;\/\/学号$/;"	m	class:user	access:private
+user::name	user.h	/^    QString name;\/\/姓名$/;"	m	class:user	access:private
+user::number	user.h	/^    QString number;\/\/学号$/;"	m	class:user	access:private
 user::operator =	user.cpp	/^user& user::operator=(const user &usr)$/;"	f	class:user	signature:(const user &usr)
 user::operator =	user.h	/^    user& operator=(const user &usr);\/\/赋值操作符$/;"	p	class:user	access:public	signature:(const user &usr)
-user::returnbook	user.cpp	/^void user::returnbook(book* rbook)$/;"	f	class:user	signature:(book* rbook)
-user::returnbook	user.h	/^    void returnbook(book* rbook);\/\/用户还书$/;"	p	class:user	access:public	signature:(book* rbook)
-user::setemail	user.cpp	/^void user::setemail(const string& email)$/;"	f	class:user	signature:(const string& email)
-user::setemail	user.h	/^    void setemail(const string& email);$/;"	p	class:user	access:public	signature:(const string& email)
-user::setname	user.cpp	/^void user::setname(const string& name)$/;"	f	class:user	signature:(const string& name)
-user::setname	user.h	/^    void setname(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
-user::setnumber	user.cpp	/^void  user::setnumber(const string& number)$/;"	f	class:user	signature:(const string& number)
-user::setnumber	user.h	/^    void setnumber(const string& number);$/;"	p	class:user	access:public	signature:(const string& number)
-user::showinfo	user.cpp	/^void user::showinfo()$/;"	f	class:user	signature:()
-user::showinfo	user.h	/^    void showinfo();$/;"	p	class:user	access:public	signature:()
+user::returnbook	user.cpp	/^bool user::returnbook(book* rbook)$/;"	f	class:user	signature:(book* rbook)
+user::returnbook	user.h	/^    bool returnbook(book* rbook);\/\/用户还书$/;"	p	class:user	access:public	signature:(book* rbook)
+user::setemail	user.cpp	/^void user::setemail(const QString& email)$/;"	f	class:user	signature:(const QString& email)
+user::setemail	user.h	/^    void setemail(const QString& email);$/;"	p	class:user	access:public	signature:(const QString& email)
+user::setname	user.cpp	/^void user::setname(const QString& name)$/;"	f	class:user	signature:(const QString& name)
+user::setname	user.h	/^    void setname(const QString& name);$/;"	p	class:user	access:public	signature:(const QString& name)
+user::setnumber	user.cpp	/^void  user::setnumber(const QString& number)$/;"	f	class:user	signature:(const QString& number)
+user::setnumber	user.h	/^    void setnumber(const QString& number);$/;"	p	class:user	access:public	signature:(const QString& number)
 user::user	user.cpp	/^user::user()$/;"	f	class:user	signature:()
-user::user	user.cpp	/^user::user(const string& name)$/;"	f	class:user	signature:(const string& name)
-user::user	user.cpp	/^user::user(const string& name, const string& number, const string& email, const string& key)$/;"	f	class:user	signature:(const string& name, const string& number, const string& email, const string& key)
+user::user	user.cpp	/^user::user(const QString& name)$/;"	f	class:user	signature:(const QString& name)
+user::user	user.cpp	/^user::user(const QString& name, const QString& number, const QString& email, const QString& key)$/;"	f	class:user	signature:(const QString& name, const QString& number, const QString& email, const QString& key)
 user::user	user.cpp	/^user::user(const user &usr)$/;"	f	class:user	signature:(const user &usr)
 user::user	user.h	/^    user();$/;"	p	class:user	access:public	signature:()
-user::user	user.h	/^    user(const string& name);$/;"	p	class:user	access:public	signature:(const string& name)
-user::user	user.h	/^    user(const string& name, const string& number, const string& email, const string& key);$/;"	p	class:user	access:public	signature:(const string& name, const string& number, const string& email, const string& key)
+user::user	user.h	/^    user(const QString& name);$/;"	p	class:user	access:public	signature:(const QString& name)
+user::user	user.h	/^    user(const QString& name, const QString& number, const QString& email, const QString& key);$/;"	p	class:user	access:public	signature:(const QString& name, const QString& number, const QString& email, const QString& key)
 user::user	user.h	/^    user(const user &usr);\/\/复制构造函数$/;"	p	class:user	access:public	signature:(const user &usr)
-userfilename	manager.h	/^    string userfilename;$/;"	m	class:manager	access:private
-userkey	manager.cpp	/^bool manager::userkey(user* ur) const$/;"	f	class:manager	signature:(user* ur) const
-userkey	manager.h	/^    bool userkey(user* ur) const;\/\/验证用户的密码$/;"	p	class:manager	access:public	signature:(user* ur) const
+userLoginButton	mainwindow.h	/^    QPushButton *userLoginButton;$/;"	m	class:MainWindow	access:private
+userWindow	userwindow.cpp	/^userWindow::userWindow(QWidget *parent, manager *&mmanager, user *& usr) : QDialog(parent)$/;"	f	class:userWindow	signature:(QWidget *parent, manager *&mmanager, user *& usr)
+userWindow	userwindow.h	/^		userWindow(QWidget *parent, manager*& mmanager, user *&usr);$/;"	p	class:userWindow	access:public	signature:(QWidget *parent, manager*& mmanager, user *&usr)
+userWindow	userwindow.h	/^class userWindow : public QDialog$/;"	c	inherits:QDialog
+userWindow::booktable	userwindow.h	/^		QTableView *booktable;$/;"	m	class:userWindow	access:private
+userWindow::bookview	userwindow.h	/^		QDialog *bookview;$/;"	m	class:userWindow	access:private
+userWindow::createbookwindow	userwindow.cpp	/^void userWindow::createbookwindow()$/;"	f	class:userWindow	signature:()
+userWindow::createbookwindow	userwindow.h	/^		void createbookwindow();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::createdelwindow	userwindow.cpp	/^void userWindow::createdelwindow()$/;"	f	class:userWindow	signature:()
+userWindow::createdelwindow	userwindow.h	/^		void createdelwindow();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::deleteAccount	userwindow.h	/^		QDialog *deleteAccount;$/;"	m	class:userWindow	access:private
+userWindow::delusr	userwindow.cpp	/^void userWindow::delusr()$/;"	f	class:userWindow	signature:()
+userWindow::delusr	userwindow.h	/^		void delusr();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::getStaticMetaObject	moc_userwindow.cpp	/^const QMetaObject &userWindow::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:userWindow	signature:()
+userWindow::imfor	userwindow.h	/^		userinfor *imfor;$/;"	m	class:userWindow	access:private
+userWindow::imglabel	userwindow.h	/^		QLabel *imglabel;$/;"	m	class:userWindow	access:private
+userWindow::isexit	moc_userwindow.cpp	/^void userWindow::isexit()$/;"	f	class:userWindow	signature:()
+userWindow::isexit	userwindow.h	/^		void isexit();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::leftlayout	userwindow.h	/^		QVBoxLayout *leftlayout;$/;"	m	class:userWindow	access:private
+userWindow::lefttoplayout	userwindow.h	/^		QHBoxLayout *lefttoplayout;$/;"	m	class:userWindow	access:private
+userWindow::list	userwindow.h	/^		QListWidget *list;$/;"	m	class:userWindow	access:private
+userWindow::mainlayout	userwindow.h	/^		QHBoxLayout *mainlayout;$/;"	m	class:userWindow	access:private
+userWindow::metaObject	moc_userwindow.cpp	/^const QMetaObject *userWindow::metaObject() const$/;"	f	class:userWindow	signature:() const
+userWindow::model	userwindow.h	/^		QStandardItemModel *model;$/;"	m	class:userWindow	access:private
+userWindow::namelabel	userwindow.h	/^		QLabel *namelabel;$/;"	m	class:userWindow	access:private
+userWindow::qt_metacall	moc_userwindow.cpp	/^int userWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:userWindow	signature:(QMetaObject::Call _c, int _id, void **_a)
+userWindow::qt_metacast	moc_userwindow.cpp	/^void *userWindow::qt_metacast(const char *_clname)$/;"	f	class:userWindow	signature:(const char *_clname)
+userWindow::remain	userwindow.cpp	/^void userWindow::remain()\/\/回到用户信息$/;"	f	class:userWindow	signature:()
+userWindow::remain	userwindow.h	/^		void remain();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::returnbook	userwindow.cpp	/^void userWindow::returnbook()$/;"	f	class:userWindow	signature:()
+userWindow::returnbook	userwindow.h	/^		void returnbook();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::returnbutton	userwindow.h	/^		QPushButton *returnbutton;$/;"	m	class:userWindow	access:private
+userWindow::rmanager	userwindow.h	/^		manager *rmanager;$/;"	m	class:userWindow	access:private
+userWindow::rowselected	userwindow.cpp	/^void userWindow::rowselected()$/;"	f	class:userWindow	signature:()
+userWindow::rowselected	userwindow.h	/^		void rowselected();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::rusr	userwindow.h	/^		user * rusr;$/;"	m	class:userWindow	access:private
+userWindow::searchwin	userwindow.h	/^		SearchWindow *searchwin;$/;"	m	class:userWindow	access:private
+userWindow::setCurrent	userwindow.cpp	/^void userWindow::setCurrent(int index)$/;"	f	class:userWindow	signature:(int index)
+userWindow::setCurrent	userwindow.h	/^		void setCurrent(int index);$/;"	p	class:userWindow	access:private	signature:(int index)
+userWindow::stack	userwindow.h	/^		QStackedWidget *stack;$/;"	m	class:userWindow	access:private
+userWindow::staticMetaObject	moc_userwindow.cpp	/^const QMetaObject userWindow::staticMetaObject = {$/;"	m	class:userWindow	file:
+userWindow::updatemybook	userwindow.cpp	/^void userWindow::updatemybook()\/\/更新$/;"	f	class:userWindow	signature:()
+userWindow::updatemybook	userwindow.h	/^		void updatemybook();$/;"	p	class:userWindow	access:private	signature:()
+userWindow::userWindow	userwindow.cpp	/^userWindow::userWindow(QWidget *parent, manager *&mmanager, user *& usr) : QDialog(parent)$/;"	f	class:userWindow	signature:(QWidget *parent, manager *&mmanager, user *& usr)
+userWindow::userWindow	userwindow.h	/^		userWindow(QWidget *parent, manager*& mmanager, user *&usr);$/;"	p	class:userWindow	access:public	signature:(QWidget *parent, manager*& mmanager, user *&usr)
+userWindow::viewmybook	moc_userwindow.cpp	/^void userWindow::viewmybook()$/;"	f	class:userWindow	signature:()
+userWindow::viewmybook	userwindow.h	/^		void viewmybook();$/;"	p	class:userWindow	access:private	signature:()
+userdetailbutton	managerwindow.h	/^		QPushButton *userdetailbutton;$/;"	m	class:ManagerWindow	access:private
+userfilename	manager.h	/^    QString userfilename;$/;"	m	class:manager	access:private
+userinfor	userinfor.cpp	/^userinfor::userinfor(QWidget *parent,manager *&mmanager,user *&usr)$/;"	f	class:userinfor	signature:(QWidget *parent,manager *&mmanager,user *&usr)
+userinfor	userinfor.h	/^		userinfor(QWidget *parent,manager *&mmanager,user *&usr);$/;"	p	class:userinfor	access:public	signature:(QWidget *parent,manager *&mmanager,user *&usr)
+userinfor	userinfor.h	/^class userinfor : public QWidget$/;"	c	inherits:QWidget
+userinfor::cancelButton	userinfor.h	/^	QPushButton *cancelButton;$/;"	m	class:userinfor	access:private
+userinfor::change	userinfor.cpp	/^void userinfor::change()$/;"	f	class:userinfor	signature:()
+userinfor::change	userinfor.h	/^		void change();$/;"	p	class:userinfor	access:private	signature:()
+userinfor::changeButton	userinfor.h	/^	QPushButton *changeButton;$/;"	m	class:userinfor	access:private
+userinfor::changekey	userinfor.cpp	/^void userinfor::changekey()$/;"	f	class:userinfor	signature:()
+userinfor::changekey	userinfor.h	/^		void changekey();$/;"	p	class:userinfor	access:private	signature:()
+userinfor::emailEdit	userinfor.h	/^	QLineEdit *emailEdit;$/;"	m	class:userinfor	access:private
+userinfor::emailLabel	userinfor.h	/^	QLabel *emailLabel;$/;"	m	class:userinfor	access:private
+userinfor::getStaticMetaObject	moc_userinfor.cpp	/^const QMetaObject &userinfor::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:userinfor	signature:()
+userinfor::keyEdit	userinfor.h	/^	QLineEdit *keyEdit;$/;"	m	class:userinfor	access:private
+userinfor::keyLabel	userinfor.h	/^	QLabel *keyLabel;$/;"	m	class:userinfor	access:private
+userinfor::mainLayout	userinfor.h	/^	QGridLayout *mainLayout;$/;"	m	class:userinfor	access:private
+userinfor::metaObject	moc_userinfor.cpp	/^const QMetaObject *userinfor::metaObject() const$/;"	f	class:userinfor	signature:() const
+userinfor::nameEdit	userinfor.h	/^	QLineEdit *nameEdit;$/;"	m	class:userinfor	access:private
+userinfor::nameLabel	userinfor.h	/^	QLabel *nameLabel;$/;"	m	class:userinfor	access:private
+userinfor::on_lineEdit_textChanged	userinfor.cpp	/^void userinfor::on_lineEdit_textChanged()$/;"	f	class:userinfor	signature:()
+userinfor::on_lineEdit_textChanged	userinfor.h	/^		void on_lineEdit_textChanged();$/;"	p	class:userinfor	access:private	signature:()
+userinfor::passwdButton	userinfor.h	/^	QPushButton *passwdButton;$/;"	m	class:userinfor	access:private
+userinfor::qt_metacall	moc_userinfor.cpp	/^int userinfor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:userinfor	signature:(QMetaObject::Call _c, int _id, void **_a)
+userinfor::qt_metacast	moc_userinfor.cpp	/^void *userinfor::qt_metacast(const char *_clname)$/;"	f	class:userinfor	signature:(const char *_clname)
+userinfor::rmanager	userinfor.h	/^	manager *rmanager;$/;"	m	class:userinfor	access:private
+userinfor::rusr	userinfor.h	/^	user *rusr;$/;"	m	class:userinfor	access:private
+userinfor::staticMetaObject	moc_userinfor.cpp	/^const QMetaObject userinfor::staticMetaObject = {$/;"	m	class:userinfor	file:
+userinfor::studentNumberEdit	userinfor.h	/^	QLineEdit *studentNumberEdit;$/;"	m	class:userinfor	access:private
+userinfor::studentNumberLabel	userinfor.h	/^	QLabel *studentNumberLabel;$/;"	m	class:userinfor	access:private
+userinfor::userinfor	userinfor.cpp	/^userinfor::userinfor(QWidget *parent,manager *&mmanager,user *&usr)$/;"	f	class:userinfor	signature:(QWidget *parent,manager *&mmanager,user *&usr)
+userinfor::userinfor	userinfor.h	/^		userinfor(QWidget *parent,manager *&mmanager,user *&usr);$/;"	p	class:userinfor	access:public	signature:(QWidget *parent,manager *&mmanager,user *&usr)
+userinfor::whencancel	userinfor.cpp	/^void userinfor::whencancel()$/;"	f	class:userinfor	signature:()
+userinfor::whencancel	userinfor.h	/^		void whencancel();$/;"	p	class:userinfor	access:private	signature:()
+userinforlabel	managerwindow.h	/^		QLabel *userinforlabel;$/;"	m	class:ManagerWindow	access:private
+userkey	manager.cpp	/^bool manager::userkey(user*& ur,const QString& inkey) const$/;"	f	class:manager	signature:(user*& ur,const QString& inkey) const
+userkey	manager.h	/^    bool userkey(user*& ur,const QString& inkey) const;\/\/验证用户的密码$/;"	p	class:manager	access:public	signature:(user*& ur,const QString& inkey) const
 usernum	manager.h	/^    int usernum;\/\/用户数量$/;"	m	class:manager	access:private
-usertree	manager.h	/^    redblacktree<string,user> usertree;\/\/用户的红黑树$/;"	m	class:manager	access:private
+usertree	manager.h	/^    redblacktree<QString,user> usertree;\/\/用户的红黑树$/;"	m	class:manager	access:private
+usrfilebutton	mainwindow.h	/^    QPushButton *usrfilebutton;$/;"	m	class:MainWindow	access:private
+usrfileedit	mainwindow.h	/^    QLineEdit *usrfileedit;$/;"	m	class:MainWindow	access:private
+usrfilelabel	mainwindow.h	/^    QLabel *usrfilelabel;$/;"	m	class:MainWindow	access:private
+usrfilename	mainwindow.h	/^    QString usrfilename;$/;"	m	class:MainWindow	access:private
+usrwidget	mainwindow.h	/^    userWindow *usrwidget;$/;"	m	class:MainWindow	access:private
+viewmybook	moc_userwindow.cpp	/^void userWindow::viewmybook()$/;"	f	class:userWindow	signature:()
+viewmybook	userwindow.h	/^		void viewmybook();$/;"	p	class:userWindow	access:private	signature:()
+vlayout	mainwindow.h	/^    QVBoxLayout *vlayout;$/;"	m	class:MainWindow	access:private
+welcomelayout	mainwindow.h	/^    QVBoxLayout *welcomelayout;$/;"	m	class:MainWindow	access:private
+whencancel	userinfor.cpp	/^void userinfor::whencancel()$/;"	f	class:userinfor	signature:()
+whencancel	userinfor.h	/^		void whencancel();$/;"	p	class:userinfor	access:private	signature:()
+whenexit	mainwindow.cpp	/^void MainWindow::whenexit()$/;"	f	class:MainWindow	signature:()
+whenexit	mainwindow.h	/^	void whenexit();$/;"	p	class:MainWindow	access:private	signature:()
+whenexit	register.cpp	/^void Register::whenexit()$/;"	f	class:Register	signature:()
+whenexit	register.h	/^		void whenexit();$/;"	p	class:Register	access:private	signature:()
 ~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow	signature:()
 ~MainWindow	mainwindow.h	/^    ~MainWindow();$/;"	p	class:MainWindow	access:public	signature:()
 ~redblacktree	redblacktree.h	/^    ~redblacktree()$/;"	f	class:redblacktree	access:public	signature:()

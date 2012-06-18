@@ -3,7 +3,7 @@
  */
 #ifndef BOOK_H_INCLUDED
 #define BOOK_H_INCLUDED
-#include<string>
+#include<QString>
 
 class manager;
 
@@ -14,26 +14,26 @@ class book
 {
 private:
     friend class manager;
-    string bkname;
-    string author;
-    string isbn;
-    string state;
+    QString bkname;
+    QString author;
+    QString isbn;
+    QString state;
 public:
     book();
-    book(const string& name);
-    book(const string& name, const string& ibn, const string& ath);
-    book(const string& name, const string& ibn, const string& ath, const string& st);
+    book(const QString& name);
+    book(const QString& name, const QString& ibn, const QString& ath);
+    book(const QString& name, const QString& ibn, const QString& ath, const QString& st);
     book(const book& bk);//复制构造函数
     book& operator=(const book& bk);//赋值操作符
-    void getinfor();
-    string getbkname() const;
-    string getauthor() const;
-    string getisbn() const;
-    void getstate();
-    void setstate(const string& state);
-    void setbkname(const string& name);
-    void setauthor(const string& author);
-    void setisbn(const string& isbn);
+    //void getinfor();
+    QString getbkname() const;
+    QString getauthor() const;
+    QString getisbn() const;
+    QString getstate() const;
+    void setstate(const QString& state);
+    void setbkname(const QString& name);
+    void setauthor(const QString& author);
+    void setisbn(const QString& isbn);
 };
 
 #endif // BOOK_H_INCLUDED

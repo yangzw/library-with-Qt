@@ -1,8 +1,9 @@
 #include"book.h"
 #include<iostream>
 #include"Author.h"
+#include"manager.h"
 
-Author::Author()//string和list类自带构造函数
+Author::Author()//QString和list类自带构造函数
 {
     bknum = 0;
 }
@@ -33,18 +34,18 @@ void Author::delbook(book*& bk)
     }
 }
 
-void  Author::show()
-{
-    for(list<book*>::iterator iter = bklist.begin(); iter != bklist.end(); ++ iter)
-        cout << (*iter)->getbkname() << endl;
-}
+//void  Author::show()
+//{
+ //   for(list<book*>::iterator iter = bklist.begin(); iter != bklist.end(); ++ iter)
+  //      cout << (*iter)->getbkname() << endl;
+//}
 
 int Author::getbknum()
 {
     return bknum;
 }
 
-string Author::getauthor() const
+QString Author::getauthor() const
 {
     return Authorname;
 }

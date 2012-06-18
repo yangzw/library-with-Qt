@@ -6,7 +6,7 @@
 #include<QLineEdit>
 #include<QGridLayout>
 #include<QMessageBox>
-#include<string>
+#include<QString>
 
 Register::Register(QWidget *parent,manager *&mmanager)
 	: QDialog(parent)
@@ -43,7 +43,7 @@ Register::Register(QWidget *parent,manager *&mmanager)
 	mainLayout->addWidget(cancelButton,4,2);
 
 	connect(okButton,SIGNAL(clicked()),this,SLOT(Commit()));
-	connect(cancelButton,SIGNAL(clicked()),this,SLOT(close()));
+	connect(cancelButton,SIGNAL(clicked()),this,SLOT(whenexit()));
 }
 
 void Register::Commit()
@@ -53,24 +53,40 @@ void Register::Commit()
 	{
 		choice =  QMessageBox::warning(this,tr("Not input name"),tr("you havn't input your username.\nDo you want to cancel the process?"),QMessageBox::Yes|QMessageBox::No);
 		if(choice == QMessageBox::Yes)
-			close();
+			whenexit();	
 	}
 	else
 	{
-		std::string usrname = nameEdit->text().toStdString();
+		QString usrname = nameEdit->text();
 		if(rmanager->searchuser(usrname))
 		{
 			choice = QMessageBox::warning(this,tr("Same name"),tr("the is already registed\nDo you want to try again"),QMessageBox::Yes|QMessageBox::No);
 			if(choice == QMessageBox::No)
-				close();
+				whenexit();	
 		}
 		else if(keyEdit->text().isEmpty())
 			QMessageBox::warning(this,tr("Not Finished"),tr("you haven't input your key"),QMessageBox::Ok);
 		else
 		{
-		rmanager->addusr(nameEdit->text().toStdString(),studentNumberEdit->text().toStdString(),emailEdit->text().toStdString(),keyEdit->text().toStdString());
+		rmanager->addusr(nameEdit->text(),studentNumberEdit->text(),emailEdit->text(),keyEdit->text());
 		QMessageBox::information(this,tr("Successful"),tr("Congratulations!"),QMessageBox::Ok);
-		close();
+		fresh();
+		whenexit();
 		}
 	}
+}
+
+void Register::whenexit()
+{
+	emit isexit();
+	fresh();
+	close();
+}
+
+void Register::fresh()
+{
+	nameEdit->setText("");
+	studentNumberEdit->setText("");
+	emailEdit->setText("");
+	keyEdit->setText("");
 }

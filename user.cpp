@@ -1,4 +1,4 @@
-#include<string>
+#include<QString>
 #include"book.h"
 #include<iostream>
 #include"user.h"
@@ -10,7 +10,7 @@ user::user()
         mybook[i] = NULL;
 }
 
-user::user(const string& name)
+user::user(const QString& name)
 {
     this->name = name;
     booknum = 0;
@@ -18,7 +18,7 @@ user::user(const string& name)
         mybook[i] = NULL;
 }
 
-user::user(const string& name, const string& number, const string& email, const string& key)
+user::user(const QString& name, const QString& number, const QString& email, const QString& key)
 {
     this->name = name;
     this->number = number;
@@ -58,47 +58,49 @@ bool user::isbookfull() const
     return booknum == BORROWBOOKLIMIT;
 }
 
-void user::showinfo()
-{
-    cout << "Name: " << name << endl;
-    cout << "Xuehao: " << number << endl;
-    cout << "Email: " << email << endl;
-    cout << "Borrowed BookNumber: " << booknum << endl;
-    int i(0);
-    cout << "The book you have borrowed is:" << endl;
-    while(mybook[i])
-        cout << mybook[i++]->getbkname() << endl;
-}
+//void user::showinfo()
+//{
+//    cout << "Name: " << name << endl;
+//    cout << "Xuehao: " << number << endl;
+//    cout << "Email: " << email << endl;
+//    cout << "Borrowed BookNumber: " << booknum << endl;
+//    int i(0);
+//    cout << "The book you have borrowed is:" << endl;
+//    while(mybook[i])
+//        cout << mybook[i++]->getbkname() << endl;
+//}
 
-string user::getname() const
+QString user::getname() const
 {
     return name;
 }
 
-string user::getnumber() const
+QString user::getnumber() const
 {
     return number;
 }
 
-string user::getemail() const
+QString user::getemail() const
 {
     return email;
 }
 
-void user::setname(const string& name)
+
+void user::setname(const QString& name)
 {
     this->name = name;
 }
 
-void  user::setnumber(const string& number)
+void  user::setnumber(const QString& number)
 {
     this->number = number;
 }
 
-void user::setemail(const string& email)
+void user::setemail(const QString& email)
 {
     this->email = email;
 }
+
 
 bool user::addbook(book* newbook)
 {
@@ -116,7 +118,12 @@ int user::getbooknumb() const
     return booknum;
 }
 
-void user::returnbook(book* rbook)
+book** user::getbooklist()
+{
+	return mybook;
+}
+
+bool user::returnbook(book* rbook)
 {
     int i(0);
     while(i < BORROWBOOKLIMIT)
@@ -125,9 +132,9 @@ void user::returnbook(book* rbook)
         {
             mybook[i] = mybook[--booknum];
             mybook[booknum] = NULL;
-            return;
+            return true;
         }
         i++;
     }
-    cout << "error, can't return the book!" << endl;
+    return false;
 }

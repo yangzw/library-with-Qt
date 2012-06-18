@@ -1,12 +1,13 @@
 #include<iostream>
 #include"keywords.h"
+#include"book.h"
 
 keywords::keywords()
 {
 	bknum = 0;
 }
 
-keywords::keywords(book*& bk, string& keywd)
+keywords::keywords(book*& bk, QString& keywd)
 {
 	key = keywd;
 	bknum = 1;
@@ -32,18 +33,18 @@ void keywords::delbook(book*& bk)
     }
 }
 
-void keywords::show()
-{
-	for(list<book*>::iterator iter = bklist.begin(); iter != bklist.end(); ++ iter)
-			cout << (*iter)->getbkname() << endl;
-}
+//void keywords::show()
+//{
+//	for(list<book*>::iterator iter = bklist.begin(); iter != bklist.end(); ++ iter)
+//			cout << (*iter)->getbkname() << endl;
+//}
 
 int keywords::getbknum()
 {
 	return bknum;
 }
 
-string keywords::getkeywords() const
+QString keywords::getkeywords() const
 {
 	return key;
 }

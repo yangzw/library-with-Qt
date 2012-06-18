@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'register.h'
 **
-** Created: Thu Jun 7 14:25:51 2012
+** Created: Mon Jun 18 16:01:04 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,21 +23,25 @@ static const uint qt_meta_data_Register[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      10,    9,    9,    9, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-      10,    9,    9,    9, 0x08,
+      19,    9,    9,    9, 0x08,
+      28,    9,    9,    9, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_Register[] = {
-    "Register\0\0Commit()\0"
+    "Register\0\0isexit()\0Commit()\0whenexit()\0"
 };
 
 const QMetaObject Register::staticMetaObject = {
@@ -69,11 +73,19 @@ int Register::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: Commit(); break;
+        case 0: isexit(); break;
+        case 1: Commit(); break;
+        case 2: whenexit(); break;
         default: ;
         }
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
+}
+
+// SIGNAL 0
+void Register::isexit()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 QT_END_MOC_NAMESPACE

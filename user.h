@@ -6,6 +6,7 @@
 #define BORROWBOOKLIMIT 5
 #include"manager.h"
 class book;
+class QString;
 
 using namespace std;
 
@@ -13,30 +14,30 @@ class user
 {
     friend class manager;
 private:
-    string name;//姓名
-    string number;//学号
-    string email;//邮箱
+    QString name;//姓名
+    QString number;//学号
+    QString email;//邮箱
     book* mybook[BORROWBOOKLIMIT];//借的书
     int booknum;//借书的数量
-    string key;//密码
+    QString key;//密码
     bool isbookfull() const;//判断是否已经借满了书
 public:
     user();
-    user(const string& name);
-    user(const string& name, const string& number, const string& email, const string& key);
+    user(const QString& name);
+    user(const QString& name, const QString& number, const QString& email, const QString& key);
     user(const user &usr);//复制构造函数
     user& operator=(const user &usr);//赋值操作符
-    void showinfo();
-    string getname() const;
-    string getnumber() const;
-    string getemail() const;
-    //void getbookinfor();
-    void setname(const string& name);
-    void setnumber(const string& number);
-    void setemail(const string& email);
+    //void showinfo();
+    QString getname() const;
+    QString getnumber() const;
+    QString getemail() const;
+    void setname(const QString& name);
+    void setnumber(const QString& number);
+    void setemail(const QString& email);
     bool addbook(book* newbook);//用户借书
     int getbooknumb() const;
-    void returnbook(book* rbook);//用户还书
+    book** getbooklist();
+    bool returnbook(book* rbook);//用户还书
 };
 
 #endif // USER_H_INCLUDED

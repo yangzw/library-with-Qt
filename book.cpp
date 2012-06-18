@@ -1,4 +1,5 @@
 #include"book.h"
+#include<QString>
 #include<iostream>
 
 book::book()
@@ -6,9 +7,9 @@ book::book()
     state = "clean";
 }
 
-book::book(const string& name):bkname(name),state("clean") {};
+book::book(const QString& name):bkname(name),state("clean") {};
 
-book::book(const string& name, const string& ibn, const string& ath)
+book::book(const QString& name, const QString& ibn, const QString& ath)
 {
     bkname = name;
     isbn = ibn;
@@ -17,7 +18,7 @@ book::book(const string& name, const string& ibn, const string& ath)
     //:bkname(name),isbn(ibn),author(ath),state(clean)
 };
 
-book::book(const string& name, const string& ibn, const string& ath, const string& st)
+book::book(const QString& name, const QString& ibn, const QString& ath, const QString& st)
 {
     bkname = name;
     isbn = ibn;
@@ -44,50 +45,50 @@ book& book::operator=(const book& bk)
     return *this;
 }
 
-void book::getinfor()
-{
-    cout << "Bookname: " << bkname << endl;
-    cout << "Author: " << author << endl;
-    cout << "Isbn: " << isbn << endl;
-    cout << "State: " << state << endl;
-}
+//void book::getinfor()
+//{
+ //   cout << "Bookname: " << bkname << endl;
+  //  cout << "Author: " << author << endl;
+   // cout << "Isbn: " << isbn << endl;
+    //cout << "State: " << state << endl;
+//}
 
-string book::getbkname() const
+QString book::getbkname() const
 {
     return bkname;
 }
 
-string book::getauthor() const
+QString book::getauthor() const
 {
     return author;
 }
 
-string book::getisbn() const
+QString book::getisbn() const
 {
     return isbn;
 }
 
-void book::getstate()
+QString book::getstate() const
 {
-    cout << "State: " << state << endl;
+	return state;
 }
 
-void book::setstate(const string& state)
+void book::setstate(const QString& state)
 {
     this->state = state;
 }
 
-void book::setbkname(const string& bkname)
+void book::setbkname(const QString& bkname)
 {
     this->bkname = bkname;
 }
 
-void book::setauthor(const string& author)
+void book::setauthor(const QString& author)
 {
     this->author = author;
 }
 
-void book::setisbn(const string& isbn)
+void book::setisbn(const QString& isbn)
 {
     this->isbn = isbn;
 }

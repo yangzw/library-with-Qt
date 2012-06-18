@@ -80,6 +80,7 @@ public:
     {
         tree_destroy(root);
     }
+    void clear();
     void pre_tree_walk();//前序遍历
     void mid_tree_walk();//中序遍历，测试用
     node<K,T>* tree_max(node<K,T>* rt);//树的最大最小
@@ -107,6 +108,14 @@ private:
 };
 
 //将树删除
+template<class K, class T>
+void redblacktree<K,T>::clear()
+{
+	node<K,T>* current = root;
+	tree_destroy(current);
+	root = nill;
+}
+
 template<class K, class T>
 void redblacktree<K,T>::tree_destroy(node<K,T>* current)
 {
