@@ -58,18 +58,6 @@ bool user::isbookfull() const
     return booknum == BORROWBOOKLIMIT;
 }
 
-//void user::showinfo()
-//{
-//    cout << "Name: " << name << endl;
-//    cout << "Xuehao: " << number << endl;
-//    cout << "Email: " << email << endl;
-//    cout << "Borrowed BookNumber: " << booknum << endl;
-//    int i(0);
-//    cout << "The book you have borrowed is:" << endl;
-//    while(mybook[i])
-//        cout << mybook[i++]->getbkname() << endl;
-//}
-
 QString user::getname() const
 {
     return name;

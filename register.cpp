@@ -13,8 +13,7 @@ Register::Register(QWidget *parent,manager *&mmanager)
 {
 	rmanager = mmanager;
 	setWindowTitle(tr("Input Your imformation"));
-
-	nameLabel = new QLabel(tr("*&Name:"),this);
+        nameLabel = new QLabel(tr("*&Name:"),this);
 	studentNumberLabel = new QLabel(tr("&StudenNumber:"),this);
 	emailLabel = new QLabel(tr("&Email:"),this);     
 	keyLabel = new QLabel(tr("&Key:"),this);

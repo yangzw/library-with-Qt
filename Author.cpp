@@ -34,12 +34,6 @@ void Author::delbook(book*& bk)
     }
 }
 
-//void  Author::show()
-//{
- //   for(list<book*>::iterator iter = bklist.begin(); iter != bklist.end(); ++ iter)
-  //      cout << (*iter)->getbkname() << endl;
-//}
-
 int Author::getbknum()
 {
     return bknum;

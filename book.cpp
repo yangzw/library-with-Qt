@@ -15,7 +15,6 @@ book::book(const QString& name, const QString& ibn, const QString& ath)
     isbn = ibn;
     author = ath;
     state = "clean";
-    //:bkname(name),isbn(ibn),author(ath),state(clean)
 };
 
 book::book(const QString& name, const QString& ibn, const QString& ath, const QString& st)
@@ -24,11 +23,10 @@ book::book(const QString& name, const QString& ibn, const QString& ath, const QS
     isbn = ibn;
     author = ath;
     state = st;
-    //:bkname(name),isbn(ibn),author(ath),state(clean)
 };
 
 book::book(const book& bk)
-//:bkname(bk.bkname),isbn(bk.isbn),author(bk.author),state(bk.state){};
+
 {
     bkname = bk.bkname;
     isbn = bk.isbn;
@@ -45,13 +43,6 @@ book& book::operator=(const book& bk)
     return *this;
 }
 
-//void book::getinfor()
-//{
- //   cout << "Bookname: " << bkname << endl;
-  //  cout << "Author: " << author << endl;
-   // cout << "Isbn: " << isbn << endl;
-    //cout << "State: " << state << endl;
-//}
 
 QString book::getbkname() const
 {

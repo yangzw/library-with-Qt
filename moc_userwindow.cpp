@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'userwindow.h'
 **
-** Created: Mon Jun 18 11:29:13 2012
+** Created: Tue Jun 19 12:22:47 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!

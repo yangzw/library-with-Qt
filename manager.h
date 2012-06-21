@@ -28,6 +28,7 @@ private:
     redblacktree<QString,Author> Authortree;//作者的红黑树
     redblacktree<QString,user> usertree;//用户的红黑树
 public:
+    manager();
     bool searchbook(const QString& bookname,book*& srbook) const;//搜索图书，按照书名搜索
     bool searchbook(const QString& bookname) const;
     bool searchAuthor(const QString& athname, Author*& srAuthor) const;//搜索作者
@@ -46,22 +47,15 @@ public:
     void setdafaultfile(const QString& bkfilem,const QString& usrfilem);
     void savebook();
     void saveuser();
-    void savebook(node<QString,book>* root, node<QString,book>* nill,QTextStream& outbkfile);
-    void saveuser(node<QString,user>* root, node<QString,user>* nill,QTextStream& outurfile);
-    manager();
-    //void loadfile();
-    //void load();
-    //void searchbook();//查找书籍
-    //void searchAuthor();//查找作者
-    //void getuserinfo();//得到用户的信息
-    //void addusr();//加入用户
+    void savebook(node<QString,book>*& root, node<QString,book>*& nill,QTextStream& outbkfile);
+    void saveuser(node<QString,user>*& root, node<QString,user>*& nill,QTextStream& outurfile);
+
     void deluser(user *&delusr);//用户注销账号
     bool ismanagerkey(const QString &inputkey) const;//验证管理员密码
     void addbook(const QString& bkname, const QString& isbn, const QString& author);//往书库里添书
     bool delbook(QString& bkname);//从书库里面删除书
     int borrowbook(user *&usr,const QString& bkname);//借书
     void returnbook(user *&usr,const QString& bkname);//还书
-    //void getlibraryinfo();//得到图书馆的信息
     void getalluser(QStandardItemModel *&usermodel);
     void getalluser(node<QString,user>* root, node<QString,user>* nill, QStandardItemModel *&usermodel);
     void getallbook(node<QString,book>* root, node<QString,book>* nill, QStandardItemModel *&bookmodel);
@@ -69,5 +63,7 @@ public:
     int getusernumber();
     int getbooknumber();
     void savechanges();//保存库的变化
+    void saveas(const QString& bkfilename, const QString& userfilename);
+    void changemanagerpassword(const QString& password);
 };
 #endif // MANAGER_H_INCLUDED

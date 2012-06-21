@@ -27,7 +27,6 @@ public:
     user(const QString& name, const QString& number, const QString& email, const QString& key);
     user(const user &usr);//复制构造函数
     user& operator=(const user &usr);//赋值操作符
-    //void showinfo();
     QString getname() const;
     QString getnumber() const;
     QString getemail() const;

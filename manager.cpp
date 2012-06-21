@@ -14,8 +14,8 @@ manager::manager()
     usernum = 0;
     booknum = 0;
     managerkey = "manager";
-    bookfilename = "book.txt";
-    userfilename = "user.txt";
+    bookfilename = "book.bk";
+    userfilename = "user.usr";
 };
 
 //选择载入文件
@@ -24,44 +24,21 @@ void manager::setdafaultfile(const QString& bkfilem, const QString& usrfilem)
 	bookfilename = bkfilem;
 	userfilename = usrfilem;
 	booktree.clear();
+	booktree.root = booktree.nill;
 	usertree.clear();
+	usertree.root = usertree.nill;
 	Authortree.clear();
+	Authortree.root = Authortree.nill;
 	loadfileprocess();
 }
-//
-//
-////void manager::loadfile()
-////{
-// //   cout << "Input the bookfile's name: " << endl;
-//  //  getline(cin, bookfilename);
-//   // cout << "Input the userfile's name: " << endl;
-//    //getline(cin, userfilename);
-//    //load();
-////}
-//
-////void manager::load()
-////{
-////    if(loadfileprocess())
-////        cout << "Data load sucessfully!" << endl;
-////    else
-////        cout << "Faile to load file" << endl;
-////}
-//
+
 void manager::loadfileprocess()
 {
 	QFile bkfile(bookfilename);
 	bkfile.open(QFile::ReadOnly);
     QTextStream inbkfile(&bkfile);
-    //inbkfile.open(bookfilename.c_str(), ios::in);
-    //int flag(0);//标志，至少有一个文件读入成功就设为1;
-    //if(!inbkfile)
-    //{
-     //   cout << "error:unable to open bookfile!" << endl;
-    //}
-    //else
-    //{
         QString line;
-     //   flag = 1;
+	managerkey = inbkfile.readLine();//读入管理员密码
         while(!inbkfile.atEnd())
         {
 		line = inbkfile.readLine();
@@ -90,22 +67,11 @@ void manager::loadfileprocess()
                 Authortree.RB_insert(auth,newbk.author);
             }
         }
-    //}
-    //inbkfile.close();
-    //fstream inurfile;
-    //inurfile.open(userfilename.c_str(), ios::in);
-    //if(!inurfile)
-    //{
-     //   cout << "erro:ubable to open userfile!" << endl;
-    //}
-    //else
-    //{
     	bkfile.close();
 	QFile usrfile(userfilename);
 	usrfile.open(QFile::ReadOnly);
     QTextStream inusrfile(&usrfile);
         QString usrline;
-    //    flag = 1;
         while(!inusrfile.atEnd())
         {
         usrline = inusrfile.readLine();
@@ -136,7 +102,6 @@ void manager::loadfileprocess()
             usernum++;
         }
 	usrfile.close();
-    //}
 }
 
 bool manager::searchbook(const QString& bookname,book*& srbook) const
@@ -163,20 +128,7 @@ list<book*> manager::getauthorbklist(Author *&auth)
 {
 	return auth->bklist;
 }
-//
-//
-////void manager::searchbook()
-////{
-////    cout << "Input the book' name： ";
-////    QString bookname;
-////    getline(cin, bookname);
-////    book* srbook = NULL;
-////    if(searchbook(bookname,srbook))
-////        srbook->getinfor();
-////    else
-////        cout << "Can't find such book!" << endl;
-////}
-//
+
 void manager::searchbykey(const QString& key,list<book*>& bklist)
 {
     node<QString,book>* nill = booktree.nill;
@@ -195,22 +147,7 @@ void manager::searchkey(node<QString,book>* root, node<QString,book>* nill,const
         searchkey(root->rightchild,nill,key,bklist);
     }
 }
-//
-////void manager::searchAuthor()
-////{
-////    cout << "Input the author: ";
-////    QString athname;
-////    getline(cin, athname);
-////    Author* srAuthor = NULL;
-////    if(searchAuthor(athname,srAuthor))
-////    {
-////        cout << "The books of " << athname << " are as follows:" << endl;
-////        srAuthor->show();
-////    }
-////    else
-////        cout << "Can't find such author!" << endl;
-////}
-//
+
 bool manager::searchuser(const QString& usrname, user*& sruser) const
 {
    return usertree.search(usrname, sruser);
@@ -221,59 +158,7 @@ bool manager::searchuser(const QString& usrname) const
     return usertree.search(usrname);
 }
 
-////void manager::getuserinfo()
-////{
-////    cout << "Please input your name: " << endl;
-////    QString usrname;
-////    getline(cin, usrname);
-////    user* sruser = NULL;
-////    if(searchuser(usrname, sruser))
-////    {
-////        if(userkey(sruser))
-////        {
-////            cout << "Here is your information" << endl;
-////            sruser->showinfo();
-////        }
-////    }
-////    else
-////        cout << "The name is not registed yet!" << endl;
-////}
-////
-////void manager::addusr()
-////{
-////    user usr;
-////    cout << "Input your name: ";
-////    QString tmp;
-////    getline(cin,tmp);
-////    while(searchuser(tmp))
-////    {
-////        cout << "Sorry, the name is already token" << endl;
-////        cout << "Input again? input y or n " << endl;
-////        char choice;
-////        cin >> choice;
-////        getchar();
-////        if(choice == 'y')
-////        {
-////            cout << "Input your name: ";
-////            getline(cin, tmp);
-////        }
-////        else
-////            return;
-////    }
-////    usr.setname(tmp);
-////    cout << "Input your student number: ";
-////    getline(cin, tmp);
-////    usr.setnumber(tmp);
-////    cout << "Input your email: ";
-////    getline(cin, tmp);
-////    usr.setemail(tmp);
-////    cout <<"Input your key: ";
-////    getline(cin,usr.key);
-////    cout << "Congratulations! you finish the register!" << endl;
-////    usernum++;
-////    usertree.RB_insert(usr,usr.name);
-////}
-//
+
 void manager::addusr(const QString& uname,const QString& unumber,const QString& uemail,const QString& ukey)
 {
 	user usr;
@@ -387,31 +272,11 @@ void manager::returnbook(user *&usr, const QString& bkname)
             usr->returnbook(bk);
             bk->setstate("clean");
 }
-//
-////得到图书馆的信息
-//void manager::getlibraryinfo()
-//{
-//    cout << "The whole library has "<< endl;
-//    cout << booknum << " books and" << endl;
-//    cout << usernum << " users" << endl;
-//}
-//
-//
+
 void manager::savechanges()
 {
-//    if(bookfilename == "none")
-//    {
-//        cout << "It seems that you don't have a bookfile yet, please name your bookfile(file formate 'txt')" << endl;
-//        getline(cin, bookfilename);
-//    }
     savebook();
-//    if(userfilename == "none")
-//    {
-//        cout << "It seems that you don't have a userfile yet, Please name your userfile(file formate 'txt')" << endl;
-//        getline(cin, userfilename);
-//    }
     saveuser();
-//    cout << "Done!" << endl;
 }
 
 
@@ -420,12 +285,13 @@ void manager::savebook()
 	QFile outbfile(bookfilename);
 	outbfile.open(QFile::WriteOnly);
 	QTextStream outbkfile(&outbfile);
+	outbkfile << managerkey << endl;//读入管理员密码
     	savebook(booktree.root, booktree.nill,outbkfile);
     	outbfile.close();
 }
 
 //中序写入
-void manager::savebook(node<QString,book>* root, node<QString,book>* nill, QTextStream& outbkfile)
+void manager::savebook(node<QString,book>*& root, node<QString,book>*& nill, QTextStream& outbkfile)
 {
     if(root != nill)
     {
@@ -445,7 +311,7 @@ void manager::saveuser()
     	outusrfile.close();
 }
 
-void manager::saveuser(node<QString,user>* root, node<QString,user>* nill, QTextStream& outurfile)
+void manager::saveuser(node<QString,user>*& root, node<QString,user>*& nill, QTextStream& outurfile)
 {
     if(root != nill)
     {
@@ -457,6 +323,19 @@ void manager::saveuser(node<QString,user>* root, node<QString,user>* nill, QText
         saveuser(root->leftchild,nill,outurfile);
         saveuser(root->rightchild,nill,outurfile);
     }
+}
+
+
+void manager::saveas(const QString& bkfilename, const QString& usrfilename)
+{
+	QString tmp = bookfilename;
+	bookfilename = bkfilename;
+	savebook();
+	bookfilename = tmp;
+	tmp = userfilename;
+	userfilename = usrfilename;
+	saveuser();
+	userfilename = tmp;
 }
 
 int manager::getusernumber()
@@ -509,4 +388,9 @@ void manager::getallbook(node<QString,book>* root, node<QString,book>* nill, QSt
         getallbook(root->leftchild,nill,bookmodel);
         getallbook(root->rightchild,nill,bookmodel);
     }
+}
+
+void manager::changemanagerpassword(const QString& password)
+{
+	managerkey = password;
 }

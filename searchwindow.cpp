@@ -57,9 +57,9 @@ SearchWindow::SearchWindow(QWidget *parent, manager*& mmanager, user*& usr, bool
 //建立查询的界面
 void SearchWindow::createsearchwidget()
 {
-	QLabel *imglabel = new QLabel;
-        QPixmap icon(":/imgs/2.png");
-	imglabel->setPixmap(icon);
+        //QLabel *imglabel = new QLabel;
+        //QPixmap icon(":/imgs/2.png");
+        //imglabel->setPixmap(icon);
 
 	bybknameLabel = new QLabel(tr("Name:"));
 	bybknameEdit = new QLineEdit;
@@ -83,7 +83,7 @@ void SearchWindow::createsearchwidget()
 	connect(byauthorEdit,SIGNAL(textChanged(const QString &)),this,SLOT(on_lineEdit_textChanged()));
 
 	mainlayout = new QGridLayout;
-	mainlayout->addWidget(imglabel,1,0);
+        //mainlayout->addWidget(imglabel,1,0);
 	mainlayout->addWidget(bybknameLabel,0,1);
 	mainlayout->addWidget(bybknameEdit,0,2);
 	mainlayout->addWidget(bybknameButton,0,3);
@@ -218,7 +218,7 @@ void SearchWindow::borrowbook()
 		else if(r == 1)
 			QMessageBox::warning(this,tr("Error"),tr("the book is borrowed"),QMessageBox::Ok);
 		else if(r == 2)
-			QMessageBox::warning(this,tr("Error"),tr("You have borrowed enough books\n,you can't borrow any more books"),QMessageBox::Ok);
+                        QMessageBox::warning(this,tr("Error"),tr("You have borrowed 5 books\n,you can't borrow any more books"),QMessageBox::Ok);
 	}
 }
 

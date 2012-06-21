@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon Jun 18 11:29:12 2012
+** Created: Tue Jun 19 23:41:03 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -42,6 +42,11 @@ static const uint qt_meta_data_MainWindow[] = {
       93,   11,   11,   11, 0x08,
      102,   11,   11,   11, 0x08,
      110,   11,   11,   11, 0x08,
+     121,   11,   11,   11, 0x08,
+     128,   11,   11,   11, 0x08,
+     137,   11,   11,   11, 0x08,
+     153,   11,   11,   11, 0x08,
+     168,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -50,6 +55,8 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "MainWindow\0\0regis()\0ulogin()\0rmain()\0"
     "managerlog()\0search()\0open()\0openusrfile()\0"
     "openbkfile()\0okopen()\0about()\0whenexit()\0"
+    "save()\0saveas()\0saveasusrfile()\0"
+    "saveasbkfile()\0oksaveas()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -92,9 +99,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 8: okopen(); break;
         case 9: about(); break;
         case 10: whenexit(); break;
+        case 11: save(); break;
+        case 12: saveas(); break;
+        case 13: saveasusrfile(); break;
+        case 14: saveasbkfile(); break;
+        case 15: oksaveas(); break;
         default: ;
         }
-        _id -= 11;
+        _id -= 16;
     }
     return _id;
 }

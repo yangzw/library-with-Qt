@@ -69,7 +69,7 @@ class redblacktree
 public:
     redblacktree()
     {
-        nill = new node<K,T>(black) ;
+        nill = new node<K,T>(black);
         nill->parent = nill;
         nill->leftchild = nill;
         nill->rightchild = nill;//nill的各种指针都指向自己
@@ -291,16 +291,12 @@ void redblacktree<K,T>::right_rotate(node<K,T>* x)
 template<class K, class T>
 node<K,T>* redblacktree<K,T>::RB_insert(const T& data, const K& insrtkey)//插入算法
 {
-    /*测试用
-    cout << key << "hel" << endl;
-    */
     node<K,T>* x = new node<K,T>(data, insrtkey, red);
     x->parent = x->rightchild = x->leftchild = nill;
     node<K,T>* current = root;
     node<K,T>* y = nill;
     while(current != nill)
     {
-//        cout << "aaa" << endl;
         y = current;
         if(insrtkey > current->key)
             current = current->rightchild;

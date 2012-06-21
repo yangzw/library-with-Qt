@@ -21,7 +21,6 @@ public:
     Author();
     Author(book*& bk);
     void addbook(book*& bk);//加入图书后的处理
-    //void  show();//显示图书
     void delbook(book*& bk);//删除图书
     int getbknum();
     QString getauthor() const;

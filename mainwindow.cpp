@@ -58,23 +58,35 @@ void MainWindow::createAction()
         openfileAction->setIcon(QIcon(":/imgs/open.png"));
 	openfileAction->setShortcut(QKeySequence::Open);
 	openfileAction->setStatusTip(tr("Open a new library database file"));
-	connect(openfileAction,SIGNAL(triggered()),this,SLOT(open()));
+	saveaction = new QAction(tr("&Save file"),this);
+        saveaction->setIcon(QIcon(":/imgs/save.png"));
+	saveaction->setShortcut(QKeySequence::Save);
+	saveaction->setStatusTip(tr("Save your current files"));
+	saveasaction = new QAction(tr("Save &As"),this);
+        saveasaction->setIcon(QIcon(":/imgs/saveas.png"));
+	saveaction->setShortcut(QKeySequence::SaveAs);
+	saveaction->setStatusTip(tr("Save your in another files"));
 	exitAction = new QAction(tr("E&xit"),this);
 	exitAction->setShortcut(tr("Ctr+Q"));
 	exitAction->setStatusTip(tr("Exit the applicatino"));
 	connect(exitAction,SIGNAL(triggered()),this,SLOT(whenexit()));
 	aboutLibraryAction = new QAction(tr("About &Library"),this);
 	aboutLibraryAction->setStatusTip(tr("Show this application's about box"));
-	connect(aboutLibraryAction,SIGNAL(triggered()),this,SLOT(about()));
 	aboutQtAction = new QAction(tr("&About Qt"),this);
 	aboutQtAction->setStatusTip(tr("Show the QT library's about box"));
+	connect(openfileAction,SIGNAL(triggered()),this,SLOT(open()));
+	connect(saveaction,SIGNAL(triggered()),this,SLOT(save()));
+	connect(saveasaction,SIGNAL(triggered()),this,SLOT(saveas()));
 	connect(aboutQtAction,SIGNAL(triggered()),qApp,SLOT(aboutQt()));
+	connect(aboutLibraryAction,SIGNAL(triggered()),this,SLOT(about()));
 }
 
 void MainWindow::createMenu()
 {
 	fileMenu = menuBar()->addMenu(tr("&File")); 
 	fileMenu->addAction(openfileAction);
+	fileMenu->addAction(saveaction);
+	fileMenu->addAction(saveasaction);
 	fileMenu->addAction(exitAction);
 
 	helpMenu = menuBar()->addMenu(tr("&Help"));
@@ -217,15 +229,16 @@ void MainWindow::open()
 	if(!ismanager)
 	{
 		QMessageBox::information(this, tr("Not entitled"), tr("You are not manager,you have no rights to open a file."),QMessageBox::Ok); 
-		return;
 	}
+	else
+	{
 	opendialog = new QDialog(this);
 	usrfilelabel = new QLabel(tr("userfile"));
-	usrfileedit = new QLineEdit("");
+	usrfileedit = new QLineEdit;
 	usrfileedit->setReadOnly(true);
 	usrfilebutton = new QPushButton("open");
 	bkfilelabel = new QLabel(tr("bookfile"));
-	bkfileedit = new QLineEdit("");
+	bkfileedit = new QLineEdit;
 	bkfileedit->setReadOnly(true);
 	bkfilebutton = new QPushButton("open");
 	oktoopen = new QPushButton("Ok");
@@ -242,11 +255,12 @@ void MainWindow::open()
 	connect(bkfilebutton,SIGNAL(clicked()),this,SLOT(openbkfile()));
 	connect(oktoopen,SIGNAL(clicked()),this,SLOT(okopen()));
 	opendialog->show();
+	}
 }
 
 void MainWindow::openusrfile()
 {
-		usrfilename = QFileDialog::getOpenFileName(this,tr("Open userfile"),".",tr("txtfile(*.txt)"));
+                usrfilename = QFileDialog::getOpenFileName(this,tr("Open userfile"),".",tr("txtfile(*.usr)"));
 		if(usrfilename.isEmpty())
 			QMessageBox::information(opendialog, tr("Error"), tr("You didn't select any files."),QMessageBox::Ok); 
 		else
@@ -255,7 +269,7 @@ void MainWindow::openusrfile()
 
 void MainWindow::openbkfile()
 {
-		bkfilename = QFileDialog::getOpenFileName(this,tr("Open bookfile"),".",tr("txtfile(*.txt)"));
+                bkfilename = QFileDialog::getOpenFileName(this,tr("Open bookfile"),".",tr("txtfile(*.bk)"));
 		if(bkfilename.isEmpty())
 			QMessageBox::information(opendialog, tr("Error"), tr("You didn't select any files."),QMessageBox::Ok); 
 		else
@@ -272,12 +286,95 @@ void MainWindow::okopen()
 	else
 		QMessageBox::warning(this,tr("Error"),tr("You didn't  chose any files to open !"),QMessageBox::Ok);
 	opendialog->close();
+	delete opendialog;
+	opendialog = NULL;
+}
+
+void MainWindow::save()
+{
+	if(!ismanager)
+	{
+		QMessageBox::information(this, tr("Not entitled"), tr("You are not manager,you have no rights to open a file."),QMessageBox::Ok); 
+	}
+	else
+	{
+		mainmanager->savechanges();
+		QMessageBox::information(this,tr("Sucess"),tr("Done"),QMessageBox::Ok);
+	}
+}
+
+void MainWindow::saveas()
+{
+	if(!ismanager)
+	{
+		QMessageBox::information(this, tr("Not entitled"), tr("You are not manager,you have no rights to open a file."),QMessageBox::Ok); 
+	}
+	
+	else
+	{
+	saveasdialog = new QDialog(this);
+	susrfilelabel = new QLabel(tr("userfile"));
+	susrfileedit = new QLineEdit;
+	susrfileedit->setReadOnly(true);
+	susrfilebutton = new QPushButton("saveas");
+	sbkfilelabel = new QLabel(tr("bookfile"));
+	sbkfileedit = new QLineEdit;
+	sbkfileedit->setReadOnly(true);
+	sbkfilebutton = new QPushButton("saveas");
+	oktosaveas = new QPushButton("Ok");
+	QGridLayout layout;
+	layout.addWidget(susrfilelabel,0,0);
+	layout.addWidget(susrfileedit,0,1);
+	layout.addWidget(susrfilebutton,0,2);
+	layout.addWidget(sbkfilelabel,1,0);
+	layout.addWidget(sbkfileedit,1,1);
+	layout.addWidget(sbkfilebutton,1,2);
+	layout.addWidget(oktosaveas,2,3);
+	saveasdialog->setLayout(&layout);
+	connect(susrfilebutton,SIGNAL(clicked()),this,SLOT(saveasusrfile()));
+	connect(sbkfilebutton,SIGNAL(clicked()),this,SLOT(saveasbkfile()));
+	connect(oktosaveas,SIGNAL(clicked()),this,SLOT(oksaveas()));
+	saveasdialog->show();
+	}
+}
+
+void MainWindow::saveasusrfile()
+{
+                susrfilename = QFileDialog::getSaveFileName(this,tr("Save userfile"),".",tr("txtfile(*.usr)"));
+		if(susrfilename.isEmpty())
+			QMessageBox::information(saveasdialog, tr("Error"), tr("You didn't select any files."),QMessageBox::Ok); 
+		else
+			susrfileedit->setText(susrfilename);
+}
+
+void MainWindow::saveasbkfile()
+{
+                sbkfilename = QFileDialog::getSaveFileName(this,tr("Save bookfile"),".",tr("txtfile(*.bk)"));
+		if(sbkfilename.isEmpty())
+			QMessageBox::information(saveasdialog, tr("Error"), tr("You didn't select any files."),QMessageBox::Ok); 
+		else
+			sbkfileedit->setText(sbkfilename);
+}
+
+void MainWindow::oksaveas()
+{
+	if(!susrfileedit->text().isEmpty() && !sbkfileedit->text().isEmpty())
+	{
+		mainmanager->saveas(sbkfilename,susrfilename);
+		QMessageBox::information(this,tr("Success"),tr("Saved"),QMessageBox::Ok);
+	}
+	else
+		QMessageBox::warning(this,tr("Error"),tr("You didn't  chose any files to saveas !"),QMessageBox::Ok);
+	saveasdialog->close();
+	delete saveasdialog;
+	saveasdialog = NULL;
 }
 
 void MainWindow::about()
 {
 	QMessageBox::about(this,tr("About Library"),tr("<h2>Library</h2>"
 				"<p>the library is based in redblacktree and Qt</p>"
+                                "\nEach user can borrow 5 books\n"
 				"copyright@yang_zw 2012"));
 }
 

@@ -25,7 +25,6 @@ public:
     book(const QString& name, const QString& ibn, const QString& ath, const QString& st);
     book(const book& bk);//复制构造函数
     book& operator=(const book& bk);//赋值操作符
-    //void getinfor();
     QString getbkname() const;
     QString getauthor() const;
     QString getisbn() const;

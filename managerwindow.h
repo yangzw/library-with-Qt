@@ -33,6 +33,7 @@ class ManagerWindow : public QDialog
 		void showallbook();
 		void closealluser();
 		void closeallbook();
+		void changepassword();
 	private:
 		manager *rmanager;
 		SearchWindow *searchwin;
@@ -43,7 +44,7 @@ class ManagerWindow : public QDialog
 		QHBoxLayout *lefttoplayout;
 		QVBoxLayout *leftlayout;
 		QLabel *imglabel;
-		QLabel *namelabel;
+                //QLabel *namelabel;
 		QLabel *tmp;
 		QGroupBox *addgroup;
 		QGridLayout *addlayout;
@@ -67,10 +68,19 @@ class ManagerWindow : public QDialog
 		QTableView *allbooktableview;
 		QStandardItemModel *allusermodel;
 		QStandardItemModel *allbookmodel;
+		QGroupBox *chanebox;
+		QLabel *oldpasslabel;
+		QLabel *newpasslabel;
+		QLineEdit *oldpassedit;
+		QLineEdit *newpassedit;
+		QPushButton *okpassbutton;
+		QPushButton *cancelpassbutton;
+		QGridLayout *changelayout;
 
 		void createaddwindow();
 		void cleanaddwindow();
 		void createinforwindow();
 		void updateinfor();
+		void createchangewindow();
 };
 #endif //MANAGERWINDOW_H

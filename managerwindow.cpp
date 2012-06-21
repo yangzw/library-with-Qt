@@ -23,15 +23,16 @@ ManagerWindow::ManagerWindow(QWidget *parent, manager *&mmanager)
 	list->insertItem(0,tr("Add"));
 	list->insertItem(1,tr("Search&&Delete"));
 	list->insertItem(2,tr("check library"));
+	list->insertItem(3,tr("Change manager password"));
 
 	imglabel = new QLabel(this);
-        QPixmap icon(":/imgs/2.png");
+        QPixmap icon(":/imgs/2.jpg");
 	imglabel->setPixmap(icon);
-	namelabel = new QLabel("Manager",this);
+        //namelabel = new QLabel("Manager",this);
 	leftlayout = new QVBoxLayout;
 	lefttoplayout =new QHBoxLayout;
 	lefttoplayout->addWidget(imglabel);
-	lefttoplayout->addWidget(namelabel);
+        //lefttoplayout->addWidget(namelabel);
 	leftlayout->addLayout(lefttoplayout);
 	leftlayout->addWidget(list);
 
@@ -39,12 +40,14 @@ ManagerWindow::ManagerWindow(QWidget *parent, manager *&mmanager)
 	searchwin = new SearchWindow(this,rmanager,tmpusr,false,true);
 	createaddwindow();
 	createinforwindow();
+	createchangewindow();
 
 
 	stack = new QStackedWidget(this);
 	stack->addWidget(addgroup);
 	stack->addWidget(searchwin);
 	stack->addWidget(inforgroup);
+	stack->addWidget(chanebox);
 	mainlayout = new QHBoxLayout(this);
 	mainlayout->addLayout(leftlayout);
 	mainlayout->addStretch();
@@ -212,4 +215,49 @@ void ManagerWindow::closeallbook()
 	allbookwidget->close();
 	delete allbookwidget;
 	allbookwidget = NULL;
+}
+
+void ManagerWindow::createchangewindow()
+{
+	chanebox = new QGroupBox;
+	oldpasslabel = new QLabel(tr("Current Password"));
+	newpasslabel = new QLabel(tr("New Passwd"));
+	oldpassedit = new QLineEdit;
+	newpassedit = new QLineEdit;
+	oldpassedit->setEchoMode(QLineEdit::Password);
+	newpassedit->setEchoMode(QLineEdit::Password);
+	okpassbutton = new QPushButton(tr("Ok"));
+	cancelpassbutton = new QPushButton(tr("Cancel"));
+	changelayout = new QGridLayout;
+	changelayout->addWidget(oldpasslabel,0,0);
+	changelayout->addWidget(newpasslabel,1,0);
+	changelayout->addWidget(oldpassedit,0,1);
+	changelayout->addWidget(newpassedit,1,1);
+	changelayout->addWidget(okpassbutton,2,0);
+	changelayout->addWidget(cancelpassbutton,2,1);
+	chanebox->setLayout(changelayout);
+	connect(okpassbutton,SIGNAL(clicked()),this,SLOT(changepassword()));
+	connect(cancelpassbutton,SIGNAL(clicked()),this,SLOT(remain()));
+}
+
+void ManagerWindow::changepassword()
+{
+	if(!oldpassedit->text().isEmpty() && !newpassedit->text().isEmpty())
+	{
+		if(rmanager->ismanagerkey(oldpassedit->text()))
+		{
+			rmanager->changemanagerpassword(newpassedit->text());
+			oldpassedit->clear();
+			newpassedit->clear();
+			QMessageBox::information(this,"Sucess","Done",QMessageBox::Ok);
+		}
+		else
+		{
+			QMessageBox::warning(this,"Eror","You password is not right",QMessageBox::Ok);
+			oldpassedit->clear();
+			newpassedit->clear();
+		}
+	}
+	else
+		QMessageBox::warning(this,"Eror","You haven't input current password or oldpassword",QMessageBox::Ok);
 }

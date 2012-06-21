@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'managerwindow.h'
 **
-** Created: Mon Jun 18 18:49:37 2012
+** Created: Tue Jun 19 21:37:48 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ManagerWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,6 +39,7 @@ static const uint qt_meta_data_ManagerWindow[] = {
       96,   14,   14,   14, 0x08,
      110,   14,   14,   14, 0x08,
      125,   14,   14,   14, 0x08,
+     140,   14,   14,   14, 0x08,
 
        0        // eod
 };
@@ -47,7 +48,7 @@ static const char qt_meta_stringdata_ManagerWindow[] = {
     "ManagerWindow\0\0index\0setCurrent(int)\0"
     "addbook()\0remain()\0on_lineEdit_textChanged()\0"
     "showalluser()\0showallbook()\0closealluser()\0"
-    "closeallbook()\0"
+    "closeallbook()\0changepassword()\0"
 };
 
 const QMetaObject ManagerWindow::staticMetaObject = {
@@ -87,9 +88,10 @@ int ManagerWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: showallbook(); break;
         case 6: closealluser(); break;
         case 7: closeallbook(); break;
+        case 8: changepassword(); break;
         default: ;
         }
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

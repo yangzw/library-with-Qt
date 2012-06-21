@@ -11,7 +11,6 @@ class QMenu;
 class userWindow;
 class QStackedWidget;
 class Register;
-//class QGridLayout;
 class QHBoxLayout;
 class QVBoxLayout;
 class manager;
@@ -39,6 +38,11 @@ private slots:
 	void okopen();
 	void about();
 	void whenexit();
+	void save();
+	void saveas();
+	void saveasusrfile();
+	void saveasbkfile();
+	void oksaveas();
 private:
     void createAction();
     void createMenu();
@@ -53,6 +57,8 @@ private:
     SearchWindow* searchwin;
     QString usrfilename;
     QString bkfilename;
+    QString susrfilename;
+    QString sbkfilename;
     QPushButton *userLoginButton;
     QPushButton *MainWindowButton;
     QPushButton *registerButton;
@@ -61,11 +67,16 @@ private:
     QPushButton *managerButton;
     QPushButton *usrfilebutton;
     QPushButton *bkfilebutton;
+    QPushButton *susrfilebutton;
+    QPushButton *sbkfilebutton;
     QPushButton *oktoopen;
+    QPushButton *oktosaveas;
     QAction *openfileAction;
     QAction *exitAction;
     QAction *aboutLibraryAction;
     QAction *aboutQtAction;
+    QAction *saveaction;
+    QAction *saveasaction;
     QMenu *fileMenu;
     QMenu *helpMenu;
     userWindow *usrwidget;
@@ -76,9 +87,14 @@ private:
     QVBoxLayout *welcomelayout;
     QLabel *usrfilelabel;
     QLabel *bkfilelabel;
+    QLabel *susrfilelabel;
+    QLabel *sbkfilelabel;
     QLineEdit *usrfileedit;
     QLineEdit *bkfileedit;
+    QLineEdit *susrfileedit;
+    QLineEdit *sbkfileedit;
     QDialog *opendialog;
+    QDialog *saveasdialog;
 };
 
 #endif // MAINWINDOW_H
